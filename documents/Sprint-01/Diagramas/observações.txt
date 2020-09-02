@@ -1,0 +1,1 @@
+Armazene diagramas como HLD, Desenhos de solução e arquitetura do projeto
