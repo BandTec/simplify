@@ -1,5 +1,6 @@
 package com.cartorio.sprint1;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/usuarios")
 public class ControllerApp {
+    private boolean estaLogado = false;
     private List<Usuario> usuarios = new ArrayList<>();
 
     @GetMapping
@@ -47,8 +49,27 @@ public class ControllerApp {
     public void alterarUsuario(@PathVariable int id, @RequestBody Usuario usuario){
         usuarios.remove(id-1);
         usuarios.add(id-1, usuario);
-
     }
 
+    @PostMapping("/login")
+    public ResponseEntity loginUsuario(@RequestBody Login login) {
+        for (Usuario usuario : usuarios){
+            if (usuario.getEmail().equals(login.getEmail()) && usuario.getSenha().equals(login.getSenha())) {
+                estaLogado = true;
+                return ResponseEntity.ok().body(usuario);
+            }
+        }
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+    }
 
+    @PostMapping("/logoff")
+    public ResponseEntity logoffUsuario(@RequestBody Login login) {
+        for (Usuario usuario : usuarios){
+            if (usuario.getEmail().equals(login.getEmail()) && usuario.getSenha().equals(login.getSenha())) {
+                estaLogado = false;
+                return ResponseEntity.ok().body("O usuário foi deslogado!");
+            }
+        }
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+    }
 }
