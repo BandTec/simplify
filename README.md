@@ -1,4 +1,4 @@
-# ScripTech
+# Simplify
 
 Somos uma startup, formada por 6 pessoas
 com um propósito de acabar com filas e alta
