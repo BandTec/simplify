@@ -67,7 +67,7 @@
 .navbar:hover .logo svg{
     transform: rotate(180deg);
 }
-@media only screen and (min-width:600px){
+@media only screen and (min-width:670px){
     .navbar{
         top: 0;
         width: 5rem;
@@ -81,7 +81,7 @@
         transition: opacity var(--transition-speed);
     }
 }
-@media only screen and (max-width:600px){
+@media only screen and (max-width:670px){
     .navbar{
         bottom: 0;
         width: 100vw;

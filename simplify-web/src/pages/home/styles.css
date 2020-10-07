@@ -2,7 +2,7 @@
 .container{
     margin: 0;
     padding: 0;
-   padding-left: 100px; /*Como não é um component precisamos indicar um espaçamento para a nav não sobre por */
+    padding-left: 100px; /*Como não é um component precisamos indicar um espaçamento para a nav não sobre por */
     display: flex;
     flex-direction: row;
     background: #6649b8;
@@ -73,15 +73,13 @@
 }
 @media only screen and (max-width: 660px){
     .container{
+        width: 100%;
         display: flex;
-        padding: 0;
-        margin-left: 0;
         flex-direction: column;
     }
     .container-info{
         margin: 0px;
         align-items: center;
-        
     }
     .container-info h2{
         font-size: 3rem;
@@ -105,12 +103,9 @@
     .container{
         display: flex;
         margin-left: 0;
+        width: 100%;
         flex-direction: column;
-        padding-left: 40px;
-    }
-    .container-info{
-        margin: 50px;
-        align-items: center;  
+        padding-left: 0px;
     }
     .container-info h2{
         font-size: 3rem;
@@ -129,7 +124,7 @@
         height: 350px;
     }
 }
-@media only screen and (max-width: 1260px){
+@media only screen and (max-width: 1280px){
     body{
         overflow: hidden;
     }
@@ -137,10 +132,11 @@
         display: flex;
         margin-left: 0;
         flex-direction: column;
+        margin-bottom: 0px;
     }
     .container-info{
-        margin: 50px;
-        align-items: center;  
+        justify-content: center; 
+       align-items: center;  
     }
     .container-info h2{
         font-size: 3rem;
@@ -150,12 +146,12 @@
         text-align: center;
     }
     .btn{
-        margin:10px;
+        margin: 10px;
         width: 180px;
         font-size: 1.2rem;
     }
     .container-img img{
-        width: 350px;
-        height: 350px;
+        width: 450px;
+        height: 450px;
     }
 }

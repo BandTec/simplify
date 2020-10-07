@@ -1,10 +1,15 @@
 import React from 'react'
 import './styles.css'
 
-const Button: React.FC = () => {
+export interface btnProps {
+    title: string;
+    classe?: string
+}
+
+const Button: React.FC<btnProps> = (props) => {
     return (
-        <button className="btn">
-            Cadastre-se
+        <button className={props.classe}>
+            {props.title}
             {/* Atenção PROPS nescessario */}
         </button>
     )

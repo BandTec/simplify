@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css'
 
-import ilustracao from '../../assets/ilustration-svg.png'
+import ilustracao from '../../assets/ilustration.png'
 import Button from '../../components/button';
 
 function Home() {
@@ -17,8 +17,8 @@ function Home() {
                 </h3>
 
                 <div className="btn-container">
-                    <Button />
-                    <Button />
+                    <Button title="saiba mais" classe="btn" />
+                    <Button title="cadastre-se" classe="btn btn-1" />
                 </div>
             </div>
             <div className="container-img">

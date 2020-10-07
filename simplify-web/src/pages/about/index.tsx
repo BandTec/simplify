@@ -1,23 +1,26 @@
 import React from 'react';
-import ilustracao from '../../assets/ilustration-svg.png'
+import SectionAbout from '../../components/about-section';
 
+import img from "../../assets/ilustration.png"
 
 import './styles.css';
+import Section from '../../components/about-2';
+import Contador from '../../components/Contador';
 
 function About() {
     return (
-        <div className="container">
-            <div className="about1">
-                <h2 className="title">Simplify</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. </p>
-            </div>
-            <div className="container-img">
-                <img src={ilustracao} alt="" />
-            </div>
+        <div className="container-about">
+            <SectionAbout title="Simplify"
+                description="Hello world"
+                image={img}
+            />
+            <Section
+                image={img}
+                title="Praticidade"
+                description="Serviços 100% online, simplifcado para trazer sua melhor expriencia"
+            />
+            <Contador />
         </div>
-
     )
 }
 
