@@ -3,6 +3,7 @@ import './styles.css'
 
 import ilustracao from '../../assets/ilustration.png'
 import Button from '../../components/button';
+import { Link } from 'react-router-dom';
 
 function Home() {
     return (
@@ -17,7 +18,7 @@ function Home() {
                 </h3>
 
                 <div className="btn-container">
-                    <Button title="saiba mais" classe="btn" />
+                    <Link to="home">  <Button title="saiba mais" classe="btn" /> </Link>
                     <Button title="cadastre-se" classe="btn btn-1" />
                 </div>
             </div>

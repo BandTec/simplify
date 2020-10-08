@@ -1,10 +1,15 @@
 import React from 'react';
+
+//Routes
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+
+//Component
 import Nav from './components/Nav';
-import About from './pages/about';
+
+
+// Paginas
 import Home from './pages/home';
-
-
+import Servico from './pages/services'
 
 function Routes() {
     return (
@@ -15,9 +20,7 @@ function Routes() {
 
                 <Route path="/home" component={Home} />
 
-                <Route path="/about" component={About} />
-
-                <Route path="/services" component={Home} />
+                <Route path="/services" component={Servico} />
 
                 <Route path="/generate" component={Home} />
 

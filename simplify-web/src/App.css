@@ -16,6 +16,14 @@
     font-family: "roboto";
 }
 
+.container{
+    margin: 0;
+    padding: 0;
+    padding-left: 100px; /*Como não é um component precisamos indicar um espaçamento para a nav não sobre por */
+    display: flex;
+    background: #6649b8;
+    height: 100vh;
+}
 body::-webkit-scrollbar{
     width: 0.5rem;
 }
