@@ -46,7 +46,7 @@ const Nav: React.FC = () => {
                     </Link>
                 </li>
                 <li className="nav-link nav-item">
-                    <Link to="/" className="nav-link">
+                    <Link to="/services" className="nav-link">
                         <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="cat" role="img"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                             className="svg-inline--fa fa-cat fa-w-16 fa-9x">
@@ -65,7 +65,7 @@ const Nav: React.FC = () => {
                     </Link>
                 </li>
                 <li className="nav-link nav-item">
-                    <Link to="/" className="nav-link">
+                    <Link to="/generate" className="nav-link">
                         <svg aria-hidden="true" focusable="false" data-prefix="fad" data-icon="cat" role="img"
                             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                             className="svg-inline--fa fa-cat fa-w-16 fa-9x">

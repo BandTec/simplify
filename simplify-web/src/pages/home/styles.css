@@ -1,4 +1,11 @@
-
+.container-home{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    padding-left: 100px; /*Como não é um component precisamos indicar um espaçamento para a nav não sobre por */
+    background: #6649b8;
+    height: 100vh;
+}
 .container-info{
     display: flex;
     flex-basis: 30%;
@@ -41,7 +48,7 @@
     height: 500px;
 }
 @media only screen and (max-width: 660px){
-    .container{
+    .container-home{
         width: 100%;
         display: flex;
         flex-direction: column;
@@ -69,7 +76,7 @@
 }
 @media only screen and (max-width: 768px){
     
-    .container{
+    .container-home{
         display: flex;
         margin-left: 0;
         width: 100%;
@@ -94,10 +101,8 @@
     }
 }
 @media only screen and (max-width: 1280px){
-    body{
-        overflow: hidden;
-    }
-    .container{
+
+    .container-home{
         display: flex;
         margin-left: 0;
         flex-direction: column;

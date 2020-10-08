@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 //Component
 import Nav from './components/Nav';
+import Generate from './pages/Generate';
 
 
 // Paginas
@@ -22,7 +23,7 @@ function Routes() {
 
                 <Route path="/services" component={Servico} />
 
-                <Route path="/generate" component={Home} />
+                <Route path="/generate" component={Generate} />
 
                 <Route path="profile" component={Home} />
             </Switch>

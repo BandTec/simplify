@@ -17,10 +17,10 @@
 }
 
 .container{
+    display: flex;
     margin: 0;
     padding: 0;
     padding-left: 100px; /*Como não é um component precisamos indicar um espaçamento para a nav não sobre por */
-    display: flex;
     background: #6649b8;
     height: 100vh;
 }

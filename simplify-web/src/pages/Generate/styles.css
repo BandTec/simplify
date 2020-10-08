@@ -1,0 +1,47 @@
+.generate-container{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    padding-left: 100px; /*Como não é um component precisamos indicar um espaçamento para a nav não sobre por */
+    color: whitesmoke;
+    background: #6649b8;
+    height: 100vh;
+}
+
+.generate-container .text-container{
+    display: flex;
+    width: 30%; 
+    max-height: 50vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.generate-container .text-container h3{
+    font-size: 2rem;
+    padding-bottom: 10%;
+    font-weight: 600;   
+}
+.generate-container .text-container p{
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--text-primary);
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:flex-start;
+    margin-left: 12%;
+    margin-top: 5%;
+    width: 50%;
+    height: 80vh;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    box-shadow: 1px 1px black;
+}
+
+.form-container .input-container{
+    padding: 50px;
+}

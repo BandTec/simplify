@@ -3,6 +3,7 @@
     position: fixed;
     background: var(--bg-primary);
     transition: width 400ms ease;
+    z-index: 10;
 }
 .navbar-nav{
     list-style: none;
