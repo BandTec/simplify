@@ -3,7 +3,6 @@ package com.example.sprint2.dominios;
 import javax.persistence.*;
 
 @Entity
-
 public abstract class Usuario {
 
     @Column(length = 60,nullable = false)
