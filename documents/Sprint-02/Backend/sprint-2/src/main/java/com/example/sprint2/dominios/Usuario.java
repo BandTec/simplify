@@ -2,17 +2,13 @@ package com.example.sprint2.dominios;
 
 import javax.persistence.*;
 
-@Entity
+
 public abstract class Usuario {
 
-    @Column(length = 60,nullable = false)
     private String email;
 
-    @Column(nullable = false)
     private String senha;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     public Usuario(String email, String senha, int id) {

@@ -1,13 +1,13 @@
 package com.example.sprint2.repositorios;
 
-import com.example.sprint2.dominios.Usuario;
-import com.example.sprint2.entity.User;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.sprint2.entity.Cliente;
+import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
-public interface UsuarioRepository  extends JpaRepository <User,Integer> {
+public interface UsuarioRepository  extends CrudRepository<Cliente,Integer> {
 //    List<Usuario> findByUser
 
-    List<User> findAll();
+    List<Cliente> findAll();
+
 }

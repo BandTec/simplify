@@ -1,8 +1,9 @@
 package com.example.sprint2.controladores;
 
 import com.example.sprint2.dominios.ListaObj;
-import com.example.sprint2.dominios.Usuario;
-import com.example.sprint2.entity.User;
+import com.example.sprint2.entity.Cliente;
+import com.example.sprint2.repositorios.EnderecoRepository;
+import com.example.sprint2.repositorios.SolicitacaoRepository;
 import com.example.sprint2.repositorios.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -23,14 +24,20 @@ public class ControllerORM {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
+    @Autowired
+    private EnderecoRepository enderecoRepository;
+
+    @Autowired
+    private SolicitacaoRepository solicitacaoRepository;
+
     Integer tamanho =10;
-    ListaObj<User> postLista = new ListaObj<>(tamanho);
-        ListaObj<User> exportLista = new ListaObj<>(tamanho);
+    ListaObj<Cliente> postLista = new ListaObj<>(tamanho);
+        ListaObj<Cliente> exportLista = new ListaObj<>(tamanho);
 
     @GetMapping
     public ResponseEntity getAll(){
         if (usuarioRepository.count() > 0){
-            return ResponseEntity.ok().body(usuarioRepository.findAll());
+            return ResponseEntity.ok().body(solicitacaoRepository.findAll());
         }else{
             return ResponseEntity.noContent().build();
         }
@@ -46,7 +53,7 @@ public class ControllerORM {
     }
 
     @PostMapping
-    public ResponseEntity postUser(@RequestBody User u){
+    public ResponseEntity postUser(@RequestBody Cliente u){
         if (postLista.getNroElem() < this.tamanho){  //Se a lista obj Post estiver com espaço ela vai adcionar o usuario
             postLista.adiciona(u);
             for (Integer i= 0; i<postLista.getTamanho();i++){ // após adcionar ele faz um for percorrendo a lista OBj e adcionando no  repository
@@ -66,7 +73,7 @@ public class ControllerORM {
 
         String lista = "";
 
-        List<User> user = usuarioRepository.findAll(); //Método do userRepository para fazer uma unica requisição retornando todos
+        List<Cliente> user = usuarioRepository.findAll(); //Método do userRepository para fazer uma unica requisição retornando todos
 
         for (Integer i = 0;i <usuarioRepository.count(); i++){ //Esse for vai percorrer todos os dados do repositoru e vai adcionar na lista OBJ Export list
             exportLista.adiciona(user.get(i));
@@ -79,7 +86,7 @@ public class ControllerORM {
             return ResponseEntity.badRequest().body(e.getMessage());
         } try {
             for (Integer i=0; i<exportLista.getTamanho();i++){
-                User u = exportLista.getElemento(i);
+                Cliente u = exportLista.getElemento(i);
                 exit.format("%s;%s",u.getEmail(),u.getSenha());
                 lista += String.format("%s;%s",u.getEmail(),u.getSenha());
             }

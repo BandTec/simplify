@@ -3,30 +3,23 @@ package com.example.sprint2.dominios;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 
-@Entity
+
 public class UsuarioCadastro extends Usuario {
-    @Column(length = 20, nullable = false)
+
     private String nome;
 
-    @Column (length =20,nullable = false)
     private String logradouro;
 
-    @Column (length = 8,nullable = false)
     private String cep;
 
-    @Column(length = 11,nullable = false)
     private String cpf;
 
-    @Column(length = 9, nullable = false)
     private String rg;
 
-    @Column (length = 20, nullable = false)
     private String estado;
 
-    @Column (length = 20, nullable = false)
     private String cidade;
 
-    @Column (length = 20, nullable = false)
     private String nacionalidade;
 
 

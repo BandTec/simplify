@@ -1,6 +1,9 @@
 package com.example.sprint2.entity;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Entity
 public class Endereco {
@@ -9,17 +12,24 @@ public class Endereco {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @NotNull
+    @Length(min =6, max = 15)
     private String cep;
 
+    @NotNull
+    @Length(min =3, max = 40)
     private String cidade;
 
+    @NotNull
+    @Length(min =2, max = 20)
     private String estado;
 
+    @NotNull
+    @Length(min =2, max = 40)
     private String logradouro;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    private Dados dados;
-
+    @ManyToOne
+    private Cliente cliente;
 
     public Integer getId() {
         return id;
@@ -27,14 +37,6 @@ public class Endereco {
 
     public void setId(Integer id) {
         this.id = id;
-    }
-
-    public String getLogradouro() {
-        return logradouro;
-    }
-
-    public void setLogradouro(String logradouro) {
-        this.logradouro = logradouro;
     }
 
     public String getCep() {
@@ -45,14 +47,6 @@ public class Endereco {
         this.cep = cep;
     }
 
-    public String getEstado() {
-        return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
-    }
-
     public String getCidade() {
         return cidade;
     }
@@ -61,15 +55,27 @@ public class Endereco {
         this.cidade = cidade;
     }
 
+    public String getEstado() {
+        return estado;
+    }
 
-    @Override
-    public String toString() {
-        return "Endereço{" +
-                "id=" + id +
-                ", logradouro='" + logradouro + '\'' +
-                ", cep='" + cep + '\'' +
-                ", estado='" + estado + '\'' +
-                ", cidade='" + cidade + '\'' +
-                '}';
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 }
