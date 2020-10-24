@@ -23,7 +23,7 @@ public class Cliente { //Entidade forte
     private String email;
 
     @NotNull
-    @Length(min=2, max = 35)
+    @Length(min=2, max = 15)
     private String telefone;
 
     @NotNull
@@ -31,7 +31,7 @@ public class Cliente { //Entidade forte
     private String senha;
 
     @NotNull
-    @Length(min=10, max = 15)
+    @Length(min=10, max = 11)
     private String cpf;
 
     @NotNull
