@@ -17,11 +17,11 @@ insert into endereco
 (null,'3234854','São Paulo','SP','Av Imperador',6);
 
 insert into solicitacao
-(id, Descricao,Online, Presencial, endereco_id) values
-(null,'Certidão de Nascimento ', 'sim', 'não',1),
-(null,'Certidão de Casamento ', 'sim', 'não',1),
-(null,'Compra de imóveis', 'não' ,'sim',2),
-(null,'Certidão de Nascimento ', 'sim', 'não',3),
-(null,'Certidão de Casamento ', 'sim', 'não',4),
-(null,'Certidão de Nascimento ', 'sim', 'não',5),
-(null,'Compra de imóveis', 'não', 'sim',6);
+(id, Descricao, Presencial, endereco_id) values
+(null,'Certidão de Nascimento ', 'true' ,1),
+(null,'Certidão de Casamento ', 'true',1),
+(null,'Compra de imóveis', 'false',2),
+(null,'Certidão de Nascimento ', 'true',3),
+(null,'Certidão de Casamento ', 'true',4),
+(null,'Certidão de Nascimento ', 'false',5),
+(null,'Compra de imóveis', 'false',6);

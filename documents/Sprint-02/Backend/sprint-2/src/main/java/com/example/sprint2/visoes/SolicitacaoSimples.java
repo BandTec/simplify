@@ -6,14 +6,11 @@ public class SolicitacaoSimples {
 
     private String Descricao;
 
-    private String Online;
+    private boolean Presencial;
 
-    private String Presencial;
-
-    public SolicitacaoSimples(Integer id, String descricao, String online, String presencial) {
+    public SolicitacaoSimples(Integer id, String descricao, boolean presencial) {
         this.id = id;
         Descricao = descricao;
-        Online = online;
         Presencial = presencial;
     }
 
@@ -21,15 +18,23 @@ public class SolicitacaoSimples {
         return id;
     }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public String getDescricao() {
         return Descricao;
     }
 
-    public String getOnline() {
-        return Online;
+    public void setDescricao(String descricao) {
+        Descricao = descricao;
     }
 
-    public String getPresencial() {
+    public boolean isPresencial() {
         return Presencial;
+    }
+
+    public void setPresencial(boolean presencial) {
+        Presencial = presencial;
     }
 }

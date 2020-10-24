@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface SolicitacaoRepository extends CrudRepository<Solicitacao, Integer> {
 
-    @Query("select new com.example.sprint2.visoes.SolicitacaoSimples (s.id,s.Descricao, s.Online, s.Presencial) from Solicitacao s")
+    @Query("select new com.example.sprint2.visoes.SolicitacaoSimples (s.id,s.Descricao, s.Presencial) from Solicitacao s")
     List<SolicitacaoSimples> findAllSimples();
 
 

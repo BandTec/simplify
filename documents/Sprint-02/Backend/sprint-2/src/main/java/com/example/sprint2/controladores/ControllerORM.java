@@ -2,6 +2,7 @@ package com.example.sprint2.controladores;
 
 import com.example.sprint2.dominios.ListaObj;
 import com.example.sprint2.entity.Cliente;
+import com.example.sprint2.entity.Solicitacao;
 import com.example.sprint2.repositorios.EnderecoRepository;
 import com.example.sprint2.repositorios.SolicitacaoRepository;
 import com.example.sprint2.repositorios.UsuarioRepository;
@@ -13,9 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Formatter;
-import java.util.FormatterClosedException;
-import java.util.List;
+import java.util.*;
 
 @RestController
 @RequestMapping("/users")
@@ -102,4 +101,6 @@ public class ControllerORM {
 
         return new ResponseEntity(lista,headers, HttpStatus.OK);
     }
+
+
 }

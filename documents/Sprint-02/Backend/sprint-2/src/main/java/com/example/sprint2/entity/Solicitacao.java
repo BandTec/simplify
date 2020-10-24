@@ -17,12 +17,8 @@ public class Solicitacao {
     private String Descricao;
 
     @NotNull
-    @Length(min=2, max = 3)
-    private String Online;
-
-    @NotNull
-    @Length(min=2, max = 3)
-    private String Presencial;
+    @Length(min=4, max = 6)
+    private boolean Presencial;
 
     @ManyToOne
     private Endereco endereco;
@@ -35,20 +31,16 @@ public class Solicitacao {
         this.id = id;
     }
 
-    public String getOnline() {
-        return Online;
-    }
-
-    public void setOnline(String online) {
-        Online = online;
-    }
-
-    public String getPresencial() {
+    public Boolean isPresencial() {
         return Presencial;
     }
 
-    public void setPresencial(String presencial) {
+    public void setPresencial(boolean presencial) {
         Presencial = presencial;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
 
     public String getDescricao() {
