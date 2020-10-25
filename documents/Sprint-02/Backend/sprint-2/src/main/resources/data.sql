@@ -18,10 +18,25 @@ insert into endereco
 
 insert into solicitacao
 (id, Descricao, Presencial, endereco_id) values
-(null,'Certidão de Nascimento ', 'true' ,1),
-(null,'Certidão de Casamento ', 'true',1),
-(null,'Compra de imóveis', 'false',2),
-(null,'Certidão de Nascimento ', 'true',3),
-(null,'Certidão de Casamento ', 'true',4),
+(null,'Certidão de Nascimento ', 'false' ,1),
+(null,'Compra de imóveis', 'true',2),
+(null,'Certidão de Nascimento ', 'false',3),
+(null,'Certidão de Casamento ', 'false',4),
 (null,'Certidão de Nascimento ', 'false',5),
-(null,'Compra de imóveis', 'false',6);
+(null,'Compra de imóveis', 'true',6),
+(null,'Certidão de Casamento ', 'false',1);
+
+insert into agendamento
+(id,nome, endereco, data, solicitacao_id) values
+(null,'Cartório Vila Matilde ','Waldemar 2020', '2020-10-31' ,2),
+(null,'Cartório do Bem ','Av Paulista 3000', '2020-10-30',6);
+
+insert into pagamento
+(id, Descricao, solicitacao_id) values
+(null,'Boleto ',1),
+(null,'Boleto ',2),
+(null,'Boleto ',3),
+(null,'Boleto ',4),
+(null,'Boleto ',5),
+(null,'Cartão de crédito',6),
+(null,'Cartão de crédito',7);
