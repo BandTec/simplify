@@ -21,7 +21,7 @@ public class Solicitacao {
     private boolean Presencial;
 
     @ManyToOne
-    private Endereco endereco;
+    private Cliente cliente;
 
     public Integer getId() {
         return id;
@@ -39,9 +39,7 @@ public class Solicitacao {
         Presencial = presencial;
     }
 
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
+
 
     public String getDescricao() {
         return Descricao;
@@ -51,7 +49,11 @@ public class Solicitacao {
         Descricao = descricao;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 }
