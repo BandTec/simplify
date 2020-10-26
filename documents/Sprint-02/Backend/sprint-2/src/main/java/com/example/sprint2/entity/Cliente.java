@@ -39,6 +39,7 @@ public class Cliente { //Entidade forte
     private String rg;
 
 
+
     public Integer getId() {
         return id;
     }
@@ -94,4 +95,6 @@ public class Cliente { //Entidade forte
     public void setRg(String rg) {
         this.rg = rg;
     }
+
+
 }

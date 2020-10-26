@@ -3,6 +3,7 @@ package com.example.sprint2.controladores;
 import com.example.sprint2.dominios.ListaObj;
 import com.example.sprint2.entity.Cliente;
 import com.example.sprint2.entity.Solicitacao;
+import com.example.sprint2.repositorios.AgendamentoRepository;
 import com.example.sprint2.repositorios.EnderecoRepository;
 import com.example.sprint2.repositorios.SolicitacaoRepository;
 import com.example.sprint2.repositorios.UsuarioRepository;
@@ -29,6 +30,9 @@ public class ControllerORM {
     @Autowired
     private SolicitacaoRepository solicitacaoRepository;
 
+    @Autowired
+    private AgendamentoRepository agendamentoRepository;
+
     Integer tamanho =10;
     ListaObj<Cliente> postLista = new ListaObj<>(tamanho);
         ListaObj<Cliente> exportLista = new ListaObj<>(tamanho);
@@ -36,7 +40,7 @@ public class ControllerORM {
     @GetMapping
     public ResponseEntity getAll(){
         if (usuarioRepository.count() > 0){
-            return ResponseEntity.ok().body(solicitacaoRepository.findAll());
+            return ResponseEntity.ok().body(agendamentoRepository.findAll());
         }else{
             return ResponseEntity.noContent().build();
         }
