@@ -90,8 +90,10 @@ public class ControllerORM {
         } try {
             for (Integer i=0; i<exportLista.getTamanho();i++){
                 Cliente u = exportLista.getElemento(i);
-                exit.format("%s;%s",u.getEmail(),u.getSenha());
-                lista += String.format("%s;%s",u.getEmail(),u.getSenha());
+                exit.format("%d;%s;%s;%s;%s;%s;%s",u.getId(), u.getNome(),u.getEmail(),u.getTelefone(),u.getSenha(),
+                u.getCpf(), u.getRg());
+                lista += String.format("%d;%s;%s;%s;%s;%s;%s", u.getId(), u.getNome(),u.getEmail(),u.getTelefone(),u.getSenha(),
+                        u.getCpf(), u.getRg());
             }
             exit.close();
         }catch (FormatterClosedException e){
