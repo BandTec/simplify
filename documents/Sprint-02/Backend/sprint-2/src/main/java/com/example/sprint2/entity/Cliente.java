@@ -3,6 +3,7 @@ package com.example.sprint2.entity;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -19,6 +20,7 @@ public class Cliente { //Entidade forte
     private String nome;
 
     @NotNull
+    @Email
     @Length(min=2, max = 35)
     private String email;
 
