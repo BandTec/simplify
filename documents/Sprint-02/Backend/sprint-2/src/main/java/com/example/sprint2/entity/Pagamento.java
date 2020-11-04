@@ -6,22 +6,20 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
-public class Solicitacao {
+public class Pagamento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @NotNull
-    @Length(min=2, max = 30)
+    @Length(min=2, max = 35)
     private String Descricao;
 
-    @NotNull
-    @Length(min=4, max = 6)
-    private boolean Presencial;
-
     @ManyToOne
-    private Cliente cliente;
+    private Solicitacao solicitacao;
+
+
 
     public Integer getId() {
         return id;
@@ -31,16 +29,6 @@ public class Solicitacao {
         this.id = id;
     }
 
-    public Boolean isPresencial() {
-        return Presencial;
-    }
-
-    public void setPresencial(boolean presencial) {
-        Presencial = presencial;
-    }
-
-
-
     public String getDescricao() {
         return Descricao;
     }
@@ -49,11 +37,12 @@ public class Solicitacao {
         Descricao = descricao;
     }
 
-    public Cliente getCliente() {
-        return cliente;
+    public Solicitacao getSolicitacao() {
+        return solicitacao;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    public void setSolicitacao(Solicitacao solicitacao) {
+        this.solicitacao = solicitacao;
     }
+
 }

@@ -25,7 +25,6 @@ public class ControllerSolicitacao {
 
         Integer tamanho = Math.toIntExact(solicitacaoRepository.count());
 
-
         ArrayList<Iterable<Solicitacao>> solicitacaos = new ArrayList<>();
 
         for(Integer i =0 ; i<tamanho;i++){
@@ -45,7 +44,6 @@ public class ControllerSolicitacao {
                     return ResponseEntity.ok().body(it);
                 }
             }
-
         }
         return ResponseEntity.ok().body("foi");
     }

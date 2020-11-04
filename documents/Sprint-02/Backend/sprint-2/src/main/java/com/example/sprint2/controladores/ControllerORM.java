@@ -1,8 +1,11 @@
 package com.example.sprint2.controladores;
 
 import com.example.sprint2.dominios.ListaObj;
+import com.example.sprint2.dominios.Login;
+import com.example.sprint2.dominios.Usuario;
 import com.example.sprint2.entity.Cliente;
 import com.example.sprint2.entity.Solicitacao;
+import com.example.sprint2.repositorios.AgendamentoRepository;
 import com.example.sprint2.repositorios.EnderecoRepository;
 import com.example.sprint2.repositorios.SolicitacaoRepository;
 import com.example.sprint2.repositorios.UsuarioRepository;
@@ -19,6 +22,7 @@ import java.util.*;
 @RestController
 @RequestMapping("/users")
 public class ControllerORM {
+    private boolean estaLogado = false;
 
     @Autowired
     private UsuarioRepository usuarioRepository;
@@ -29,17 +33,49 @@ public class ControllerORM {
     @Autowired
     private SolicitacaoRepository solicitacaoRepository;
 
+    @Autowired
+    private AgendamentoRepository agendamentoRepository;
+
     Integer tamanho =10;
+    List<Cliente> listaCliente = new ArrayList<>();
     ListaObj<Cliente> postLista = new ListaObj<>(tamanho);
-        ListaObj<Cliente> exportLista = new ListaObj<>(tamanho);
+    ListaObj<Cliente> exportLista = new ListaObj<>(tamanho);
 
     @GetMapping
     public ResponseEntity getAll(){
         if (usuarioRepository.count() > 0){
-            return ResponseEntity.ok().body(solicitacaoRepository.findAll());
+            return ResponseEntity.ok().body(agendamentoRepository.findAll());
         }else{
             return ResponseEntity.noContent().build();
         }
+    }
+
+    @PostMapping("/login")
+    public ResponseEntity loginUsuario(@RequestBody Login login) {
+        List<Cliente> user = usuarioRepository.findAll();
+        for (Cliente cliente : user){
+            for (Integer i = 0;i <usuarioRepository.count(); i++){
+            if (cliente.getEmail().equals(login.getEmail()) && cliente.getSenha().equals(login.getSenha())){
+                estaLogado = true;
+                return ResponseEntity.ok().body(cliente);
+            }
+        }
+        }
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+    }
+
+    @PostMapping("/logoff")
+    public ResponseEntity logoffUsuario(@RequestBody Login login) {
+        List<Cliente> user = usuarioRepository.findAll();
+        for (Cliente cliente : user){
+            for (Integer i = 0;i <usuarioRepository.count(); i++){
+                if (cliente.getEmail().equals(login.getEmail()) && cliente.getSenha().equals(login.getSenha())){
+                    estaLogado = false;
+                    return ResponseEntity.ok().body("O usuário foi deslogado!");
+                }
+            }
+        }
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
     }
 
     @GetMapping("/{id}")
@@ -50,6 +86,7 @@ public class ControllerORM {
             return ResponseEntity.noContent().build();
         }
     }
+
 
     @PostMapping
     public ResponseEntity postUser(@RequestBody Cliente u){
@@ -86,8 +123,10 @@ public class ControllerORM {
         } try {
             for (Integer i=0; i<exportLista.getTamanho();i++){
                 Cliente u = exportLista.getElemento(i);
-                exit.format("%s;%s",u.getEmail(),u.getSenha());
-                lista += String.format("%s;%s",u.getEmail(),u.getSenha());
+                exit.format("%d;%s;%s;%s;%s;%s;%s",u.getId(), u.getNome(),u.getEmail(),u.getTelefone(),u.getSenha(),
+                u.getCpf(), u.getRg());
+                lista += String.format("%d;%s;%s;%s;%s;%s;%s", u.getId(), u.getNome(),u.getEmail(),u.getTelefone(),u.getSenha(),
+                        u.getCpf(), u.getRg());
             }
             exit.close();
         }catch (FormatterClosedException e){
