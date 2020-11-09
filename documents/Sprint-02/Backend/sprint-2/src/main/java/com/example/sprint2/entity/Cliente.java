@@ -3,6 +3,7 @@ package com.example.sprint2.entity;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -38,7 +39,21 @@ public class Cliente { //Entidade forte
     @Length(min=7, max = 13)
     private String rg;
 
+    @NotNull
+    @Length(min =6, max = 15)
+    private String cep;
 
+    @NotNull
+    @Length(min =3, max = 40)
+    private String cidade;
+
+    @NotNull
+    @Length(min =2, max = 20)
+    private String estado;
+
+    @NotNull
+    @Length(min =2, max = 40)
+    private String logradouro;
 
     public Integer getId() {
         return id;
@@ -96,5 +111,35 @@ public class Cliente { //Entidade forte
         this.rg = rg;
     }
 
+    public String getCep() {
+        return cep;
+    }
 
+    public void setCep(String cep) {
+        this.cep = cep;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public void setLogradouro(String logradouro) {
+        this.logradouro = logradouro;
+    }
 }
