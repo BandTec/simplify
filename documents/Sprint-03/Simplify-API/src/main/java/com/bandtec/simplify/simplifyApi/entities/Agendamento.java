@@ -1,9 +1,6 @@
 package com.bandtec.simplify.simplifyApi.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Agendamento {
@@ -20,6 +17,8 @@ public class Agendamento {
 
     private String hora;
 
+    @OneToOne
+    private Pagamento pagamento;
 
     public Integer getId_agendamento() {
         return id_agendamento;
@@ -59,5 +58,13 @@ public class Agendamento {
 
     public void setHora(String hora) {
         this.hora = hora;
+    }
+
+    public Pagamento getPagamento() {
+        return pagamento;
+    }
+
+    public void setPagamento(Pagamento pagamento) {
+        this.pagamento = pagamento;
     }
 }

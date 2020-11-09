@@ -1,10 +1,7 @@
 package com.bandtec.simplify.simplifyApi.entities;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Servico {
@@ -16,6 +13,15 @@ public class Servico {
     private Boolean presencial;
 
     private String descricao;
+
+    @ManyToOne
+    private Usuario usuario;
+
+    @OneToOne
+    private Agendamento agendamento;
+
+    @OneToOne
+    private Pagamento pagamento;
 
 
     //Getters and setters
@@ -43,5 +49,29 @@ public class Servico {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
+    public Agendamento getAgendamento() {
+        return agendamento;
+    }
+
+    public void setAgendamento(Agendamento agendamento) {
+        this.agendamento = agendamento;
+    }
+
+    public Pagamento getPagamento() {
+        return pagamento;
+    }
+
+    public void setPagamento(Pagamento pagamento) {
+        this.pagamento = pagamento;
     }
 }
