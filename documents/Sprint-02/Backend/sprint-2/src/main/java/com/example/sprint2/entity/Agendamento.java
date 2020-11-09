@@ -24,8 +24,8 @@ public class Agendamento {
 
     private LocalDate data;
 
-    @ManyToOne
-    private Solicitacao solicitacao;
+    @OneToOne
+    private Pagamento pagamento;
 
     public Integer getId() {
         return id;
@@ -59,11 +59,11 @@ public class Agendamento {
         this.data = data;
     }
 
-    public Solicitacao getSolicitacao() {
-        return solicitacao;
+    public Pagamento getPagamento() {
+        return pagamento;
     }
 
-    public void setSolicitacao(Solicitacao solicitacao) {
-        this.solicitacao = solicitacao;
+    public void setPagamento(Pagamento pagamento) {
+        this.pagamento = pagamento;
     }
 }
