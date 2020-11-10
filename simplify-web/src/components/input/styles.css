@@ -9,6 +9,7 @@
     font-size: 0.5;
     transition: ease-in-out;
     transition: 0.5s;
+    
 }
 .inp:hover{
     border-bottom: 5px solid palevioletred;
@@ -23,10 +24,10 @@
     font-size: 1.2rem;
     margin-bottom: 2px;
 }
-.label-inp-black{
+.label-inp-white{
     display: flex;
     flex-direction: column;
-    color: black;
+    color: white;
     font-size: 1.2rem;
     margin-bottom: 2px;
 }
@@ -35,13 +36,19 @@
     height: 50px;
     border: 0;
     margin-bottom: 5%;
-    border-bottom: 2px solid black;
-    box-shadow: 1px 0px black;
-    border-radius: 7px;
-    color: black;
+    border-bottom: 2px solid #15689B;
+    color:white;
     align-items: center;
     text-align: center;
     font-size: 0.5;
     transition: ease-in-out;
     transition: 0.5s;
+    background-color: #292929;
+}
+.login{
+     
+    margin-right: 50%;
+}
+.login-inp{
+    width: 221px;
 }

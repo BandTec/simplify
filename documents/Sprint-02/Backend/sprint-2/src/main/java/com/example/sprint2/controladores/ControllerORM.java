@@ -57,11 +57,11 @@ public class ControllerORM {
             for (Integer i = 0;i <usuarioRepository.count(); i++){
             if (cliente.getEmail().equals(login.getEmail()) && cliente.getSenha().equals(login.getSenha())){
                 estaLogado = true;
-                return ResponseEntity.ok().body(cliente);
+                return ResponseEntity.ok().body(estaLogado);
             }
         }
         }
-        return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(estaLogado);
     }
 
     @PostMapping("/logoff")
