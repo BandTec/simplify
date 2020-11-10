@@ -1,0 +1,54 @@
+.inp{
+    width: 250px;
+    height: 50px;
+    border-bottom: 1px solid palevioletred;
+    border-radius: 7px;
+    color: #0101;
+    align-items: center;
+    text-align: center;
+    font-size: 0.5;
+    transition: ease-in-out;
+    transition: 0.5s;
+    
+}
+.inp:hover{
+    border-bottom: 5px solid palevioletred;
+    transition: 0.5s;
+}
+
+/*Label*/
+.label-inp{
+    display: flex;
+    flex-direction: column;
+    color: papayawhip;
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+.label-inp-white{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+.inp-form{
+    width: 550px;
+    height: 50px;
+    border: 0;
+    margin-bottom: 5%;
+    border-bottom: 2px solid #15689B;
+    color:white;
+    align-items: center;
+    text-align: center;
+    font-size: 0.5;
+    transition: ease-in-out;
+    transition: 0.5s;
+    background-color: #292929;
+}
+.login{
+     
+    margin-right: 50%;
+}
+.login-inp{
+    width: 221px;
+}

@@ -1,0 +1,55 @@
+.login-conteiner{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    padding-left: 100px; /*Como não é um component precisamos indicar um espaçamento para a nav não sobre por */
+    color: whitesmoke;
+    background: #181818;
+    height: 100vh;
+    align-items: center;
+}
+.title-login{
+    width: 80%;
+    
+    margin: 7% 0 8% 0;
+}
+h1{
+    color: rgba(255, 255, 255, 0.5);  
+    font-size: 1rem;
+}
+h3{
+    font-size: 1.8rem;
+    margin-bottom: 5%;
+}
+.conteiner-img{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    width: 36%;
+    height: 80vh;
+    border-radius: 10px;
+    background-color:black;
+    box-shadow: 1px 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.div-img{
+    background-image: url(../../assets/pessoa-de-negocios.png);
+    background-size: cover;
+   background-repeat: no-repeat;
+    width: 50%;
+    height: 50%;
+}
+a{
+    color:  #15689B;
+    margin-right: 50%;
+}
+
+Button{
+    margin-top: 10%;
+    margin-right: 50% !important;
+    color: white !important;
+}
+
