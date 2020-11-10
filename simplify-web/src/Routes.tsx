@@ -10,7 +10,9 @@ import Generate from './pages/Generate';
 
 // Paginas
 import Home from './pages/home';
-import Servico from './pages/services'
+import Servico from './pages/services';
+import Status404 from './pages/status';
+import Login from './pages/Login';
 
 function Routes() {
     return (
@@ -26,6 +28,10 @@ function Routes() {
                 <Route path="/generate" component={Generate} />
 
                 <Route path="profile" component={Home} />
+        
+                <Route path="/login" component={Login} />
+
+                <Route path="**" component={Status404} />
             </Switch>
         </BrowserRouter>
     )

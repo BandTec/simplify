@@ -7,10 +7,13 @@
     font-size: 1.5rem;
     color: #050505;
     cursor: pointer;
+    background: linear-gradient(90deg, #15689B 0%, #5263FA 100%);
+    
 }
 .btn-1{
     background: transparent;
     border:2px solid white;
     color: whitesmoke;
 }
+
 
