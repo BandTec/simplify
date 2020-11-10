@@ -1,8 +1,11 @@
-package com.example.sprint2.entity;
+package com.bandtec.simplify.simplifyApi.entities;
 
 import org.hibernate.validator.constraints.Length;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -13,7 +16,7 @@ public class Pagamento {
     private Integer id;
 
     @NotNull
-    @Length(min=2, max = 35)
+    @Length(min = 2, max = 35)
     private String Descricao;
 
     public Integer getId() {
@@ -31,5 +34,4 @@ public class Pagamento {
     public void setDescricao(String descricao) {
         Descricao = descricao;
     }
-
 }
