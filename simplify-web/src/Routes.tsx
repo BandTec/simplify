@@ -13,6 +13,8 @@ import Home from './pages/home';
 import Servico from './pages/services';
 import Status404 from './pages/status';
 import Login from './pages/Login';
+import Cadastro from './pages/register';
+import Profile from './pages/profile';
 
 function Routes() {
     return (
@@ -27,11 +29,14 @@ function Routes() {
 
                 <Route path="/generate" component={Generate} />
 
-                <Route path="profile" component={Home} />
+                <Route path="/profile" component={Profile} />
         
                 <Route path="/login" component={Login} />
 
+                <Route path="/cadastro" component={Cadastro} />
+
                 <Route path="**" component={Status404} />
+
             </Switch>
         </BrowserRouter>
     )

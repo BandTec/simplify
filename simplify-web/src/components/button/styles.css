@@ -16,4 +16,13 @@
     color: whitesmoke;
 }
 
-
+.btn-passo{
+    margin-top: 0% !important;
+    margin-left: 25% !important;
+    color: white;
+}
+.btn-recaregar{
+    margin-top: 10%;
+    margin-right: 50% !important;
+    color: white !important;
+}

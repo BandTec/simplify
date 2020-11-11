@@ -52,3 +52,16 @@
 .login-inp{
     width: 221px;
 }
+.nome-cad{
+    height: 20px;
+}
+.cadastro-inp{
+    height: 20px;
+    width: 200px;
+   
+}
+.uf-inp{
+    width: 50px;
+    height: 20px;
+    margin-left: 20%;
+}
