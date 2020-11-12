@@ -18,9 +18,6 @@ function Servicos() {
             </div>
             <div className="card-container">
                 <Card title="Documento" />
-                <Card title="Serviço" />
-                <Card title="Assinatura" />
-                <Card title="Serviço" />
             </div>
         </div>
     )

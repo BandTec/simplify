@@ -1,152 +1,66 @@
 .card{
-    width: 320px;
-    height: 450px;
-    background-color: #030301;
-    border-radius: 15px;
+    background-color: #F8F8FC;
+    border-radius: 0.6rem;
+    margin-top: 3.4rem;
     overflow: hidden;
-    position: relative;
-    margin-top: 5%;
+    height: 70vh;
 }
-.card:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:  #df49a6;
-    
-    clip-path: circle(150px at 80% 20%);
-    transition: 0.5s ease-in-out;
-}
-.card:hover:before{
-    clip-path: circle(300px at 80% -20%);
-}
-.card .imgBox{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 100000;
-    width: 100%;
-    height: 220px;
-    transition: 0.5s;
-}
-.card .imgBox img{
-    position: absolute;
-    top: 50;
-    left: 50%;
-    transform: translate(-50%,-0%) rotate(10deg);
-    width: 270px;
-}
-    .card .contentBox{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    text-align: center;
-    transition: 1s;
-    z-index: 5;
-}
- .card:hover .contentBox{
-    height: 210px;
-}
- .card .contentBox h2{
-     z-index: 2;
-    font-weight: 600;
-    letter-spacing: 2px;
-    color: #fff;
-}
- .card .contentBox .size,
- .card .contentBox .color
-{
-    opacity: 0;
-    visibility: hidden;
+.card header{
+    padding: 3.2rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 20px;
-    transition: 0.5s;
-}
- .card:hover .contentBox .size{
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0.5s;
-}
- .card:hover .contentBox .color{
-    opacity: 1;
-    visibility: visible;
-    transition-delay: 0.5s;
-}
- .card .contentBox .size h3,
- .card .contentBox .color h3
-{
-    color: #fff;
-    font-weight: 300;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-right: 10px;
-}
- .card .contentBox .color span{
-    width: 26px;
-    height: 26px;
-    text-align: center;
-    padding: 2px;
-    padding-top: 10px;
-    font-weight: 500;
-    line-height: 14px;
-    display: inline-block;
-    color: #111;
-    background: #fff;
-    margin: 0 5px;
-    transition: 0.5s;
-    border-radius: 5px;
-    cursor: pointer;
-}
- .card .contentBox .size span:hover{
-    background: #6649b8;
-}
- .card .contentBox .color span{
-    width: 55px;
-    height: 40px;
-    padding-top: 10px;
-    background: whitesmoke;
-    font-size: 1.2rem;
-    text-align: center;
-    padding: 0 auto;
-    margin: 0 5px;
-    cursor: pointer;
-}
-.card .contentBox .btn-card-container{
-    display: flex;
-    width: 100%;
-    padding: 10%;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
 }
- .card .contentBox .btn-card-container .btn{
+.card header img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}
+.card header div{
+    margin-left: 2.4rem;
+}
+.card header div strong{
+    font: 700 2.4rem "Roboto";
+    display: block;
+    color: #000333;
+}
+.card header span {
+    font-size: 1.6rem;
+    display: block;
+    margin-top: 0.4rem;
+}
+.card > p {
+    padding: 0 2rem;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+}
+.card footer{
+    padding: 3.2rem 2rem;
+    background: #f5f5f5;
+    border-top: 1px solid #fff;
+    margin-top: 1.2rem;
     display: flex;
-    justify-content: center;
-    padding:10px 20px;
-    background: #6649b8;
-    border-radius: 4px;
-    text-align: center;
-    font-weight: 600;
+    align-items: center;
+    justify-content: space-between;
+}
+.card footer p strong{
+    color: #000333;
+    font-size: 1.6rem;
+    display: block;
+}
+.card footer a{
+    width: 20rem;
+    height: 5.5rem;
+    background: #345a12;
     color: #fff;
-    opacity: 0;
-    transform: translateY(50px); 
-    transition: 0.5s;
+    border: 0;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font:700 1.4rem "Roboto";
+    display: flex ;
+    align-items: center;
+    justify-content: space-evenly;
+    transform: 0.2s;
 }
- .card:hover .contentBox .btn{
-    opacity: 1;
-    transform: translateY(0px);
-    transition-delay: 0.75 ;
-}
-
-.contentBox .true{
-    width: 10px;
-    height: 10px;
-    border-radius :10px;
-    background-color: lime;
+.card footer a:hover{
+    background: #000333;
 }

@@ -3,34 +3,53 @@ import { Link } from 'react-router-dom';
 
 import './styles.css'
 
+export interface User {
+    nome: string;
+    sobrenome: string;
+    dataNascimento: string;
+    email: string;
+    telefone: string;
+    senha: string;
+    rg: string;
+    cep: string;
+    cidade: string;
+    estado: string;
+    logradouro: string;
+}
+
+export interface service {
+    nome: string;
+    descricao: string;
+    endereco: string;
+    presencial: boolean;
+}
+
 export interface cardProps {
     title: string
 }
 
 const Card: React.FC<cardProps> = (props) => {
     return (
-        <div className="card">
-            <div className="imgBox">
-
-            </div>
-            <div className="contentBox">
-                <h2>{props.title}</h2>
-                <div className="size">
-                    <h3>Precisa agendamento :</h3>
-                    <div className="true"></div>
+        <article className="card">
+            <header>
+                <img src="" alt="" />
+                <div>
+                    <strong>Titulo</strong>
+                    <span>Tipo documento</span>
                 </div>
-                <div className="color">
-                    <h3>Docs nescessarios :</h3>
-                    <span>RG</span>
-                    <span>CPF</span>
-                </div>
-                <div className="btn-card-container">
-                    <Link to="services">
-                        <div className="btn">Saber mais</div>
-                    </Link>
-                </div>
-            </div>
-        </div>
+            </header>
+            <p>
+                Descrição
+            </p>
+            <footer>
+                <p>
+                    Horarios disponiveis <strong>10:00 - 22:00</strong>
+                </p>
+                <a target="blank">
+                    Fazer agendamento
+                </a>
+            </footer>
+        </article>
     )
 }
 
