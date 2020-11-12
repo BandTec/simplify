@@ -1,0 +1,21 @@
+.cadastro-conteiner{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    padding-left: 100px; /*Como não é um component precisamos indicar um espaçamento para a nav não sobre por */
+    color: whitesmoke;
+    background: #181818;
+    height: 100vh;
+    align-items: center;
+}
+.cadastro-con{
+  margin-left: 12% !important;
+}
+.cadastro-form{
+    margin-left: 0% !important;
+}
+.input-rg{
+display: flex;
+flex-direction: row;
+}

@@ -1,0 +1,47 @@
+.perfil-conteiner{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    padding-left: 100px; /*Como não é um component precisamos indicar um espaçamento para a nav não sobre por */
+    color: whitesmoke;
+    background: #181818;
+    height: 100vh;
+    align-items: center;
+
+}
+.perfil-form{
+    align-items: flex-start;
+}
+.dados-tela{
+    margin-left: 10%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+}
+.title-perfil{
+    width: 400px;
+    height: 40px;
+    color: rgba(255, 255, 255, 0.5);;  
+    border: 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 8%;
+}
+.title-perfil h3{
+    font-weight: 500px;
+    font-size: 25px;
+    line-height: 33px;
+}
+.avatar{
+    background-image: url(../../assets/Rectangle\ 82.jpg);
+    background-size: cover;
+   background-repeat: no-repeat;
+   width: 131px;
+   height: 156px;
+    margin-bottom: 8%;
+}
+.dados-tela strong{
+    margin-top: 2%;
+    font-size: 24px;
+    line-height: 35px;
+}
