@@ -2,9 +2,7 @@ package com.example.sprint2.controladores;
 
 import com.example.sprint2.dominios.ListaObj;
 import com.example.sprint2.dominios.Login;
-import com.example.sprint2.dominios.Usuario;
 import com.example.sprint2.entity.Cliente;
-import com.example.sprint2.entity.Solicitacao;
 import com.example.sprint2.repositorios.AgendamentoRepository;
 import com.example.sprint2.repositorios.EnderecoRepository;
 import com.example.sprint2.repositorios.SolicitacaoRepository;
