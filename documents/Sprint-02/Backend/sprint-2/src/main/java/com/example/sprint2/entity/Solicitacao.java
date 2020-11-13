@@ -23,12 +23,6 @@ public class Solicitacao {
     @ManyToOne
     private Cliente cliente;
 
-    @OneToOne
-    private Agendamento agendamento;
-
-    @OneToOne
-    private Pagamento pagamento;
-
     public Integer getId() {
         return id;
     }
@@ -45,6 +39,8 @@ public class Solicitacao {
         Presencial = presencial;
     }
 
+
+
     public String getDescricao() {
         return Descricao;
     }
@@ -59,21 +55,5 @@ public class Solicitacao {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
-    }
-
-    public Agendamento getAgendamento() {
-        return agendamento;
-    }
-
-    public void setAgendamento(Agendamento agendamento) {
-        this.agendamento = agendamento;
-    }
-
-    public Pagamento getPagamento() {
-        return pagamento;
-    }
-
-    public void setPagamento(Pagamento pagamento) {
-        this.pagamento = pagamento;
     }
 }
