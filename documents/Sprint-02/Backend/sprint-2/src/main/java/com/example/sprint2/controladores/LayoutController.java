@@ -31,7 +31,6 @@ public class LayoutController {
     Date dataDeHoje = new Date();
     SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
 
-
     @GetMapping(value = "download", produces = {"app/txt"})
     public ResponseEntity download(){
         FileWriter arquivo;
@@ -93,7 +92,5 @@ public class LayoutController {
                 "attachment; filename= cliente.txt "
         );
         return new ResponseEntity(clientezinho ,headers, HttpStatus.OK);
-
-
 
 }}

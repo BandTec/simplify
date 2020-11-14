@@ -4,6 +4,7 @@ import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Entity
 public class Solicitacao {
@@ -23,6 +24,9 @@ public class Solicitacao {
     @ManyToOne
     private Cliente cliente;
 
+    @OneToMany
+    private List<Documentos> documentos;
+
     public Integer getId() {
         return id;
     }
@@ -39,8 +43,6 @@ public class Solicitacao {
         Presencial = presencial;
     }
 
-
-
     public String getDescricao() {
         return Descricao;
     }
@@ -55,5 +57,13 @@ public class Solicitacao {
 
     public void setCliente(Cliente cliente) {
         this.cliente = cliente;
+    }
+
+    public List<Documentos> getDocumentos() {
+        return documentos;
+    }
+
+    public void setDocumentos(List<Documentos> documentos) {
+        this.documentos = documentos;
     }
 }
