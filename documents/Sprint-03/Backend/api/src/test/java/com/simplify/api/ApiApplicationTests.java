@@ -1,10 +1,10 @@
-package com.bandtec.simplify.simplifyApi;
+package com.simplify.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SimplifyApiApplicationTests {
+class ApiApplicationTests {
 
 	@Test
 	void contextLoads() {
