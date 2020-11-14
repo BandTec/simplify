@@ -13,19 +13,21 @@ function cadastro() {
             </div>
 
             <div className="form-container cadastro-form">
-                <div className="title-login">
+                <div className="title-cad">
                     <h3> Estamos felizes em ter você <br /> como usuario </h3>
                     <h1>O primeiro passo é preencher este formulario</h1>
                 </div>
                 <div>
-                    <Input labelStyle="label-inp-white" classe="inp-form nome-cad" name="nome" label="Nome" placehold=""></Input>
-                    <Input labelStyle="label-inp-white" classe="inp-form cadastro-inp" name="CPF" label="CPF" placehold="000.000.000-00"></Input>
+                    <Input labelStyle="label-inp-white cad" classe="inp-form nome-cad" name="nome" label="Nome" placehold=""></Input>
+                    <Input labelStyle="label-inp-white cad" classe="inp-form cadastro-inp" name="CPF" label="CPF" placehold="000.000.000-00"></Input>
                     <div className="input-rg">
-                        <Input labelStyle="label-inp-white" classe="inp-form cadastro-inp" name="RG" label="RG" placehold="00-000-000-0"></Input>
-                        <Input labelStyle="label-inp-white" classe="inp-form uf-inp" name="Uf" label="UF" placehold="SP"></Input>
+                        <Input labelStyle="label-inp-white cad" classe="inp-form cadastro-inp" name="RG" label="RG" placehold="00-000-000-0"></Input>
+                        <Input labelStyle="label-inp-white cad" classe="inp-form uf-inp" name="Uf" label="UF" placehold="SP"></Input>
                     </div>
 
-                    <Input labelStyle="label-inp-white" classe="inp-form cadastro-inp" name="dataNas" label="Data De Nascimento" placehold="--/--/----"></Input>
+                    <Input labelStyle="label-inp-white cad" classe="inp-form cadastro-inp" name="dataNas" label="Data De Nascimento" placehold="--/--/----"></Input>
+                    <Input labelStyle="label-inp-white cad" classe="inp-form cadastro-inp" name="Senha" label="Senha" placehold="Digite uma senha"></Input>
+                    <Input labelStyle="label-inp-white cad" classe="inp-form cadastro-inp" name="ConfirmaSenha" label="Confirmar Senha" placehold="Digite sua senha novamente"></Input>
                     <Button title="Proximo passo" classe=" btn btn-passo" />
                    
                    
