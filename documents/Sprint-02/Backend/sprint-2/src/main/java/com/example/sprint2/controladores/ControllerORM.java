@@ -2,9 +2,7 @@ package com.example.sprint2.controladores;
 
 import com.example.sprint2.dominios.ListaObj;
 import com.example.sprint2.dominios.Login;
-import com.example.sprint2.dominios.Usuario;
 import com.example.sprint2.entity.Cliente;
-import com.example.sprint2.entity.Solicitacao;
 import com.example.sprint2.repositorios.AgendamentoRepository;
 import com.example.sprint2.repositorios.EnderecoRepository;
 import com.example.sprint2.repositorios.SolicitacaoRepository;
@@ -57,11 +55,11 @@ public class ControllerORM {
             for (Integer i = 0;i <usuarioRepository.count(); i++){
             if (cliente.getEmail().equals(login.getEmail()) && cliente.getSenha().equals(login.getSenha())){
                 estaLogado = true;
-                return ResponseEntity.ok().body(estaLogado);
+                return ResponseEntity.ok().body(cliente);
             }
         }
         }
-        return ResponseEntity.status(HttpStatus.FORBIDDEN).body(estaLogado);
+        return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
     }
 
     @PostMapping("/logoff")

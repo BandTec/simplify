@@ -19,3 +19,11 @@
 display: flex;
 flex-direction: row;
 }
+.title-cad{
+  width: 80%;
+  
+  margin: 2% 0 2% 0;
+}
+.cad{
+  margin-bottom: 0% !important;
+}

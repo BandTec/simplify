@@ -21,6 +21,14 @@ public class Cliente { //Entidade forte
 
     @NotNull
     @Length(min=2, max = 35)
+    private String sobrenome;
+
+    @NotNull
+    @Length(min=2, max = 35)
+    private String dataNascimento;
+
+    @NotNull
+    @Length(min=2, max = 35)
     private String email;
 
     @NotNull
@@ -55,6 +63,10 @@ public class Cliente { //Entidade forte
     @Length(min =2, max = 40)
     private String logradouro;
 
+    @NotNull
+    @Length(min =1, max = 6)
+    private String numero;
+
     public Integer getId() {
         return id;
     }
@@ -69,6 +81,22 @@ public class Cliente { //Entidade forte
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+
+    public String getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 
     public String getEmail() {
@@ -141,5 +169,13 @@ public class Cliente { //Entidade forte
 
     public void setLogradouro(String logradouro) {
         this.logradouro = logradouro;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
 }

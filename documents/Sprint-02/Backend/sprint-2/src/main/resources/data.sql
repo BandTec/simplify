@@ -1,11 +1,11 @@
 insert into cliente
-(id,nome,email,telefone,cpf,rg,senha,cep,cidade,estado,logradouro) values
-(null,'Matheus','matheus@simplify.com','11963758133','76438728734','998777662','senhaForte','1000000','São Paulo','SP','Av Paulista'),
-(null,'Jairo','jairo@simplify.com','11962258109','78338721093','945547452','senha','2093894','São Paulo','SP','Av São Miguel'),
-(null,'Pedro Henrique','p.henrique@simplify.com','11987638100','83438720083','998828600','piada','3902093','São Paulo','SP','Radial Leste'),
-(null,'Leonardo','leonardo@simplify.com','11987987635','76983727438','998023875','packer','0949304','São Paulo','SP','Av Europa'),
-(null,'Carina','carina@simplify.com','11999736273','76438728734','998930123','safra','8498539','São Paulo','SP','Av Brasil'),
-(null,'Eduarda','eduarda@simplify.com','11983923489','76438098345','909235847','parmera','3234854','São Paulo','SP','Av Imperador');
+(id,nome,sobrenome,data_nascimento,email,telefone,cpf,rg,senha,cep,cidade,estado,logradouro,numero) values
+(null,'Matheus','Candido','09/08/2009','matheus@simplify.com','11963758133','76438728734','998777662','senhaForte','1000000','São Paulo','SP','Av Paulista','11'),
+(null,'Jairo','Quintino','01/05/1990','jairo@simplify.com','11962258109','78338721093','945547452','senha','2093894','São Paulo','SP','Av São Miguel','50'),
+(null,'Pedro Henrique','Pinheiro','29/04/2001','p.henrique@simplify.com','11987638100','83438720083','998828600','piada','3902093','São Paulo','SP','Radial Leste','90'),
+(null,'Leonardo','Packer','22/01/1999','leonardo@simplify.com','11987987635','76983727438','998023875','packer','0949304','São Paulo','SP','Av Europa','11'),
+(null,'Carina','Di Domenico','07/05/1998','carina@simplify.com','11999736273','76438728734','998930123','safra','8498539','São Paulo','SP','Av Brasil','1'),
+(null,'Eduarda','Alves','17/02/2001','eduarda@simplify.com','11983923489','76438098345','909235847','parmera','3234854','São Paulo','SP','Av Imperador','109');
 
 insert into solicitacao
 (id, Descricao, Presencial, cliente_id) values

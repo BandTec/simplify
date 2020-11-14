@@ -16,6 +16,11 @@ public class Pagamento {
     @Length(min=2, max = 35)
     private String Descricao;
 
+    @ManyToOne
+    private Solicitacao solicitacao;
+
+
+
     public Integer getId() {
         return id;
     }
@@ -30,6 +35,14 @@ public class Pagamento {
 
     public void setDescricao(String descricao) {
         Descricao = descricao;
+    }
+
+    public Solicitacao getSolicitacao() {
+        return solicitacao;
+    }
+
+    public void setSolicitacao(Solicitacao solicitacao) {
+        this.solicitacao = solicitacao;
     }
 
 }
