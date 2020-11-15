@@ -18,7 +18,7 @@ insert into solicitacao
 (null,'Certidão de Casamento ', 'false',1);
 
 insert into agendamento
-(id,nome, endereco, data, solicitacao_id) values
+(id,nome, endereco, data, solicitaca    o_id) values
 (null,'Cartório Vila Matilde ','Waldemar 2020', '2020-10-31' ,2),
 (null,'Cartório do Bem ','Av Paulista 3000', '2020-10-30',6);
 
