@@ -11,6 +11,9 @@ import javax.persistence.Id;
 public class Documents {
 
 
+        //Essa classe ela é uma fk do usuario para referenciar seus documentos
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
