@@ -1,66 +1,95 @@
 .card{
+    width: 25vw;
     background-color: #F8F8FC;
     border-radius: 0.6rem;
-    margin-top: 3.4rem;
+    margin-top: 2rem;
     overflow: hidden;
-    height: 70vh;
+    padding: 1rem;
 }
+
 .card header{
-    padding: 3.2rem;
     display: flex;
     align-items: center;
 }
+
 .card header img{
     width: 8rem;
     height: 8rem;
     border-radius: 50%;
 }
-.card header div{
-    margin-left: 2.4rem;
-}
+
 .card header div strong{
-    font: 700 2.4rem "Roboto";
+    font: 700 25px "Roboto";
     display: block;
     color: #000333;
 }
-.card header span {
-    font-size: 1.6rem;
+
+.card header span{
+    font-size: 16px;
     display: block;
-    margin-top: 0.4rem;
+    margin-top: 1rem;
 }
-.card > p {
-    padding: 0 2rem;
-    font-size: 1.6rem;
-    line-height: 2.8rem;
+
+.card > p{
+    font-size: 14px;
+    line-height: 1.5rem;
+    line-break: auto;
 }
+
 .card footer{
-    padding: 3.2rem 2rem;
     background: #f5f5f5;
     border-top: 1px solid #fff;
     margin-top: 1.2rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
+
 .card footer p strong{
     color: #000333;
-    font-size: 1.6rem;
+    font-size: 18px;
     display: block;
 }
+
 .card footer a{
-    width: 20rem;
-    height: 5.5rem;
+    width: 9.5rem;
+    height: 3rem;
     background: #345a12;
     color: #fff;
     border: 0;
     border-radius: 0.5rem;
     cursor: pointer;
-    font:700 1.4rem "Roboto";
-    display: flex ;
+    font: 700 15px "Roboto";
+    display: flex;
     align-items: center;
     justify-content: space-evenly;
     transform: 0.2s;
+    margin: 0;
 }
+
 .card footer a:hover{
     background: #000333;
+}
+
+.card hr{
+    padding: 1px 0;
+    margin: 1rem auto;
+    border: none;
+    background-color: #000333;
+}
+
+@media only screen and (max-width:670px) {
+    .card {
+        width: 70vw;
+    }
+
+    .card footer {
+        justify-content: center;
+    }
+
+    .card footer a {
+        margin-top: 1rem;
+        text-align: center;
+    }
 }

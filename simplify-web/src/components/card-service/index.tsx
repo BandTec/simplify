@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { servicesVersion } from 'typescript';
 
 import './styles.css'
 
@@ -25,26 +26,33 @@ export interface service {
 }
 
 export interface cardProps {
-    title: string
+    title: string;
+    descricao: string;
+    documento: string;
+    isPresencial: boolean;
 }
 
 const Card: React.FC<cardProps> = (props) => {
     return (
-        <article className="card">
+        <article className="card">  
             <header>
-                <img src="" alt="" />
+                {/* <img src="" alt="" /> */}
                 <div>
-                    <strong>Titulo</strong>
-                    <span>Tipo documento</span>
+                    <strong className="card-title">{props.title}</strong>
+                    <span>Documentos necessários: {props.documento}</span>
+                    <span>{props.isPresencial == true ? "Presencial": "Online"}</span>
                 </div>
             </header>
-            <p>
-                Descrição
-            </p>
+            <hr/>
+            <p>Descrição: </p>
+            <p>{props.descricao}</p>
+            <hr/>
             <footer>
-                <p>
-                    Horarios disponiveis <strong>10:00 - 22:00</strong>
-                </p>
+                <div>                    
+                    <p>
+                        Horarios disponiveis <strong>10:00 - 22:00</strong>
+                    </p>
+                </div>
                 <a target="blank">
                     Fazer agendamento
                 </a>
