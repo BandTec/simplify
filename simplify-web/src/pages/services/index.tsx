@@ -3,6 +3,7 @@ import Button from '../../components/button';
 import Card from '../../components/card-service';
 import Input from '../../components/input';
 import servicos from '../../mocks/services/mock-service';
+import Modal from '../../components/modal'
 
 import './styles.css'
 
@@ -10,6 +11,11 @@ function Servicos() {
     return (
         <div className="container-service">
             <div className="container-content">
+                {/* Componente do modal aplicado */}
+                <Modal
+                    titulo="Modal teste"
+                    conteudo="Conteudo teste"
+                />
                 <h1>Serviços</h1>
                 <div className="card-container">
                 {servicos.map( (item: { title: string; descricao: string; documentos: string; isPresencial: boolean; }) => {
