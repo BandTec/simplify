@@ -1,8 +1,8 @@
 package com.simplify.api.controllers;
 
 import com.google.cloud.storage.*;
-import com.simplify.api.entities.ImportDocumentos;
-import com.simplify.api.repositories.DocumentosImportRepository;
+import com.simplify.api.entities.ImgsDocs;
+import com.simplify.api.repositories.ImgsDocsRepository;
 import com.simplify.api.repositories.SolicitacaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -13,10 +13,10 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 
-public class ImportDocumentoController {
+public class ImgsDocsController {
 
     @Autowired
-    private DocumentosImportRepository documentosRepository;
+    private ImgsDocsRepository documentosRepository;
 
     @Autowired
     private SolicitacaoRepository solicitacaoRepository;
@@ -34,7 +34,7 @@ public class ImportDocumentoController {
         //Nome do arquivo;
         String blobId = uploadFile.getBlobId().getName();
         System.out.println("BlobID: " + blobId);
-        ImportDocumentos novoDoc = new ImportDocumentos();
+        ImgsDocs novoDoc = new ImgsDocs();
         novoDoc.setTipoDocumento(tipoDoc);
         novoDoc.setSolicitacao(null);
         novoDoc.setUrlUpload(uploadFile.getMediaLink());

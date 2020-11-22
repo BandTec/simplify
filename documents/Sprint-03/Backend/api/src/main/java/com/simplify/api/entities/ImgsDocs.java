@@ -3,7 +3,7 @@ package com.simplify.api.entities;
 import javax.persistence.*;
 
 @Entity
-public class ImportDocumentos {
+public class ImgsDocs {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idDocumento;
@@ -47,3 +47,4 @@ public class ImportDocumentos {
         this.solicitacao = solicitacao;
     }
 }
+
