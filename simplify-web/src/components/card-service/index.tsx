@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { servicesVersion } from 'typescript';
+import Button from '../button';
 
 import './styles.css'
 
@@ -34,28 +35,26 @@ export interface cardProps {
 
 const Card: React.FC<cardProps> = (props) => {
     return (
-        <article className="card">  
+        <article className="card">
             <header>
                 {/* <img src="" alt="" /> */}
                 <div>
                     <strong className="card-title">{props.title}</strong>
                     <span>Documentos necessários: {props.documento}</span>
-                    <span>{props.isPresencial == true ? "Presencial": "Online"}</span>
+                    <span>{props.isPresencial == true ? "Presencial" : "Online"}</span>
                 </div>
             </header>
-            <hr/>
+            <hr />
             <p>Descrição: </p>
             <p>{props.descricao}</p>
-            <hr/>
+            <hr />
             <footer>
-                <div>                    
+                <div>
                     <p>
                         Horarios disponiveis <strong>10:00 - 22:00</strong>
                     </p>
                 </div>
-                <a target="blank">
-                    Fazer agendamento
-                </a>
+                <Button title="agendar" classe="btn-1" />
             </footer>
         </article>
     )

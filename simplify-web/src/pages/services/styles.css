@@ -11,7 +11,7 @@
 .container-service{
     display: flex;
     flex-direction: column;
-    background: #6649b8;
+    background: #181818;
     min-height: 100vh;
 }
 

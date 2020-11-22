@@ -52,10 +52,10 @@
     display: block;
 }
 
-.card footer a{
+.card footer button{
     width: 9.5rem;
     height: 3rem;
-    background: #345a12;
+    background: linear-gradient(90deg, #15689B 0%, #5263FA 100%);
     color: #fff;
     border: 0;
     border-radius: 0.5rem;

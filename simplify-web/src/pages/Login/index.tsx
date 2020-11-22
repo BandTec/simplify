@@ -20,9 +20,11 @@ function Login() {
         api.post("endereço", {
             CPF,
             Senha
-        }).then(() => {
-            alert(`Login Efetuado seja bem vindo(a)`)
-            history.push('/services')
+        }).then(res => {
+            if (res) {
+                alert(`Login Efetuado seja bem vindo(a)`)
+                history.push('/services')
+            }
         }).catch(() => {
             alert("CPF ou senha invalidos")
         })

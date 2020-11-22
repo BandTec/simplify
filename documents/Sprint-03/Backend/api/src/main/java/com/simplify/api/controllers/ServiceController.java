@@ -1,7 +1,7 @@
 package com.simplify.api.controllers;
 
 
-import com.google.cloud.storage.*;
+//import com.google.cloud.storage.*;
 import com.simplify.api.entities.Documents;
 import com.simplify.api.entities.Service;
 import com.simplify.api.entities.Usuario;

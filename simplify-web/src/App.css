@@ -21,8 +21,9 @@
     margin: 0;
     padding: 0;
     padding-left: 100px; /*Como não é um component precisamos indicar um espaçamento para a nav não sobre por */
-    background: #6649b8;
-    height: 100vh;
+    background: #181818;
+    height: 100%;
+    width: 100%;
 }
 body::-webkit-scrollbar{
     width: 0.5rem;
