@@ -3,12 +3,13 @@ import './styles.css'
 
 export interface btnProps {
     title: string;
-    classe?: string
+    classe?: string;
+    type?: any;
 }
 
 const Button: React.FC<btnProps> = (props) => {
     return (
-        <button className={props.classe}>
+        <button type={props.type} className={props.classe}>
             {props.title}
             {/* Atenção PROPS nescessario */}
         </button>

@@ -1,20 +1,20 @@
 package com.example.sprint2.dominios;
 
 public class Login {
-    private String email;
+    private String CPF;
     private String senha;
 
-    public Login(String email, String senha) {
-        this.email = email;
+    public Login(String CPF, String senha) {
+        this.CPF = CPF;
         this.senha = senha;
     }
 
-    public String getEmail() {
-        return email;
+    public String getCPF() {
+        return CPF;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setCPF(String CPF) {
+        this.CPF = CPF;
     }
 
     public String getSenha() {

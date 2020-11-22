@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { InputHTMLAttributes } from 'react';
 
 import './styles.css'
 
-export interface InpPros {
+interface InpPros extends InputHTMLAttributes<HTMLInputElement> {
     name: string
     placehold: string
     label: string
@@ -10,12 +10,11 @@ export interface InpPros {
     labelStyle?: string
 }
 
-const Input: React.FC<InpPros> = (props) => {
+const Input: React.FC<InpPros> = ({ placehold, classe, label, labelStyle, ...rest }) => {
     return (
-        <div className={props.labelStyle}>
-            <label htmlFor={props.label}>{props.label}:</label>
-
-            <input className={props.classe} type="text" id={props.label} name={props.name} placeholder={props.placehold} />
+        <div className={labelStyle}>
+            <label htmlFor={label}>{label}:</label>
+            <input className={classe} placeholder={placehold} {...rest} />
         </div>
     )
 }

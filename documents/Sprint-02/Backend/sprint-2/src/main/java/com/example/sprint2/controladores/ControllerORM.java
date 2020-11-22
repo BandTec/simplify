@@ -53,7 +53,8 @@ public class ControllerORM {
         List<Cliente> user = usuarioRepository.findAll();
         for (Cliente cliente : user){
             for (Integer i = 0;i <usuarioRepository.count(); i++){
-            if (cliente.getEmail().equals(login.getEmail()) && cliente.getSenha().equals(login.getSenha())){
+            if (cliente.getEmail().equals(login.getCPF()
+            ) && cliente.getCpf().equals(login.getCPF())){
                 estaLogado = true;
                 return ResponseEntity.ok().body(cliente);
             }
@@ -67,7 +68,7 @@ public class ControllerORM {
         List<Cliente> user = usuarioRepository.findAll();
         for (Cliente cliente : user){
             for (Integer i = 0;i <usuarioRepository.count(); i++){
-                if (cliente.getEmail().equals(login.getEmail()) && cliente.getSenha().equals(login.getSenha())){
+                if (cliente.getEmail().equals(login.getCPF()) && cliente.getSenha().equals(login.getSenha())){
                     estaLogado = false;
                     return ResponseEntity.ok().body("O usuário foi deslogado!");
                 }
