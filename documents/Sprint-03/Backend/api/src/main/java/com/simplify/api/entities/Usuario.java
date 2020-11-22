@@ -14,6 +14,8 @@ public class Usuario {
 
     private String email;
 
+    private Integer senha;
+
     @Column(name = "nascimento")
     private String dataNascimento;
 
@@ -70,5 +72,13 @@ public class Usuario {
 
     public void setUrlImg(String urlImg) {
         this.urlImg = urlImg;
+    }
+
+    public Integer getSenha() {
+        return senha;
+    }
+
+    public void setSenha(Integer senha) {
+        this.senha = senha;
     }
 }

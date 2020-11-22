@@ -1,6 +1,7 @@
 package com.simplify.api.entities;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity(name = "solicita")
 public class Solicitacao {
@@ -12,6 +13,8 @@ public class Solicitacao {
     @Column(name = "agendamento")
     private String dataAgendamento;
 
+    @OneToMany
+    private List<ImportDocumentos> documentos;
 
     public Integer getId() {
         return id;

@@ -1,6 +1,5 @@
 package com.simplify.api.entities.documents;
 
-import javax.annotation.processing.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

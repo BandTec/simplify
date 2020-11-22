@@ -19,8 +19,14 @@ public class Documents {
     private Integer id;
 
     private CPF cpf;
+
     private RG rg;
+
     private Comprovante comprovante;
+
+    private String tipoDocumento;
+
+    private String urlUpload;
 
 
     public Integer getId() {
@@ -53,5 +59,21 @@ public class Documents {
 
     public void setComprovante(Comprovante comprovante) {
         this.comprovante = comprovante;
+    }
+
+    public String getTipoDocumento() {
+        return tipoDocumento;
+    }
+
+    public void setTipoDocumento(String tipoDocumento) {
+        this.tipoDocumento = tipoDocumento;
+    }
+
+    public String getUrlUpload() {
+        return urlUpload;
+    }
+
+    public void setUrlUpload(String urlUpload) {
+        this.urlUpload = urlUpload;
     }
 }
