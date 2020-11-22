@@ -1,9 +1,9 @@
 package com.simplify.api.entities.documents;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.simplify.api.entities.Documento;
+
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
 public class Comprovante {
@@ -13,9 +13,23 @@ public class Comprovante {
     private Integer id;
 
     private String nome;
+
     private String endereco;
+
     private String numero;
+
     private String complemento;
+
+    @OneToMany
+    private List<Documento> documentos;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getNome() {
         return nome;

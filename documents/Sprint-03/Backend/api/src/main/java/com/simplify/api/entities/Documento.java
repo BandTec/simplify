@@ -4,30 +4,23 @@ import com.simplify.api.entities.documents.CPF;
 import com.simplify.api.entities.documents.Comprovante;
 import com.simplify.api.entities.documents.RG;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-public class Documents {
-
-
-        //Essa classe ela é uma fk do usuario para referenciar seus documentos
-
+@Entity
+public class Documento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @ManyToOne
     private CPF cpf;
 
+    @ManyToOne
     private RG rg;
 
+    @ManyToOne
     private Comprovante comprovante;
-
-    private String tipoDocumento;
-
-    private String urlUpload;
-
 
     public Integer getId() {
         return id;
@@ -59,21 +52,5 @@ public class Documents {
 
     public void setComprovante(Comprovante comprovante) {
         this.comprovante = comprovante;
-    }
-
-    public String getTipoDocumento() {
-        return tipoDocumento;
-    }
-
-    public void setTipoDocumento(String tipoDocumento) {
-        this.tipoDocumento = tipoDocumento;
-    }
-
-    public String getUrlUpload() {
-        return urlUpload;
-    }
-
-    public void setUrlUpload(String urlUpload) {
-        this.urlUpload = urlUpload;
     }
 }

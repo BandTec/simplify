@@ -14,7 +14,7 @@ public class Solicitacao {
     private String dataAgendamento;
 
     @OneToMany
-    private List<ImportDocumentos> documentos;
+    private List<ImgsDocs> documentos;
 
     public Integer getId() {
         return id;

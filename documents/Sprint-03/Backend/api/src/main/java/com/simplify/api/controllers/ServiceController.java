@@ -1,18 +1,16 @@
 package com.simplify.api.controllers;
 
 
+<<<<<<< HEAD
 //import com.google.cloud.storage.*;
 import com.simplify.api.entities.Documents;
+=======
+>>>>>>> c1cc29dff68304b25ade6b48e4ec159176d81e0e
 import com.simplify.api.entities.Service;
-import com.simplify.api.entities.Usuario;
 import com.simplify.api.repositories.ServiceRepository;
-import com.simplify.api.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-
-import java.io.IOException;
 
 import static org.springframework.http.ResponseEntity.*;
 import static org.springframework.http.ResponseEntity.notFound;
