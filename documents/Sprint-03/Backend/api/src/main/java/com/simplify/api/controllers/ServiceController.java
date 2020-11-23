@@ -1,11 +1,6 @@
 package com.simplify.api.controllers;
 
 
-<<<<<<< HEAD
-//import com.google.cloud.storage.*;
-import com.simplify.api.entities.Documents;
-=======
->>>>>>> c1cc29dff68304b25ade6b48e4ec159176d81e0e
 import com.simplify.api.entities.Service;
 import com.simplify.api.repositories.ServiceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
