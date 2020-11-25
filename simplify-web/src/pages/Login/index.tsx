@@ -11,26 +11,26 @@ function Login() {
 
     const history = useHistory();
 
-    const [CPF, setCPF] = useState('');
-    const [Senha, setSenha] = useState('');
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
 
     function loginConect(e: FormEvent) {
         e.preventDefault();
 
-        api.post("endereço", {
-            CPF,
-            Senha
+        api.post("/user/login", {
+            email,
+            senha
         }).then(res => {
-            if (res) {
+            if (res.data) {
                 alert(`Login Efetuado seja bem vindo(a)`)
                 history.push('/services')
             }
         }).catch(() => {
-            alert("CPF ou senha invalidos")
+            alert("Email ou senha invalidos")
         })
     }
 
-    console.log(CPF, Senha)
+    console.log(email, senha)
 
     return (
         <div className="login-conteiner">
@@ -40,8 +40,8 @@ function Login() {
                     <h1>Para começar a utilizar nossos serviços precisamos que <br></br> faça login no nosso sistema</h1>
                 </div>
                 <form onSubmit={loginConect}>
-                    <Input labelStyle="label-inp-white login " onChange={e => setCPF(e.target.value)} classe="inp-form login-inp" name="CPF" label="CPF" placehold="000.000.000-00"></Input>
-                    <Input labelStyle="label-inp-white  login" type="password" onChange={e => setSenha(e.target.value)} classe="inp-form login-inp" name="Senha" label="Senha" placehold="******"></Input>
+                    <Input labelStyle="label-inp-white login " onChange={e => setEmail(e.target.value)} classe="inp-form login-inp" name="email" label="Email" placehold="simplify@example.com"></Input>
+                    <Input labelStyle="label-inp-white  login" type="password" onChange={e => setSenha(e.target.value)} classe="inp-form login-inp" name="enha" label="Senha" placehold="******"></Input>
                     <Link to="">Esqueci minha senha</Link>
                     <Button title="Fazer login" type="submit" classe=" btn btn-recaregar" />
                 </form>
