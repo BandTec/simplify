@@ -1,6 +1,8 @@
-package br.com.simplify.apipdf;
+package br.com.simplify.apipdf.controller;
 
 
+import br.com.simplify.apipdf.geraPdf.CertidaoNascimento;
+import br.com.simplify.apipdf.geraPdf.RG;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,15 +14,23 @@ import java.io.IOException;
 @RequestMapping("/pdf")
 public class PdfController {
 
-    @GetMapping("/baixar")
+    @GetMapping("/certidao")
     public void exportTOpdf(HttpServletResponse response) throws IOException {
         response.setContentType("application/pdf");
         String headerKey = "Content-Disposition";
         String headerValue = "attachment; filename=users.pdf";
         response.setHeader(headerKey,headerValue);
-        PdfCertidaoNascimento gerarPDF = new PdfCertidaoNascimento();
+        CertidaoNascimento gerarPDF = new CertidaoNascimento();
         gerarPDF.export(response);
     }
 
-
+    @GetMapping("/rg")
+    public void exportTOpdfRg(HttpServletResponse response) throws IOException {
+        response.setContentType("application/pdf");
+        String headerKey = "Content-Disposition";
+        String headerValue = "attachment; filename=users.pdf";
+        response.setHeader(headerKey,headerValue);
+        RG gerarPDF = new RG();
+        gerarPDF.export(response);
+    }
 }

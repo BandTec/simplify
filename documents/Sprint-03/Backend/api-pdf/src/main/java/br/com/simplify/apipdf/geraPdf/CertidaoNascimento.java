@@ -1,4 +1,4 @@
-package br.com.simplify.apipdf;
+package br.com.simplify.apipdf.geraPdf;
 
 import com.itextpdf.io.image.ImageData;
 import com.itextpdf.io.image.ImageDataFactory;
@@ -8,12 +8,10 @@ import com.itextpdf.layout.Document;
 import com.itextpdf.layout.element.Image;
 import com.itextpdf.layout.element.Paragraph;
 
-
 import javax.servlet.http.HttpServletResponse;
-import java.awt.*;
 import java.io.IOException;
-public class PdfCertidaoNascimento {
 
+public class CertidaoNascimento {
     public void export(HttpServletResponse response) throws IOException {
         String imgSrc = "images\\icon.jpg";
         ImageData data = ImageDataFactory.create(imgSrc);
@@ -37,7 +35,7 @@ public class PdfCertidaoNascimento {
         Paragraph paragraph2 = new Paragraph(texto);
         paragraph1.setMarginLeft(200);
         paragraph2.setMarginLeft(130);
-        String instrucao = "\n  Dados do Agendamento: \n DATA: 16/10/2020 \n HORARIO*: 8:30 \n SERVIÇO: 2°via de Certidão de Nacimento ";
+        String instrucao = "\n  Dados do Agendamento: \n DATA: 16/12/2020 \n HORARIO*: 8:30 \n SERVIÇO: 2°via de Certidão de Nacimento ";
         String sobre = "\n O serviço que você escolheu possui uma taxa de R$25,00. \n pensando no seu conforto agora temos a opção de pagamento com o PIX, siga as instruções abaixo e economize tempo no seu atendimento:";
         String qr = "\n 1- Acesse o APP do seu banco e entre no PIX  \n 2- Escolha a opção pagar com PIX \n  3- Aponte a câmera do seu celular para o QR-CODE como mostra na ilustração abaixo: ";
         String seu = "\n SEU QR-CODE :\n R$ 25,00";
