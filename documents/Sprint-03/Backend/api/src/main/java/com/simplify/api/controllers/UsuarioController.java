@@ -43,7 +43,7 @@ public class UsuarioController {
 
     @PostMapping
     public ResponseEntity postUser(@RequestBody Usuario u){
-        if (postLista.getNroElem() < this.tamanho){  //Se a lista obj Post estiver com espaço ela vai adcionar o usuario
+        if (postLista.getNroElem() < this.tamanho){  //Se a lista entregaveis Post estiver com espaço ela vai adcionar o usuario
             postLista.adiciona(u);
             for (Integer i= 0; i<postLista.getTamanho();i++){ // após adcionar ele faz um for percorrendo a lista OBj e adcionando no  repository
                 repository.save(postLista.getElemento(i));

@@ -23,7 +23,7 @@ public class Usuario {
     private String urlImg;
 
     @ManyToOne
-    @JoinColumn(name="teste", nullable=false)
+    @JoinColumn(name="teste")
     private Solicitacao solicita;
 
     public Solicitacao getSolicita() {
