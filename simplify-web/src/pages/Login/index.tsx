@@ -2,52 +2,55 @@ import React, { FormEvent, useState } from 'react';
 import './styles.css'
 
 import Input from '../../components/input';
-import Button from '../../components/button';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import api from '../../Service/api';
 
 
 function Login() {
+
 
     const history = useHistory();
 
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 
+
     function loginConect(e: FormEvent) {
         e.preventDefault();
 
-        api.post("/user/login", {
+
+        api.post("/login", {
             email,
             senha
         }).then(res => {
-            if (res.data) {
-                alert(`Login Efetuado seja bem vindo(a)`)
-                history.push('/services')
-            }
+            history.push('/services')
         }).catch(() => {
             alert("Email ou senha invalidos")
         })
     }
 
-    console.log(email, senha)
-
     return (
         <div className="login-conteiner">
-            <div className="form-container">
-                <div className="title-login">
-                    <h3> Seja bem-vindo!</h3>
-                    <h1>Para começar a utilizar nossos serviços precisamos que <br></br> faça login no nosso sistema</h1>
+            <div className="signupSection">
+                <div className="info">
+                    <h2>Seja bem vindo a Simplify</h2>
+                    <i className="icon ion-ios-ionic-outline" aria-hidden="true"></i>
+                    <p>O fim da alta burocratização está aqui</p>
                 </div>
-                <form onSubmit={loginConect}>
-                    <Input labelStyle="label-inp-white login " onChange={e => setEmail(e.target.value)} classe="inp-form login-inp" name="email" label="Email" placehold="simplify@example.com"></Input>
-                    <Input labelStyle="label-inp-white  login" type="password" onChange={e => setSenha(e.target.value)} classe="inp-form login-inp" name="enha" label="Senha" placehold="******"></Input>
-                    <Link to="">Esqueci minha senha</Link>
-                    <Button title="Fazer login" type="submit" classe=" btn btn-recaregar" />
+                <form onSubmit={loginConect} className="signupForm" name="signupform">
+                    <h2>Login simplify</h2>
+                    <ul className="noBullet">
+                        <li>
+                            <Input name="email" onChange={e => setEmail(e.target.value)} placehold="" type="email" label="Email cadastrado" />
+                        </li>
+                        <li>
+                            <Input name="senha" onChange={e => setSenha(e.target.value)} placehold="****" type="password" label="Senha" />
+                        </li>
+                        <li id="center-btn">
+                            <input type="submit" id="join-btn" name="join" alt="Join" />
+                        </li>
+                    </ul>
                 </form>
-            </div>
-            <div className="conteiner-img">
-                <div className="div-img"></div>
             </div>
         </div>
 

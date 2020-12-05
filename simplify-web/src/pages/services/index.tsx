@@ -1,7 +1,5 @@
 import React from 'react';
-import Button from '../../components/button';
 import Card from '../../components/card-service';
-import Input from '../../components/input';
 import servicos from '../../mocks/services/mock-service';
 import Modal from '../../components/modal'
 
@@ -18,16 +16,16 @@ function Servicos() {
                 />
                 <h1>Serviços</h1>
                 <div className="card-container">
-                {servicos.map( (item: { title: string; descricao: string; documentos: string; isPresencial: boolean; }) => {
-            return (
-                <Card
-                    title={item.title}
-                    descricao={item.descricao}
-                    documento={item.documentos}
-                    isPresencial={item.isPresencial}
-                />
-            )
-            })}
+                    {servicos.map((item: { title: string; descricao: string; documentos: string; isPresencial: boolean; }) => {
+                        return (
+                            <Card
+                                title={item.title}
+                                descricao={item.descricao}
+                                documento={item.documentos}
+                                isPresencial={item.isPresencial}
+                            />
+                        )
+                    })}
                 </div>
             </div>
             {/* <div className="inp-container">

@@ -14,9 +14,9 @@ function Generate() {
             </div>
             <div className="form-container">
                 <div className="input-container">
-                    <Input labelStyle="label-inp-white" classe="inp-form" name="Nome" label="Seu nome" placehold="Nome" />
-                    <Input labelStyle="label-inp-white" classe="inp-form" name="Nome" label="Seu email" placehold="example@example.com" />
-                    <Input labelStyle="label-inp-white" classe="inp-form" name="Nome" label="Seu CPF" placehold="xxx.xxx.xxx-xx" />
+                    <Input name="Nome" label="Seu nome" placehold="Nome" />
+                    <Input name="Nome" label="Seu email" placehold="example@example.com" />
+                    <Input name="Nome" label="Seu CPF" placehold="xxx.xxx.xxx-xx" />
 
                     <Upload />
 

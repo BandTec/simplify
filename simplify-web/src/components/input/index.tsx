@@ -6,15 +6,13 @@ interface InpPros extends InputHTMLAttributes<HTMLInputElement> {
     name: string
     placehold: string
     label: string
-    classe?: string
-    labelStyle?: string
 }
 
-const Input: React.FC<InpPros> = ({ placehold, classe, label, labelStyle, ...rest }) => {
+const Input: React.FC<InpPros> = ({ placehold, label, ...rest }) => {
     return (
         <div className="label-inp">
             <label htmlFor={label}>{label}:</label>
-            <input className={classe} placeholder={placehold} {...rest} />
+            <input className="inp" placeholder={placehold} {...rest} />
         </div>
     )
 }

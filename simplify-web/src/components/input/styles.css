@@ -1,5 +1,5 @@
 .inp{
-    width:100%;
+    width: 70%;
     height: 40px;
     border-bottom: 1px solid black ;
     border-radius: 7px;
@@ -15,8 +15,11 @@
 /*Label*/
 .label-inp{
     display: flex;
-    font-family: Arial;
+    font-family: Arial, "Roboto";
     flex-direction: column;
+    text-align: start;
+    align-items: center;
+    justify-content: center;
     color: white;
     font-weight: 600;
     font-size: 1rem;
@@ -30,7 +33,7 @@
     margin-bottom: 2px;
 }
 .inp-form{
-    width: 550px;
+    width: 100px;
     height: 50px;
     border: 0;
     margin-bottom: 5%;
@@ -44,7 +47,6 @@
     background-color: #292929;
 }
 .login{
-     
     margin-right: 50%;
 }
 .login-inp{

@@ -3,9 +3,7 @@ import './styles.css';
 import { Link, useHistory } from 'react-router-dom';
 
 import Input from '../../components/input';
-import Button from '../../components/button';
 import api from '../../Service/api';
-import { endpoints } from '../../Service/endpoints';
 
 function Cadastro() {
 
@@ -20,11 +18,12 @@ function Cadastro() {
 
     const [password, setPassword] = useState('');
 
+
     function cadastro(e: FormEvent) {
         e.preventDefault();
 
         //adcionar endereço de post de novos usuarios 
-        api.post(endpoints.register, {
+        api.post('/cadastro', {
             nome,
             sobrenome,
             dataNascimento,
@@ -43,26 +42,38 @@ function Cadastro() {
     }
 
     return (
-        <div className="cadastro-conteiner">
-            <div className="form-container">
-                <div className="row">
-                    <div className="col-12 form-title">
-                        <h3>Estamos muito felizes por ter você como cliente</h3>
-                        <i className="fas fa-circle"></i>
-                        {/* Ou image */}
-                        <h4>O primeiro passo para escapar da alta burocratização é preenchendo este pequeno formulario</h4>
-                    </div>
-                </div>
-                <form onSubmit={cadastro}>
-                    <Input classe="inp" name="nome" label="Seu nome" onChange={e => setNome(e.target.value)} placehold="Example: Matheus"></Input>
-                    <Input classe="inp" name="Sobrenome" label="Seu Sobrenome" onChange={e => setSobrenome(e.target.value)} placehold="Example: Candido"></Input>
-                    <Input classe="inp" name="nome" label="Sua data de nascimento: (dd/mm/yyyy)" onChange={e => setDataNascimento(e.target.value)} placehold="28/07/2001"></Input>
-                    <Input classe="inp" name="nome" label="Seu email" onChange={e => setEmail(e.target.value)} placehold="Example: matheus@simplify.com"></Input>
-                    <Input classe="inp" name="password" label="Sua password" type="password" onChange={e => setPassword(e.target.value)} placehold="********"></Input>
-                    <div className="btn-container">
-                        <Button title="Concluir Registro" type="submit" classe=" btn " />
-                    </div>
+        <div className="login-conteiner">
+            <div className="signupSection">
+                <form onSubmit={cadastro} className="signupForm" name="signupform">
+                    <h2>Cadastro simplify</h2>
+                    <ul className="noBullet">
+                        <li>
+                            <Input name="Nome" maxLength={15} onChange={e => setNome(e.target.value)} placehold="NOME" label="Seu nome" />
+                            <Input name="Sobrenome" maxLength={15} onChange={e => setSobrenome(e.target.value)} placehold="SOBRENOME" label="Seu sobrenome" />
+                        </li>
+                        <li>
+                            <Input name="data"
+                                maxLength={7}
+                                onChange={e => setDataNascimento(e.target.value)}
+                                placehold="dd/mm/yyyy"
+                                label="Data nascimento" />
+                        </li>
+                        <li>
+                            <Input name="email" maxLength={60} onChange={e => setEmail(e.target.value)} type="email" label="Email" placehold="" />
+                            <Input name="senha" maxLength={10} onChange={e => setPassword(e.target.value)} placehold="****" type="password" label="Senha" />
+                        </li>
+                        <li id="center-btn">
+                            <input type="submit" id="join-btn" name="join" alt="Join" />
+                        </li>
+                    </ul>
                 </form>
+                <div className="info">
+                    <h2>Seja bem vindo a Simplify</h2>
+                    <i className="icon ion-ios-ionic-outline" aria-hidden="true"></i>
+                    <p>O fim da alta burocratização está aqui, o primeiro passo é preencher este pequeno formulario </p>
+
+                    <Link to="login">Já possuo cadastro</Link>
+                </div>
             </div>
         </div>
     )

@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { servicesVersion } from 'typescript';
 import Button from '../button';
 
 import './styles.css'
@@ -41,7 +39,7 @@ const Card: React.FC<cardProps> = (props) => {
                 <div>
                     <strong className="card-title">{props.title}</strong>
                     <span>Documentos necessários: {props.documento}</span>
-                    <span>{props.isPresencial == true ? "Presencial" : "Online"}</span>
+                    <span>{props.isPresencial === true ? "Presencial" : "Online"}</span>
                 </div>
             </header>
             <hr />
