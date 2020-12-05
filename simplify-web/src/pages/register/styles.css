@@ -3,27 +3,43 @@
     flex-direction: row;
     margin: 0;
     padding: 0;
-    padding-left: 100px; /*Como não é um component precisamos indicar um espaçamento para a nav não sobre por */
+     /*Como não é um component precisamos indicar um espaçamento para a nav não sobre por */
     color: whitesmoke;
     background: #181818;
     height: 100vh;
     align-items: center;
 }
-.cadastro-con{
-  margin-left: 12% !important;
+.form-container{
+  height: 90%;
+  width: 30vw;
+  border-radius: 2px;
+  background-color: #000003;
 }
-.cadastro-form{
-    margin-left: 0% !important;
+.form-title{
+  padding: 10px;
 }
-.input-rg{
-display: flex;
-flex-direction: row;
+.form-title h3{
+  font-size: 1.3rem;
+  font-family: "Roboto",Arial, sans-serif;
+  font-weight: 500;
+  text-align: center;
 }
-.title-cad{
-  width: 80%;
-  
-  margin: 2% 0 2% 0;
+.form-title h4{
+  padding-top: 5px;
+  font-size: 1rem;
+  font-family: "Roboto",Arial, sans-serif;
+  font-weight: 400;
+  color: #f5f5f5;
 }
-.cad{
-  margin-bottom: 0% !important;
+form{
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.btn-container{
+  padding-top: 20px;
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

@@ -12,7 +12,7 @@ interface InpPros extends InputHTMLAttributes<HTMLInputElement> {
 
 const Input: React.FC<InpPros> = ({ placehold, classe, label, labelStyle, ...rest }) => {
     return (
-        <div className={labelStyle}>
+        <div className="label-inp">
             <label htmlFor={label}>{label}:</label>
             <input className={classe} placeholder={placehold} {...rest} />
         </div>

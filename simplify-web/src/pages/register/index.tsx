@@ -5,35 +5,38 @@ import { Link, useHistory } from 'react-router-dom';
 import Input from '../../components/input';
 import Button from '../../components/button';
 import api from '../../Service/api';
+import { endpoints } from '../../Service/endpoints';
 
 function Cadastro() {
 
     const history = useHistory();
 
     const [nome, setNome] = useState('');
-    const [CPF, setCPF] = useState('');
-    const [RG, setRg] = useState('');
-    const [UF, setUF] = useState('');
-    const [dataNas, setDataNas] = useState('');
-    const [senha, setSenha] = useState('');
+    const [sobrenome, setSobrenome] = useState('');
+
+    const [dataNascimento, setDataNascimento] = useState('');
+
+    const [email, setEmail] = useState('');
+
+    const [password, setPassword] = useState('');
 
     function cadastro(e: FormEvent) {
         e.preventDefault();
 
         //adcionar endereço de post de novos usuarios 
-        api.post("", {
+        api.post(endpoints.register, {
             nome,
-            CPF,
-            RG,
-            UF,
-            dataNas,
-            senha
+            sobrenome,
+            dataNascimento,
+            email,
+            password
         }).then(res => {
             if (res.status === 201) {
                 alert(`Sejá bem vindo ${nome}, seu cadastro foi efetuado com sucesso`)
                 history.push("/home");
             }
-        }).catch(() => {
+        }).catch(e => {
+            console.log(e)
             alert(`Erro ao cadastrar`)
         })
 
@@ -41,34 +44,26 @@ function Cadastro() {
 
     return (
         <div className="cadastro-conteiner">
-            <div className="conteiner-img cadastro-con">
-                <div className="div-img cadastro-img"></div>
-            </div>
-
-            <div className="form-container cadastro-form">
-                <div className="title-cad">
-                    <h3> Estamos felizes em ter você <br /> como usuario </h3>
-                    <h1>O primeiro passo é preencher este formulario</h1>
+            <div className="form-container">
+                <div className="row">
+                    <div className="col-12 form-title">
+                        <h3>Estamos muito felizes por ter você como cliente</h3>
+                        <i className="fas fa-circle"></i>
+                        {/* Ou image */}
+                        <h4>O primeiro passo para escapar da alta burocratização é preenchendo este pequeno formulario</h4>
+                    </div>
                 </div>
-                <div>
-                    <form onSubmit={cadastro}>
-                        <Input labelStyle="label-inp-white cad" onChange={e => setNome(e.target.value)} classe="inp-form nome-cad" name="nome" label="Nome" placehold=""></Input>
-                        <Input labelStyle="label-inp-white cad" onChange={e => setCPF(e.target.value)} classe="inp-form cadastro-inp" name="CPF" label="CPF" placehold="000.000.000-00"></Input>
-                        <div className="input-rg">
-                            <Input labelStyle="label-inp-white cad" onChange={e => setRg(e.target.value)} classe="inp-form cadastro-inp" name="RG" label="RG" placehold="00-000-000-0"></Input>
-                            <Input labelStyle="label-inp-white cad" onChange={e => setUF(e.target.value)} classe="inp-form uf-inp" name="Uf" label="UF" placehold="SP"></Input>
-                        </div>
-
-                        <Input labelStyle="label-inp-white cad" onChange={e => setDataNas(e.target.value)} classe="inp-form cadastro-inp" name="dataNas" label="Data De Nascimento" placehold="--/--/----"></Input>
-                        <Input labelStyle="label-inp-white cad" onChange={e => setSenha(e.target.value)} classe="inp-form cadastro-inp" name="Senha" label="Senha" placehold="Digite uma senha"></Input>
-                        <Input labelStyle="label-inp-white cad" classe="inp-form cadastro-inp" name="ConfirmaSenha" label="Confirmar Senha" placehold="Digite sua senha novamente"></Input>
-                        <Button title="Proximo passo" type="submit" classe=" btn btn-passo" />
-                    </form>
-
-                </div>
-
+                <form onSubmit={cadastro}>
+                    <Input classe="inp" name="nome" label="Seu nome" onChange={e => setNome(e.target.value)} placehold="Example: Matheus"></Input>
+                    <Input classe="inp" name="Sobrenome" label="Seu Sobrenome" onChange={e => setSobrenome(e.target.value)} placehold="Example: Candido"></Input>
+                    <Input classe="inp" name="nome" label="Sua data de nascimento: (dd/mm/yyyy)" onChange={e => setDataNascimento(e.target.value)} placehold="28/07/2001"></Input>
+                    <Input classe="inp" name="nome" label="Seu email" onChange={e => setEmail(e.target.value)} placehold="Example: matheus@simplify.com"></Input>
+                    <Input classe="inp" name="password" label="Sua password" type="password" onChange={e => setPassword(e.target.value)} placehold="********"></Input>
+                    <div className="btn-container">
+                        <Button title="Concluir Registro" type="submit" classe=" btn " />
+                    </div>
+                </form>
             </div>
-
         </div>
     )
 }
