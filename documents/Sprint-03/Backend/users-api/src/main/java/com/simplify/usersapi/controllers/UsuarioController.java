@@ -31,14 +31,10 @@ public class UsuarioController {
         }
     }
 
-    @PostMapping
+    @PostMapping("/cadastro")
     public ResponseEntity post(@RequestBody Usuario user){
-        if (user == null){
-            return badRequest().build();
-        }else{
             repository.save(user);
             return created(null).build();
-        }
     }
 
     @GetMapping("/{id}")
