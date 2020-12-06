@@ -52,8 +52,8 @@ function Cadastro() {
                             <Input name="Sobrenome" maxLength={15} onChange={e => setSobrenome(e.target.value)} placehold="SOBRENOME" label="Seu sobrenome" />
                         </li>
                         <li>
-                            <Input name="data"
-                                maxLength={7}
+                            <Input name="data" 
+                                maxLength={10}
                                 onChange={e => setDataNascimento(e.target.value)}
                                 placehold="dd/mm/yyyy"
                                 label="Data nascimento" />
