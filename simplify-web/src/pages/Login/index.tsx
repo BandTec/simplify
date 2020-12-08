@@ -41,10 +41,10 @@ function Login() {
                     <h2>Login simplify</h2>
                     <ul className="noBullet">
                         <li>
-                            <Input name="email" onChange={e => setEmail(e.target.value)} placehold="" type="email" label="Email cadastrado" />
+                            <Input name="email" onChange={e => setEmail(e.target.value)} type="email" label="Email cadastrado" />
                         </li>
                         <li>
-                            <Input name="senha" onChange={e => setSenha(e.target.value)} placehold="****" type="password" label="Senha" />
+                            <Input name="senha" onChange={e => setSenha(e.target.value)} type="password" label="Senha" />
                         </li>
                         <li id="center-btn">
                             <input type="submit" id="join-btn" name="join" alt="Join" />

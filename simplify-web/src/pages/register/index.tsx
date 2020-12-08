@@ -48,19 +48,19 @@ function Cadastro() {
                     <h2>Cadastro simplify</h2>
                     <ul className="noBullet">
                         <li>
-                            <Input name="Nome" maxLength={15} onChange={e => setNome(e.target.value)} placehold="NOME" label="Seu nome" />
-                            <Input name="Sobrenome" maxLength={15} onChange={e => setSobrenome(e.target.value)} placehold="SOBRENOME" label="Seu sobrenome" />
+                            <Input name="Nome" maxLength={15} onChange={e => setNome(e.target.value)} label="Seu nome" />
+                            <Input name="Sobrenome" maxLength={15} onChange={e => setSobrenome(e.target.value)} label="Seu sobrenome" />
                         </li>
                         <li>
-                            <Input name="data" 
+                            <Input name="data"
                                 maxLength={10}
                                 onChange={e => setDataNascimento(e.target.value)}
-                                placehold="dd/mm/yyyy"
+
                                 label="Data nascimento" />
                         </li>
                         <li>
-                            <Input name="email" maxLength={60} onChange={e => setEmail(e.target.value)} type="email" label="Email" placehold="" />
-                            <Input name="senha" maxLength={10} onChange={e => setPassword(e.target.value)} placehold="****" type="password" label="Senha" />
+                            <Input name="email" maxLength={60} onChange={e => setEmail(e.target.value)} type="email" label="Email" />
+                            <Input name="senha" maxLength={10} onChange={e => setPassword(e.target.value)} type="password" label="Senha" />
                         </li>
                         <li id="center-btn">
                             <input type="submit" id="join-btn" name="join" alt="Join" />

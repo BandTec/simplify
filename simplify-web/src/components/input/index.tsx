@@ -4,15 +4,14 @@ import './styles.css'
 
 interface InpPros extends InputHTMLAttributes<HTMLInputElement> {
     name: string
-    placehold: string
     label: string
 }
 
-const Input: React.FC<InpPros> = ({ placehold, label, ...rest }) => {
+const Input: React.FC<InpPros> = ({ label, name, ...rest }) => {
     return (
-        <div className="label-inp">
-            <label htmlFor={label}>{label}:</label>
-            <input className="inp" placeholder={placehold} {...rest} />
+        <div className="input-block">
+            <label htmlFor="name">{label}</label>
+            <input type="text" id={name} {...rest} />
         </div>
     )
 }
