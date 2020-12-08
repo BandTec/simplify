@@ -2,8 +2,11 @@ import React, { FormEvent, useState } from 'react';
 import './styles.css';
 import { Link, useHistory } from 'react-router-dom';
 
+import warningIcon from '../../assets/icons/warning.svg'
+
 import Input from '../../components/input';
 import api from '../../Service/api';
+import PageHeader from '../../components/page-header';
 
 function Cadastro() {
 
@@ -42,39 +45,36 @@ function Cadastro() {
     }
 
     return (
-        <div className="login-conteiner">
-            <div className="signupSection">
-                <form onSubmit={cadastro} className="signupForm" name="signupform">
-                    <h2>Cadastro simplify</h2>
-                    <ul className="noBullet">
-                        <li>
-                            <Input name="Nome" maxLength={15} onChange={e => setNome(e.target.value)} label="Seu nome" />
-                            <Input name="Sobrenome" maxLength={15} onChange={e => setSobrenome(e.target.value)} label="Seu sobrenome" />
-                        </li>
-                        <li>
-                            <Input name="data"
-                                maxLength={10}
-                                onChange={e => setDataNascimento(e.target.value)}
+        <div id="page-teacher-form" className="container">
+            <PageHeader title="Que Incrivel que você está escapando da alta burocratização !!!"
 
-                                label="Data nascimento" />
-                        </li>
-                        <li>
-                            <Input name="email" maxLength={60} onChange={e => setEmail(e.target.value)} type="email" label="Email" />
-                            <Input name="senha" maxLength={10} onChange={e => setPassword(e.target.value)} type="password" label="Senha" />
-                        </li>
-                        <li id="center-btn">
-                            <input type="submit" id="join-btn" name="join" alt="Join" />
-                        </li>
-                    </ul>
+            />
+
+            <main>
+                <fieldset>
+                    <legend>Seus dados</legend>
+                    <Input name="name" label="Seu primeiro nome" onChange={(e => { setNome(e.target.value) })} />
+                    <Input name="sobrenome" label="Seu sobrenome " onChange={(e => { setSobrenome(e.target.value) })} />
+                    <Input name="data" label="Sua Data de nascimento" type="date" onChange={(e => { setDataNascimento(e.target.value) })} />
+                </fieldset>
+                <fieldset>
+                    <legend>Seus dados para acesso</legend>
+                    <Input name="name" label="Seu email " type="email" onChange={(e => { setEmail(e.target.value) })} />
+                    <Input name="whatsapp" label="Sua senha" type="password" onChange={(e => { setPassword(e.target.value) })} />
+                </fieldset>
+                <form onSubmit={cadastro}>
+                    <footer>
+                        <p >
+                            <img src={warningIcon} alt="Aviso Importante" />
+                Importante !
+                Preencha todos os dados
+            </p>
+                        <button type="submit">
+                            finalizar cadastro
+            </button>
+                    </footer>
                 </form>
-                <div className="info">
-                    <h2>Seja bem vindo a Simplify</h2>
-                    <i className="icon ion-ios-ionic-outline" aria-hidden="true"></i>
-                    <p>O fim da alta burocratização está aqui, o primeiro passo é preencher este pequeno formulario </p>
-
-                    <Link to="login">Já possuo cadastro</Link>
-                </div>
-            </div>
+            </main>
         </div>
     )
 }
