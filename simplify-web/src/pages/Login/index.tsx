@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from 'react';
+import React, { FormEvent, useEffect, useState } from 'react';
 import './styles.css'
 
 import Input from '../../components/input';
@@ -27,11 +27,26 @@ function Login() {
             email,
             senha
         }).then(res => {
-            history.push('/profile')
-        }).catch(() => {
+            if (res.status === 200) {
+                localStorage.setItem('idUser', res.data)
+                history.push('/profile')
+            }
+        }).catch(e => {
+            console.log(e)
             alert("Email ou senha invalidos")
         })
     }
+
+    useEffect(() => {
+        api.get("/verificar").then(res => {
+            if (!res.data) {
+                return history.push("/profile")
+            } else {
+                return;
+            }
+        })
+    }
+    )
 
     return (
         <div id="page-teacher-form" className="container">

@@ -3,8 +3,7 @@ import React from 'react';
 //Routes
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-//Component
-import Nav from './components/Nav';
+
 
 
 
@@ -19,7 +18,6 @@ import Profile from './pages/profile';
 function Routes() {
     return (
         <BrowserRouter>
-            <Nav />
             <Switch>
                 <Route path="/" exact component={Home} />
 
