@@ -1,32 +1,43 @@
 import React from 'react';
 import './styles.css'
 
-import ilustracao from '../../assets/ilustration.png'
-import Button from '../../components/button';
+import logo from '../../assets/Simplify.png';
+
+import heroImage from '../../assets/Ilustracao/image-1.svg';
+
 import { Link } from 'react-router-dom';
 
 function Home() {
     return (
-
-        <div className="container-home">
-            <div className="container-info">
-                <h2>
-                    Simplify
-                </h2>
-                <h3>
-                    Lidar com documentos nunca foi tão fácil
-                </h3>
-
-                <div className="btn-container">
-                    <Link to="home">  <Button title="saiba mais" classe="btn" /> </Link>
-                    <Button title="cadastre-se" classe="btn btn-1" />
+        <div id="page-landing">
+            <div id="page-landing-content" className="container">
+                <div className="logo-container">
+                    <img src={logo} alt="Proffy" />
+                    <h2>Gerar documentos nunca foi tão fácil</h2>
                 </div>
-            </div>
-            <div className="container-img">
-                <img src={ilustracao} alt="" />
+
+                <img src={heroImage} alt="" className="hero-image" />
+
+                <div className="buttons-container">
+                    <Link to="/cadastro" className="study">
+                        <img src={""} alt="" />
+                        Cadastrar-se
+               </Link>
+                    <Link to="/services" className="give-classes">
+                        <img src={""} alt="" />
+                        Procurar serviços
+                </Link>
+                    <Link to="/profile" className="give-classes">
+                        <img src={""} alt="" />
+                        Minhas solicitações
+               </Link>
+
+                </div>
+                <span className="total-connections">
+                    total de 28 documentos gerados <img src={""} alt="" />
+                </span>
             </div>
         </div>
-
     )
 }
 
