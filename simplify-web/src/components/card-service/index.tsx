@@ -25,6 +25,7 @@ export interface service {
 }
 
 export interface cardProps {
+    id: string,
     title: string;
     descricao: string;
     documento: string;
@@ -35,7 +36,6 @@ const Card: React.FC<cardProps> = (props) => {
     return (
         <article className="card">
             <header>
-                {/* <img src="" alt="" /> */}
                 <div>
                     <strong className="card-title">{props.title}</strong>
                     <span>Documentos necessários: {props.documento}</span>
@@ -48,11 +48,14 @@ const Card: React.FC<cardProps> = (props) => {
             <hr />
             <footer>
                 <div>
+                    <h4>
+                        Horarios disponiveis
+                    </h4>
                     <p>
-                        Horarios disponiveis <strong>10:00 - 22:00</strong>
+                    <strong>10:00 - 22:00</strong>
                     </p>
                 </div>
-                <Button title="agendar" classe="btn-1" />
+                <button className="btn-1" data-toggle="modal" data-target={`#${props.id}`}>Agendar</button>
             </footer>
         </article>
     )
