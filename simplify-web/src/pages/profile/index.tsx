@@ -20,9 +20,10 @@ export interface content {
 function Profile() {
 
     const [response, setResponse] = useState<dataResponse>();
+    let userLogado = localStorage.getItem('idUser');
 
     useEffect(() => {
-        api.get('/1').then(res => setResponse(res.data))
+        api.get(`${userLogado}`).then(res => setResponse(res.data))
     })
 
     return (
