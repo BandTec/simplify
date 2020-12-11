@@ -3,19 +3,28 @@ package com.simplify.usersapi.controllers;
 
 import com.simplify.usersapi.entities.Login;
 import com.simplify.usersapi.entities.Usuario;
+import com.simplify.usersapi.entregaveis.FilaObj;
+import com.simplify.usersapi.entregaveis.PilhaObj;
 import com.simplify.usersapi.repositories.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.UUID;
 
 import static org.springframework.http.ResponseEntity.*;
 
 @RestController
 @RequestMapping("/user")
 public class UsuarioController {
+    PilhaObj<Usuario> aux = new PilhaObj<>(10);
+    FilaObj<UUID> filaUUID = new FilaObj<>(10);
+    private Map<UUID, List<Usuario>> reqFeitas = new HashMap<>();
 
     @Autowired
     UsuarioRepository repository;
@@ -24,13 +33,49 @@ public class UsuarioController {
 
     @GetMapping
     public ResponseEntity getAll(){
-        if(repository.count() > 0){
-            return ok().body(repository.findAll());
+        UUID identificador = UUID.randomUUID();
+        filaUUID.insert(identificador);
+        return accepted()
+                .header("identificador", identificador.toString())
+                .build();
+
+    }
+    @Scheduled(fixedDelay = 30000)
+    public void executarScheduler() {
+        if (!filaUUID.isEmpty()) {
+            UUID id = filaUUID.poll();
+            if (repository.count() > 0) {
+                repository.findAll();
+                reqFeitas.put(id, repository.findAll());
+                System.out.println("FEITO  " + id);
+            }
+        }
+    }
+    @GetMapping("/resultado/{identificador}")
+    public  ResponseEntity resultado(@PathVariable String identificador){
+        UUID identificadorObj = UUID.fromString(identificador);
+        if(reqFeitas.containsKey(identificadorObj)){
+            return ok(reqFeitas.get(identificadorObj));
         }else{
+            return notFound().build();
+        }
+    }
+    @PostMapping("/cadastro/pilha")
+    public ResponseEntity postPilha(@RequestBody Usuario user){
+        aux.push(user);
+        repository.save(user);
+        return created(null).build();
+    }
+    @DeleteMapping("/apagar/pilha")
+    public ResponseEntity deletePilha(@PathVariable Integer id){
+        if (!aux.isEmpty()){
+            Usuario usu = aux.pop();
+            repository.deleteById(usu.getId());
+            return ok().build();
+        }else {
             return noContent().build();
         }
     }
-
     @PostMapping("/cadastro")
     public ResponseEntity post(@RequestBody Usuario user){
             repository.save(user);
