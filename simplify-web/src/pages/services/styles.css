@@ -29,13 +29,18 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    margin: 0 auto;
+    margin: 4rem auto;
 }
 
 .container-content h1 {
     font: 700 25pt "Roboto";
     color: #ffffff;
     margin-left: 2rem;
+}
+
+.back-icon {
+    margin-left: 10rem;
+    margin-top: 4rem;
 }
 
 @media only screen and (max-width:670px) {
