@@ -35,16 +35,66 @@
 .infos{
     padding-top: 2rem;
 }
-.solicitacoes{
-    margin-left: 10%;
-    margin-top: 5%;
-    border-radius: 10px;
-    width: 80%;
-    color: black;
-    height: 90px;
-    padding-left: 20px;
+
+main{
+    background: var(--color-box-base);
+    width: 100%;
+    max-width: 74rem;
+    border-radius: 0.8rem;
+    margin: -3.2rem auto 3.2rem;
+    padding-top: 6.4rem;
+    overflow: hidden;
+}
+ main fieldset{
+    border: 0;
+    padding: 0 2.4rem;
+}
+ main fieldset + fieldset{
+    margin-top: 6.4rem;
+}
+ main fieldset legend{
+    font: 700 2.4rem "Roboto";
+    color: var(--color-text-title);
+    margin-bottom: 2.4rem;
     display: flex;
-    flex-direction: row;
-    border-bottom: 10px solid blueviolet;
-    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid var(--color-background);
+}
+form p{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 170px;
+    color: #000;
+    font-family: Arial;
+  }
+
+  
+#form{
+    top: 50%;
+    left: 50%;
+    margin-top: 0px;
+    margin-left: 60px;
+    width: 500px;
+    height: 200px;
+    border: 4px dashed #000;
+  }
+  button{
+    width: 100%;
+    height: 5.6rem;
+    background: var(--color-secundary);
+    border: 0;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    font: 700 1.6rem "Roboto";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.4s;
+    margin-top: 3.2rem;
 }

@@ -3,6 +3,10 @@ import './styles.css';
 
 import image from '../../assets/Ilustracao/image-1.svg'
 import api from '../../Service/api';
+import PageHeader from '../../components/page-header';
+import { CardProfile } from '../../components/card-profile';
+
+import apiImage from '../../Service/api-image';
 
 export interface dataResponse {
     id: number;
@@ -22,54 +26,72 @@ function Profile() {
     const [response, setResponse] = useState<dataResponse>();
     let userLogado = localStorage.getItem('idUser');
 
+    const [imagemUpload, setImagemUpload] = useState("");
+
+    const handleUploadFile = (e: any) => { setImagemUpload(e.target.files[0]) }
+
     useEffect(() => {
         api.get(`${userLogado}`).then(res => setResponse(res.data))
-    })
+    });
+
+    const uploadImage = async () => {
+        const dataImage = new FormData();
+        dataImage.append('file', imagemUpload)
+        apiImage.post("1", dataImage, {
+            headers: {
+                'Content-Type': 'multipart/form-data'
+            }
+        }).then(res => {
+            console.log(res)
+        }, e => {
+            console.log(e)
+        })
+    }
 
     return (
-        <div className="perfil-conteiner col-12">
-            <div className="card-let col-6">
-                <div className="banner">
-                    <div className="img-profile">
-                        <img src={image} alt="imgPerfil" />
-                    </div>
-                </div>
-                <div className="infos">
-                    <div className="user-infos">
-                        {/* destruturação das infos do user */}
-                        <h2>{response?.nome}</h2>
-                        <p>{response?.dataNascimento}</p>
-                    </div>
-                </div>
-                <h2>Ultimas solicitações:</h2>
-                {/* possivcel codigo 
-                    {resposne.content.map(res=>{
-                     <div className="solicitacoes">
-                    <div className="solicitacao">
-                        <div className="card-solicita">
-                            <h2>{res.nome}</h2>
-                        </div>
-                    </div>
-                </div>
-                    }}
-                */}
-                <div className="solicitacoes">
-                    <div className="solicitacao">
-                        <div className="card-solicita">
-                            <h2>Certidão de nascimento </h2>
-                        </div>
-                    </div>
-                </div>
 
-                <div className="solicitacoes">
-                    <div className="solicitacao">
-                        <div className="card-solicita">
-                            <h2>Gerar Assinatura </h2>
+        <div className="container-fluid">
+            <PageHeader title="Acompanhe aqui as suas solicitações" />
+            <main>
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <div className="banner">
+                        <div className="img-profile">
+                            <img src={image} alt="" />
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                </fieldset>
+                <fieldset>
+                    <h2>Nome: {response?.nome} {response?.sobrenome}</h2>
+                    <h2>Data de nascimento: {response?.dataNascimento}</h2>
+                    <h2>Email: {response?.email}</h2>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Ultimas Solicitações
+                    </legend>
+                    <CardProfile titulo="Certidão de nascimento" />
+                    <CardProfile titulo="Segunda via RG(Registro Geral)" />
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Envie aqui seus documentos
+                    </legend>
+                    <form onSubmit={uploadImage}>
+                        <label htmlFor="upload" id="form"></label>
+                        <input
+                            type="file"
+                            onChange={handleUploadFile}
+                            id="upload"
+                            accept="image/"
+                        />
+                        <h2>Arraste ou clique para fazer upload do seu documento.</h2>
+                        <button type="submit">Upload</button>
+                    </form>
+                </fieldset>
+            </main >
+        </div >
+
     )
 }
 export default Profile;

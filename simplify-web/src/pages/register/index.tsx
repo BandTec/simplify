@@ -1,6 +1,6 @@
 import React, { FormEvent, useState } from 'react';
 import './styles.css';
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import warningIcon from '../../assets/icons/warning.svg'
 
