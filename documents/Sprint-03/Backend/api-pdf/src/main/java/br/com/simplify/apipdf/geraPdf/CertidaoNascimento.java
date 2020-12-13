@@ -13,27 +13,25 @@ import java.io.IOException;
 
 public class CertidaoNascimento {
     public void export(HttpServletResponse response) throws IOException {
-        String imgSrc = "images\\icon.jpg";
+        String imgSrc = "images\\logo-simplify.png";
         ImageData data = ImageDataFactory.create(imgSrc);
         Image image1 = new Image(data);
         String imgSrc2 = "images\\howTo.jpg";
         ImageData data2 = ImageDataFactory.create(imgSrc2);
         Image image2 = new Image(data2);
-        String imgSrc3 = "images\\qrCode.png";
+        String imgSrc3 = "images\\25.jpg";
         ImageData data3 = ImageDataFactory.create(imgSrc3);
         Image image3 = new Image(data3);
 
-        image1.scaleAbsolute(64, 64);
+        image1.scaleAbsolute(80, 80);
         image1.setMarginLeft(200);
         image2.scaleAbsolute(150, 150);
         image2.setMarginLeft(200);
         image3.scaleAbsolute(150, 150);
         image3.setMarginLeft(200);
-        String titulo = "SIMPLIFY";
         String texto = "Obrigada por realizar seu agendamento conosco.\n (*tolerância de 15 minutos)";
-        Paragraph paragraph1 = new Paragraph(titulo);
+
         Paragraph paragraph2 = new Paragraph(texto);
-        paragraph1.setMarginLeft(200);
         paragraph2.setMarginLeft(130);
         String instrucao = "\n  Dados do Agendamento: \n DATA: 16/12/2020 \n HORARIO*: 8:30 \n SERVIÇO: 2°via de Certidão de Nacimento ";
         String sobre = "\n O serviço que você escolheu possui uma taxa de R$25,00. \n pensando no seu conforto agora temos a opção de pagamento com o PIX, siga as instruções abaixo e economize tempo no seu atendimento:";
@@ -53,7 +51,6 @@ public class CertidaoNascimento {
 
         Document document = new Document(pdfDocument);
         document.add(image1);
-        document.add(paragraph1);
         document.add(paragraph3);
         document.add(paragraph4);
         document.add(paragraph5);
