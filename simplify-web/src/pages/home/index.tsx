@@ -20,21 +20,21 @@ function Home() {
 
                 <div className="buttons-container">
                     <Link to="/cadastro" className="study">
-                        <img src={""} alt="" />
+                        <img src="" alt="" />
                         Cadastrar-se
                </Link>
                     <Link to="/services" className="give-classes">
-                        <img src={""} alt="" />
+                        <img src="" alt="" />
                         Procurar serviços
                 </Link>
                     <Link to="/profile" className="give-classes">
-                        <img src={""} alt="" />
+                        <img src="" alt="" />
                         Minhas solicitações
                </Link>
 
                 </div>
                 <span className="total-connections">
-                    total de 28 documentos gerados <img src={""} alt="" />
+                    Total de 28 documentos gerados <img src={""} alt="" />
                 </span>
             </div>
         </div>

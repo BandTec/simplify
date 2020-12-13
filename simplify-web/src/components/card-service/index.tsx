@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component, FormEvent, useState } from 'react';
 import Button from '../button';
+import api from '../../Service/apiServicos';
 
 import './styles.css'
 
@@ -30,9 +31,14 @@ export interface cardProps {
     descricao: string;
     documento: string;
     isPresencial: boolean;
+    submit(event: React.FormEvent<HTMLDivElement>): void;
+    click(event: React.FormEvent<HTMLButtonElement>): void;
 }
 
+
+
 const Card: React.FC<cardProps> = (props) => {
+    
     return (
         <article className="card">
             <header>
@@ -46,7 +52,7 @@ const Card: React.FC<cardProps> = (props) => {
             <p>Descrição: </p>
             <p>{props.descricao}</p>
             <hr />
-            <footer>
+            <footer onSubmit={props.submit}>
                 <div>
                     <h4>
                         Horarios disponiveis
@@ -55,7 +61,7 @@ const Card: React.FC<cardProps> = (props) => {
                     <strong>10:00 - 22:00</strong>
                     </p>
                 </div>
-                <button className="btn-1" data-toggle="modal" data-target={`#${props.id}`}>Agendar</button>
+                <button type="submit" className="btn-modal" data-toggle="modal" data-target={`#${props.id}`} onClick={props.click}>Agendar</button>
             </footer>
         </article>
     )

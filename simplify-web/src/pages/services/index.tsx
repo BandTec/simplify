@@ -1,16 +1,57 @@
-import React from 'react';
+import React, { Component, FormEvent, MouseEvent, useState } from 'react';
 import Card from '../../components/card-service';
 import servicos from '../../mocks/services/mock-service';
 import Modal from '../../components/modal'
+import { Link, useHistory } from 'react-router-dom';
+import backIcon from '../../assets/icons//back.svg'
+import api from '../../Service/apiServicos'
+import ModalPDF from '../../pages/services/modalPDF'
 
 import './styles.css'
 
 function Servicos() {
+
+    const history = useHistory();
+
+    const [id, setId] = useState('');
+    const [nome, setNome] = useState('');
+    const [descricao, setDescricao] = useState('');
+    const [documentos, setDocumentos] = useState('');
+    const [isPresencial, setIsPresencial] = useState(Boolean);
+    const [dataAgendamento, setDataAgendamento] = useState('');
+
+    function enviarInfo(e:FormEvent) {
+        e.preventDefault();
+
+        api.post("/", {
+            id,
+            nome,
+            descricao,
+            documentos,
+            isPresencial,
+            dataAgendamento
+        }).then(res => {
+            if (res.status === 200) {
+                history.push('/service')
+            }
+        }).catch(e => {
+            console.log(e)
+        })
+    }
+
     return (
         <div className="container-service">
+            <ModalPDF/>
+            <div className="top-bar-container back-icon">
+                <Link to="/">
+                    <  img src={backIcon} alt="Voltar" />
+                </Link>
+                <img src="" alt="" />
+            </div>
             <div className="container-content">
                 {/* Componente do modal aplicado */}
                 {servicos.map((item: {id: string, title: string; descricao: string; documentos: string; isPresencial: boolean;}) => {
+
                     return (
                         <Modal
                             id={`${item.id}`}
@@ -19,6 +60,16 @@ function Servicos() {
                             conteudo="Horários disponíveis"
                             botao="Continuar"
                             visibilidadeBotao={true}
+                            target="#pdf"
+                            dataAgendamento=""
+                            hora=""
+                            click={() => {
+                                console.log("click");                                
+                            }}
+                            submit={() => {
+                                console.log("submit");
+                            }}
+                            dismiss={true}
                         />
                     )
                 })}
@@ -33,6 +84,14 @@ function Servicos() {
                             descricao={item.descricao}
                             documento={item.documentos}
                             isPresencial={item.isPresencial}
+                            submit={() => console.log("submit")}
+                            click={() => {
+                                setId(item.id);
+                                setNome(item.title);
+                                setDescricao(item.descricao);
+                                setDocumentos(item.documentos);
+                                setIsPresencial(item.isPresencial);
+                            }}
                         />
                     )
                 })}
