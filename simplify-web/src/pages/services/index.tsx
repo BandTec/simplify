@@ -4,7 +4,7 @@ import servicos from '../../mocks/services/mock-service';
 import Modal from '../../components/modal'
 import { Link, useHistory } from 'react-router-dom';
 import backIcon from '../../assets/icons//back.svg'
-import api from '../../Service/apiServicos'
+import apiServicos from '../../Service/apiServicos'
 import ModalPDF from '../../pages/services/modalPDF'
 
 import './styles.css'
@@ -20,10 +20,15 @@ function Servicos() {
     const [isPresencial, setIsPresencial] = useState(Boolean);
     const [dataAgendamento, setDataAgendamento] = useState('');
 
+
+    function dismiss() {
+        return;
+    }
+
     function enviarInfo(e:FormEvent) {
         e.preventDefault();
 
-        api.post("/", {
+        apiServicos.post("/", {
             id,
             nome,
             descricao,
@@ -32,6 +37,7 @@ function Servicos() {
             dataAgendamento
         }).then(res => {
             if (res.status === 200) {
+                alert(`Agendamento realizado`)
                 history.push('/service')
             }
         }).catch(e => {
@@ -62,9 +68,9 @@ function Servicos() {
                             visibilidadeBotao={true}
                             target="#pdf"
                             dataAgendamento=""
-                            hora=""
+                            hora="12:00"
                             click={enviarInfo}
-                            submit={enviarInfo}
+                            submit={dismiss}
                             dismiss={true}
                         />
                     )

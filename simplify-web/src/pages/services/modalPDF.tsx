@@ -1,7 +1,7 @@
 import React, { FormEvent, useEffect, useState, MouseEvent } from 'react';
 import Button from '../../components/button';
 import '../../mocks/services/mock-horarios'
-import api from '../../Service/api-pdf'
+import apiPDF from '../../Service/api-pdf'
 import Modal from '../../components/modal/'
 
 import './styles.css'
@@ -15,7 +15,7 @@ function Download() {
     function baixarPDF(e:MouseEvent) {
         e.preventDefault();
         
-        api.get("/")
+        apiPDF.get("/")
         .then(res => {
             if (res.status === 200) {
                 console.log(res.status);

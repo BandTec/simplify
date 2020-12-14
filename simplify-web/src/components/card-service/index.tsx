@@ -1,6 +1,6 @@
 import React, { Component, FormEvent, useState } from 'react';
 import Button from '../button';
-import api from '../../Service/apiServicos';
+import apiServicos from '../../Service/apiServicos';
 
 import './styles.css'
 
@@ -58,7 +58,7 @@ const Card: React.FC<cardProps> = (props) => {
                         Horarios disponiveis
                     </h4>
                     <p>
-                    <strong>10:00 - 22:00</strong>
+                    <strong>12:00 - 18:00</strong>
                     </p>
                 </div>
                 <button type="submit" className="btn-modal" data-toggle="modal" data-target={`#${props.id}`} onClick={props.click}>Agendar</button>
