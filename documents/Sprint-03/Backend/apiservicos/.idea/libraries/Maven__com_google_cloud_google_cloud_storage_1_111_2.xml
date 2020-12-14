@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.google.cloud:google-cloud-storage:1.111.2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/cloud/google-cloud-storage/1.111.2/google-cloud-storage-1.111.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/cloud/google-cloud-storage/1.111.2/google-cloud-storage-1.111.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/google/cloud/google-cloud-storage/1.111.2/google-cloud-storage-1.111.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
