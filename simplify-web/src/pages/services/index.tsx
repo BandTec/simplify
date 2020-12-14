@@ -11,16 +11,15 @@ function Servicos() {
             <PageHeader title="Acompanhe aqui uma listinha com todos os nossos serviços" />
             <div className="container-content">
                 {/* Componente do modal aplicado */}
-
-                <h1>Serviços</h1>
                 <div className="card-container">
-                    {servicos.map((item: { title: string; descricao: string; documentos: string; isPresencial: boolean; }) => {
+                    {servicos.map((item: { title: string; descricao: string; documentos: string; isPresencial: boolean; horario: string }) => {
                         return (
                             <Card
                                 title={item.title}
                                 descricao={item.descricao}
                                 documento={item.documentos}
                                 isPresencial={item.isPresencial}
+                                horario={item.horario}
                             />
                         )
                     })}

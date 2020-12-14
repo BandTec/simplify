@@ -28,6 +28,7 @@ export interface cardProps {
     title: string;
     descricao: string;
     documento: string;
+    horario: string;
     isPresencial: boolean;
 }
 
@@ -49,7 +50,7 @@ const Card: React.FC<cardProps> = (props) => {
             <footer>
                 <div>
                     <p>
-                        Horarios disponiveis <strong>10:00 - 22:00</strong>
+                        Horarios disponiveis <strong>{props.horario}</strong>
                     </p>
                 </div>
                 <Button title="agendar" classe="btn-1" />
