@@ -49,12 +49,6 @@ function Servicos() {
     return (
         <div className="container-service">
             <ModalPDF/>
-            <div className="top-bar-container back-icon">
-                <Link to="/">
-                    <  img src={backIcon} alt="Voltar" />
-                </Link>
-                <img src="" alt="" />
-            </div>
             <div className="container-content">
                 {/* Componente do modal aplicado */}
                 {servicos.map((item: {id: string, title: string; descricao: string; documentos: string; isPresencial: boolean;}) => {
