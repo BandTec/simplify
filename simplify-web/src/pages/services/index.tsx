@@ -8,6 +8,7 @@ import apiServicos from '../../Service/apiServicos'
 import ModalPDF from '../../pages/services/modalPDF'
 
 import './styles.css'
+import PageHeader from '../../components/page-header';
 
 function Servicos() {
 
@@ -75,6 +76,10 @@ function Servicos() {
                         />
                     )
                 })}
+            <PageHeader title="Acompanhe aqui uma listinha com todos os nossos serviços" />
+            <div className="container-content">
+                {/* Componente do modal aplicado */}
+
                 <h1>Serviços</h1>
                 <div className="card-container">
                 {servicos.map( (item: {id: string, title: string; descricao: string; documentos: string; isPresencial: boolean;}) => {
@@ -106,6 +111,7 @@ function Servicos() {
                 </div>
             </div>
         </div>
+    </div>
     )
 }
 

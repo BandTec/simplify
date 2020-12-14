@@ -1,0 +1,19 @@
+
+.card-let{
+    border: 1px solid white;
+    height: 100%;
+}
+
+.solicitacoes{
+    margin-left: 10%;
+    margin-top: 5%;
+    border-radius: 10px;
+    width: 80%;
+    color: black;
+    height: 90px;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 10px solid blueviolet;
+    background-color: #fff;
+}

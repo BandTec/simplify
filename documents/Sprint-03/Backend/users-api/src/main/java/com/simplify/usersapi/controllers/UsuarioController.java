@@ -82,6 +82,8 @@ public class UsuarioController {
             return created(null).build();
     }
 
+
+
     @GetMapping("/{id}")
     public ResponseEntity getById(@PathVariable Integer id){
         if (repository.existsById(id)){
@@ -107,11 +109,21 @@ public class UsuarioController {
         for (Usuario user: users){
             for (Integer i = 0; i < repository.count();i++){
                 if (user.getEmail().equals(login.getEmail()) && user.getPassword().equals(login.getSenha())){
-                    return ok(isSignin = true);
+                    this.isSignin =true;
+                    return ok(user.getId());
                 }
             }
         }
         return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+    }
+
+    @GetMapping("/verificar")
+    public ResponseEntity hasSignIn(){
+        if (this.isSignin){
+            return ok(true);
+        }else{
+            return noContent().build();
+        }
     }
 
     @PostMapping("/logoff")
