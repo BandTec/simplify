@@ -7,6 +7,7 @@ import PageHeader from '../../components/page-header';
 import { CardProfile } from '../../components/card-profile';
 
 import apiImage from '../../Service/api-image';
+import { useHistory } from 'react-router-dom';
 
 export interface dataResponse {
     id: number;
@@ -22,6 +23,9 @@ export interface content {
 }
 
 function Profile() {
+
+
+    const history = useHistory();
 
     const [response, setResponse] = useState<dataResponse>();
     let userLogado = localStorage.getItem('idUser');
@@ -45,6 +49,12 @@ function Profile() {
             console.log(res)
         }, e => {
             console.log(e)
+        })
+    }
+
+    function logout() {
+        api.post(`/logout/${userLogado}`).then(res => {
+            history.push("/")
         })
     }
 
@@ -75,6 +85,22 @@ function Profile() {
                 </fieldset>
                 <fieldset>
                     <legend>
+                        Documentos Armazenados
+                    </legend>
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="col-12">
+                                <CardProfile titulo="RG" />
+                            </div>
+                            <div className="col-12">
+                                <CardProfile titulo="Comprovante de endereço" />
+                            </div>
+
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>
                         Envie aqui seus documentos
                     </legend>
                     <form onSubmit={uploadImage}>
@@ -87,6 +113,12 @@ function Profile() {
                         />
                         <h2>Arraste ou clique para fazer upload do seu documento.</h2>
                         <button type="submit">Upload</button>
+                    </form>
+                </fieldset>
+                <fieldset>
+                    <legend>Isto é um até logo ?</legend>
+                    <form onSubmit={logout}>
+                        <button type="submit">Logout</button>
                     </form>
                 </fieldset>
             </main >

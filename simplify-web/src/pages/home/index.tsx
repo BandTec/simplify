@@ -4,6 +4,12 @@ import './styles.css'
 import logo from '../../assets/Simplify.png';
 
 import heroImage from '../../assets/Ilustracao/image-1.svg';
+import serviceImage from '../../assets/accept.png'
+import loginImage from '../../assets/user.png'
+import signInImage from '../../assets/sign-in.png'
+
+
+
 
 import { Link } from 'react-router-dom';
 
@@ -20,15 +26,15 @@ function Home() {
 
                 <div className="buttons-container">
                     <Link to="/cadastro" className="study">
-                        <img src={""} alt="" />
+                        <img src={signInImage} alt="" />
                         Cadastrar-se
                </Link>
                     <Link to="/services" className="give-classes">
-                        <img src={""} alt="" />
+                        <img src={serviceImage} alt="" />
                         Procurar serviços
                 </Link>
                     <Link to="/profile" className="give-classes">
-                        <img src={""} alt="" />
+                        <img src={loginImage} alt="" />
                         Minhas solicitações
                </Link>
 
