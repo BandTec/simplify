@@ -42,15 +42,9 @@
 }
 
 @media only screen and (max-width:670px) {
-    .container-content {
-        margin: 3rem auto;
-    }
     .card-container {
         flex-direction: column;
+        margin: 0 auto;
     }
 
-    .container-content h1 {
-        margin: 0;
-        text-align: center;
-    }
 }

@@ -73,8 +73,6 @@ function Servicos() {
             <PageHeader title="Acompanhe aqui uma listinha com todos os nossos serviços" />
             <div className="container-content">
                 {/* Componente do modal aplicado */}
-
-                <h1>Serviços</h1>
                 <div className="card-container">
                 {servicos.map( (item: {id: string, title: string; descricao: string; documentos: string; isPresencial: boolean;}) => {
                     return (
