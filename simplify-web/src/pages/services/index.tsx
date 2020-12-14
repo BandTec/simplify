@@ -1,19 +1,17 @@
 import React from 'react';
 import Card from '../../components/card-service';
 import servicos from '../../mocks/services/mock-service';
-import Modal from '../../components/modal'
 
 import './styles.css'
+import PageHeader from '../../components/page-header';
 
 function Servicos() {
     return (
         <div className="container-service">
+            <PageHeader title="Acompanhe aqui uma listinha com todos os nossos serviços" />
             <div className="container-content">
                 {/* Componente do modal aplicado */}
-                <Modal
-                    titulo="Modal teste"
-                    conteudo="Conteudo teste"
-                />
+
                 <h1>Serviços</h1>
                 <div className="card-container">
                     {servicos.map((item: { title: string; descricao: string; documentos: string; isPresencial: boolean; }) => {
