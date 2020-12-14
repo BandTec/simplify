@@ -5,43 +5,52 @@ import apiPDF from '../../Service/api-pdf'
 import Modal from '../../components/modal/'
 
 import './styles.css'
+import { useHistory } from 'react-router-dom';
 
 function Download() {
+
+    const history = useHistory();
 
     function dismiss() {
         return;
     }
-    
-    function baixarPDF(e:MouseEvent) {
+
+    function baixarPDF(e: MouseEvent) {
         e.preventDefault();
-        
-        apiPDF.get("/")
-        .then(res => {
-            if (res.status === 200) {
-                console.log(res.status);
+
+        apiPDF.get("/rg", {
+            headers: {
+                'Content-Type': 'attachment; filename=users.pdf',
+                'Content-Disposition': 'application/pdf',
             }
-        }).catch(e => {
-            console.log(e)
         })
+            .then(res => {
+                if (res.status === 200) {
+                    history.push("/profile")
+                    console.log(res)
+                }
+            }).catch(e => {
+                console.log(e)
+            })
     }
 
-    return(
+    return (
 
         <Modal
-        id="pdf"
-        titulo="Agendamento realizado com sucesso"
-        conteudo="Seu agendamento foi concluído com sucesso! Clique no botão abaixo para acessar as informações da sua solicitação."
-        botao="Baixar PDF"
-        visibilidadeBotao={false}
-        target=""
-        click={baixarPDF}
-        submit={dismiss}
-        dismiss={false}
-        dataAgendamento=""
-        hora=""
-    />
+            id="pdf"
+            titulo="Agendamento realizado com sucesso"
+            conteudo="Seu agendamento foi concluído com sucesso! Clique no botão abaixo para acessar as informações da sua solicitação."
+            botao="Baixar PDF"
+            visibilidadeBotao={false}
+            target=""
+            click={baixarPDF}
+            submit={dismiss}
+            dismiss={false}
+            dataAgendamento=""
+            hora=""
+        />
     )
-    
+
 }
 
 export default Download;

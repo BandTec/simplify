@@ -3,7 +3,7 @@ import Card from '../../components/card-service';
 import servicos from '../../mocks/services/mock-service';
 import Modal from '../../components/modal'
 import { Link, useHistory } from 'react-router-dom';
-import backIcon from '../../assets/icons//back.svg'
+import backIcon from '../../assets/icons/back.svg'
 import apiServicos from '../../Service/apiServicos'
 import ModalPDF from '../../pages/services/modalPDF'
 
@@ -26,7 +26,7 @@ function Servicos() {
         return;
     }
 
-    function enviarInfo(e:FormEvent) {
+    function enviarInfo(e: FormEvent) {
         e.preventDefault();
 
         apiServicos.post("/", {
@@ -48,10 +48,10 @@ function Servicos() {
 
     return (
         <div className="container-service">
-            <ModalPDF/>
+            <ModalPDF />
             <div className="container-content">
                 {/* Componente do modal aplicado */}
-                {servicos.map((item: {id: string, title: string; descricao: string; documentos: string; isPresencial: boolean;}) => {
+                {servicos.map((item: { id: string, title: string; descricao: string; documentos: string; isPresencial: boolean; }) => {
 
                     return (
                         <Modal
@@ -70,40 +70,40 @@ function Servicos() {
                         />
                     )
                 })}
-            <PageHeader title="Acompanhe aqui uma listinha com todos os nossos serviços" />
-            <div className="container-content">
-                {/* Componente do modal aplicado */}
-                <div className="card-container">
-                {servicos.map( (item: {id: string, title: string; descricao: string; documentos: string; isPresencial: boolean;}) => {
-                    return (
-                        <Card
-                            id={item.id}
-                            key={item.id}
-                            title={item.title}
-                            descricao={item.descricao}
-                            documento={item.documentos}
-                            isPresencial={item.isPresencial}
-                            submit={() => {
-                                setId(item.id);
-                                setNome(item.title);
-                                setDescricao(item.descricao);
-                                setDocumentos(item.documentos);
-                                setIsPresencial(item.isPresencial);
-                            }}
-                            click={() => {
-                                setId(item.id);
-                                setNome(item.title);
-                                setDescricao(item.descricao);
-                                setDocumentos(item.documentos);
-                                setIsPresencial(item.isPresencial);
-                            }}
-                        />
-                    )
-                })}
+                <PageHeader title="Acompanhe aqui uma listinha com todos os nossos serviços" />
+                <div className="container-content">
+                    {/* Componente do modal aplicado */}
+                    <div className="card-container">
+                        {servicos.map((item: { id: string, title: string; descricao: string; documentos: string; isPresencial: boolean; }) => {
+                            return (
+                                <Card
+                                    id={item.id}
+                                    key={item.id}
+                                    title={item.title}
+                                    descricao={item.descricao}
+                                    documento={item.documentos}
+                                    isPresencial={item.isPresencial}
+                                    submit={() => {
+                                        setId(item.id);
+                                        setNome(item.title);
+                                        setDescricao(item.descricao);
+                                        setDocumentos(item.documentos);
+                                        setIsPresencial(item.isPresencial);
+                                    }}
+                                    click={() => {
+                                        setId(item.id);
+                                        setNome(item.title);
+                                        setDescricao(item.descricao);
+                                        setDocumentos(item.documentos);
+                                        setIsPresencial(item.isPresencial);
+                                    }}
+                                />
+                            )
+                        })}
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     )
 }
 
