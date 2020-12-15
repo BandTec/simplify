@@ -18,21 +18,23 @@ public class Service {
     @Column(name = "presencial")
     private Boolean isPresencial;
 
-    @ManyToOne
-    @JoinColumn(name="teste", nullable=false)
-    private Solicitacao solicita;
+    private String horario;
+
+    //@ManyToOne
+    //@JoinColumn(name="teste", nullable=false)
+    //private Solicitacao solicita;
 
     public Integer getId() {
         return id;
     }
 
-    public Solicitacao getSolicitacao() {
-        return solicita;
-    }
+    //public Solicitacao getSolicitacao() {
+    //    return solicita;
+   // }
 
-    public void setSolicita(Solicitacao solicita) {
-        this.solicita = solicita;
-    }
+   // public void setSolicita(Solicitacao solicita) {
+      //  this.solicita = solicita;
+    //}
 
     public void setId(Integer id) {
         this.id = id;
