@@ -10,9 +10,13 @@
     align-items: center;
 
 }
+.container-fluid{
+    padding: 0;
+}
 .card-let{
     border: 1px solid white;
     height: 100%;
+    padding: 0;
 }
 .banner{
     width: 100%;
@@ -20,6 +24,9 @@
     background-color: blueviolet;
     padding-top: 4rem;
     padding-left: 40px;
+}
+.profile {
+    padding: 4rem;
 }
 .img-profile{
     width: 150px;
@@ -97,4 +104,13 @@ form p{
     text-decoration: none;
     transition: background-color 0.4s;
     margin-top: 3.2rem;
+  }
+
+@media only screen and (max-width: 720px){
+    #form {
+    top: 0;
+    left: 0;
+    margin: 1rem auto;
+    width: -webkit-fill-available;
+    }
 }

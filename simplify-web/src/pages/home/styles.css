@@ -86,6 +86,39 @@
     margin-left: 0.8rem;
 }
 
+@media (max-width: 720px) {
+    .hero-image {
+        width: 100%;
+        padding: 0 3rem;
+    }
+    .logo-container h2 {
+        font-size: 18px;
+    }
+    .logo-container {
+        margin-bottom: 1rem;
+        margin-top: 3rem;
+    }
+    .total-connections {
+        margin-top: 0;
+    }
+    .total-connections img {
+        margin: 0;
+    }
+    .buttons-container {
+        flex-direction: column;
+        margin: 1rem auto;
+    }
+    .buttons-container a {
+        padding: 1rem;
+        margin: .5rem auto !important;
+        width: 90vw;
+        height: inherit;
+    }
+    .buttons-container a img {
+        width: 0;
+    }
+}
+
 @media (min-width: 1100px){
     #page-landing-content{
         max-width: 1100px;

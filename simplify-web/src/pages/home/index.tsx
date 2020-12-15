@@ -40,7 +40,7 @@ function Home() {
 
                 </div>
                 <span className="total-connections">
-                    total de 28 documentos gerados <img src={""} alt="" />
+                    Total de 28 documentos gerados <img src={""} alt="" />
                 </span>
             </div>
         </div>

@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { FormEvent, useEffect, useState, MouseEvent, Component } from 'react';
 import Button from '../button';
-import '../../mocks/services/mock-horarios'
+import horarios from '../../mocks/services/mock-horarios'
+import Select from '../../components/input/select'
+import Input from '../../components/input'
+import api from '../../Service/apiServicos'
 
 import './styles.css'
-import { title } from 'process';
+
 
 export interface modalProps {
     titulo: string,
@@ -11,12 +14,19 @@ export interface modalProps {
     id: string,
     botao: string,
     visibilidadeBotao: boolean
+    target: string
+    dismiss: boolean,
+    dataAgendamento: string,
+    hora: string,
+    click(event: React.MouseEvent<HTMLButtonElement>): void;
+    submit(event: React.FormEvent<HTMLDivElement>): void;
+
 }
 
 const Modal: React.FC<modalProps> = (props) => {
+
     return (
         <div>
-
             {/* Modal */}
             <div className="modal fade" id={props.id} tabIndex={-1} role="dialog" aria-hidden="true">
                 <div className="modal-dialog modal-dialog-centered modal-container" role="document">
@@ -32,26 +42,24 @@ const Modal: React.FC<modalProps> = (props) => {
                             {props.conteudo}
                         </p>
                         <div className={props.visibilidadeBotao ? "horarios-container": "btn-none"}>
-                            <Button classe="btn-horarios" title="13:30" data-toggle="modal" data-target={`#${props.id}`}/>
-                            <Button classe="btn-horarios" title="14:30" data-toggle="modal" data-target={`#${props.id}`}/>
-                            <Button classe="btn-horarios" title="15:30" data-toggle="modal" data-target={`#${props.id}`}/>
-                            <Button classe="btn-horarios" title="16:30" data-toggle="modal" data-target={`#${props.id}`}/>
-                            <Button classe="btn-horarios" title="18:30" data-toggle="modal" data-target={`#${props.id}`}/>                        
+                        <Input name="data" label="" required type="date"/>
+                        <Select name="hora"/>          
                         </div>
                     </div>
-                    <div className="modal-footer">
-                        <button type="button" className="btn-modal" data-target="">{props.botao}</button>
+                    <div className="modal-footer" onSubmit={props.submit}>
+                        <button 
+                            type="submit" 
+                            className="btn-modal" 
+                            data-dismiss={props.dismiss ? "modal": ""} 
+                            data-toggle="modal" 
+                            data-target={props.target} 
+                            onClick={props.click}>
+                                {props.botao}
+                        </button>
                     </div>
                     </div>
                 </div>
             </div>
-            <Modal 
-                id={props.id}
-                titulo="Download"
-                conteudo=""
-                botao="Baixar PDF"
-                visibilidadeBotao={false}
-            />
         </div>
     )
 }

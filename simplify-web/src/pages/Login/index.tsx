@@ -39,7 +39,7 @@ function Login() {
 
     useEffect(() => {
         api.get("/verificar").then(res => {
-            if (!res.data) {
+            if (res.data) {
                 return history.push("/profile")
             } else {
                 return;

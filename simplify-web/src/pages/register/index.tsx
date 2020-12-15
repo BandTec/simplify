@@ -24,6 +24,10 @@ function Cadastro() {
 
     var modal = false;
 
+    function dismiss() {
+        return false;
+    }
+
     function cadastro(e: FormEvent) {
         e.preventDefault();
 
@@ -52,7 +56,6 @@ function Cadastro() {
     return (
         <div id="page-teacher-form" className="container">
 
-
             <Modal
                 id="modalSucesso"
                 key="modalSucesso"
@@ -60,9 +63,15 @@ function Cadastro() {
                 conteudo={modal ? `Usuário ${nome} cadastrado com sucesso!` : "Complete o formulário para realização do cadastro."}
                 botao="OK"
                 visibilidadeBotao={false}
+                target=""
+                submit={dismiss}
+                click={dismiss}
+                dismiss={true}
+                dataAgendamento=""
+                hora=""
             />
 
-            <PageHeader title="Que Incrivel que você está escapando da alta burocratização !!!"
+            <PageHeader title="Que Incrivel que você está escapando da alta burocratização!!!"
             />
 
             <main>
