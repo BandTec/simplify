@@ -18,21 +18,23 @@ function Download() {
     function baixarPDF(e: MouseEvent) {
         e.preventDefault();
 
-        apiPDF.get("/rg", {
-            headers: {
-                'Content-Type': 'attachment; filename=users.pdf',
-                'Content-Disposition': 'application/pdf',
-            }
-        })
-            .then(res => {
-                if (res.status === 200) {
-                    history.push("/profile")
-                    console.log(res)
-                }
-            }).catch(e => {
-                console.log(e)
-            })
+        apiPDF.get("/rg", { headers: { 'Content-Disposition': 'application/pdf' } }).then(res => { console.log(res) }, e => { console.log(e) })
     }
+    // , {
+    //     headers: {
+    //           'Content-Type': 'attachment; filename=users.pdf',
+    //         'Content-Disposition': 'application/pdf',
+    //     }
+
+    // .then(res => {
+    //     if (res.status === 200) {
+    //         history.push("/profile")
+    //         console.log(res)
+    //     }
+    // }).catch(e => {
+    //     console.log(e)
+    // })
+
 
     return (
 
