@@ -16,11 +16,12 @@ public class PdfController {
 
     @GetMapping("/certidao")
     public void exportTOpdf(HttpServletResponse response) throws IOException {
+        CertidaoNascimento gerarPDF = new CertidaoNascimento();
         response.setContentType("application/pdf");
         String headerKey = "Content-Disposition";
-        String headerValue = "attachment; filename=users.pdf";
+        String headerValue = "attachment; filename= certidao-nascimento"+ gerarPDF.getProtocolinho()+".pdf";
         response.setHeader(headerKey,headerValue);
-        CertidaoNascimento gerarPDF = new CertidaoNascimento();
+
         gerarPDF.export(response);
     }
 
