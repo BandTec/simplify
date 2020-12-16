@@ -117,7 +117,7 @@
         justify-content: space-between;
     }
     #page-teacher-form main footer p{
-        justify-content: space-between;
+        justify-content: left;
     }
     #page-teacher-form main footer button{
         width: 20rem;

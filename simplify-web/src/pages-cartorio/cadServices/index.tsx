@@ -36,9 +36,9 @@ export function CadServices() {
     }
 
     return (
-        <div className="container">
+        <div>
             <PageHeader title="Cadastre novos serviços para os usuarios" />
-            <main>
+            <main className="container">
                 <fieldset>
                     <legend>Dados sobre o serviço</legend>
                     <Input name="nome" label="Nome do serviço" required onChange={e => { setNome(e.target.value) }} />

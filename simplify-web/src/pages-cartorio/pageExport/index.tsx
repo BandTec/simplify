@@ -28,14 +28,12 @@ export function ExportCart() {
                 <fieldset>
                     <legend>Exportar Dados Usuarios</legend>
                     <div className="row">
-                        <div className="col-12">
-                            <div className="col-6">
-                                <CardProfile
+                        <div className="col-12 card-content">
+                            <CardProfile
                                     classIcon="fas fa-doc"
                                     endereco="http://localhost:8080/pdf/rg"
                                     titulo="Exportar Dados usuarios TXT"
-                                />
-                            </div>
+                            />
                             <CardProfile
                                 classIcon="fas fa-doc"
                                 endereco="http://localhost:8080/pdf/rg"
