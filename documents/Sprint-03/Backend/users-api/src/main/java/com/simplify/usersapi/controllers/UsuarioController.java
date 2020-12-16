@@ -24,7 +24,7 @@ import static org.springframework.http.ResponseEntity.*;
 public class UsuarioController {
     PilhaObj<Usuario> aux = new PilhaObj<>(10);
     FilaObj<UUID> filaUUID = new FilaObj<>(10);
-    private Map<UUID, List<Usuario>> reqFeitas = new HashMap<>();
+    Map<UUID, List<Usuario>> reqFeitas = new HashMap<>();
 
     @Autowired
     UsuarioRepository repository;
@@ -45,7 +45,7 @@ public class UsuarioController {
         if (!filaUUID.isEmpty()) {
             UUID id = filaUUID.poll();
             if (repository.count() > 0) {
-                repository.findAll();
+                //repository.findAll();
                 reqFeitas.put(id, repository.findAll());
                 System.out.println("FEITO  " + id);
             }
@@ -66,23 +66,22 @@ public class UsuarioController {
         repository.save(user);
         return created(null).build();
     }
+
     @DeleteMapping("/apagar/pilha")
     public ResponseEntity deletePilha(@PathVariable Integer id){
         if (!aux.isEmpty()){
             Usuario usu = aux.pop();
             repository.deleteById(usu.getId());
             return ok().build();
-        }else {
+        } else {
             return noContent().build();
         }
     }
     @PostMapping("/cadastro")
-    public ResponseEntity post(@RequestBody Usuario user){
+    public ResponseEntity post(@RequestBody Usuario user) {
             repository.save(user);
             return created(null).build();
     }
-
-
 
     @GetMapping("/{id}")
     public ResponseEntity getById(@PathVariable Integer id){
