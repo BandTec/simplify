@@ -18,25 +18,28 @@ import PreLogin from './pages/pre-login';
 
 import { CadServices } from './pages-cartorio/cadServices';
 import { ExportCart } from './pages-cartorio/pageExport'
+import { CartLogin } from './pages-cartorio/cartLogin';
 
 function Routes() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/" exact component={Home} />
+                <Route path="/" exact component={PreLogin} />
 
-                <Route path="/home" component={Home} />
+                <Route path="/home/user" component={Home} />
 
-                <Route path="/services" component={Servico} />
+                <Route path="/user/services" component={Servico} />
 
-                <Route path="/profile" component={Profile} />
+                <Route path="/user/profile" component={Profile} />
 
-                <Route path="/login" component={Login} />
+                <Route path="/user/login" component={Login} />
 
-                <Route path="/cadastro" component={Cadastro} />
+                <Route path="/user/cadastro" component={Cadastro} />
 
-                <Route path="/prelogin" component={PreLogin} />
-                
+                {/* Adcionar home do cartorio */}
+
+                <Route path="/cart/login" component={CartLogin} />
+
                 <Route path="/cart/servicos" component={CadServices} />
 
                 <Route path="/cart/profile" component={ExportCart} />

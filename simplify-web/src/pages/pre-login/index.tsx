@@ -1,26 +1,26 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import imgCartorio from '../../assets/img-cartorio.jpg'
-import imgUser from '../../assets/img-user.png'
+import imgCartorio from '../../assets/cart-home.png'
+import imgUser from '../../assets/user-home.png'
 import './style.css'
 
 
 function PreLogin() {
-    return(
+    return (
         <div id="page-landing">
             <div>
                 <p className="prelogin-welcome">Bem Vindo(a) ao Simplify!</p>
                 <h1 className="prelogin-title">Escolha o perfil de acesso</h1>
                 <div className="prelogin-container">
                     <div>
-                        <Link className="prelogin-link" to="/login">
-                            <img className="prelogin-img" src={imgUser}/>
+                        <Link className="prelogin-link" to="user/login">
+                            <img width="400px" height="400px" className="prelogin-img" src={imgUser} />
                             <p>Usuário</p>
                         </Link>
                     </div>
                     <div>
-                        <Link className="prelogin-link" to="/login">
-                            <img className="prelogin-img" src={imgCartorio}/>
+                        <Link className="prelogin-link" to="/cart/login">
+                            <img width="400px" height="400px" className="prelogin-img" src={imgCartorio} />
                             <p>Cartório</p>
                         </Link>
                     </div>
