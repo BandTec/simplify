@@ -42,11 +42,13 @@ public class CertidaoNascimento {
         image2.setMarginLeft(175);
         image3.scaleAbsolute(150, 150);
         image3.setMarginLeft(175);
+        String horario = soli.getHora();
+        String dataAgen = soli.getDataAgendamento();
         Text texto = new Text("Obrigada por realizar seu agendamento conosco.\n (¹tolerância de 15 minutos)").setFont(PdfFontFactory.createFont(FontConstants.TIMES_ROMAN));
         Text protoc = new Text("PROTOCOLO SOLICITAÇÃO :"+protocolinho).setFont(PdfFontFactory.createFont(FontConstants.TIMES_ROMAN)).setBold();
         Paragraph paragraph2 = new Paragraph(texto);
         paragraph2.setMarginLeft(130);
-        Text instrucao = new Text("\n  Dados do Agendamento: \n DATA: 16/12/2020 \n HORARIO¹: 8:30 \n SERVIÇO: 2°via de Certidão de Nacimento ").setFont(PdfFontFactory.createFont(FontConstants.TIMES_ROMAN));
+        Text instrucao = new Text("\n  Dados do Agendamento: \n DATA:"+ dataAgen+" \n HORARIO¹: "+horario +"").setFont(PdfFontFactory.createFont(FontConstants.TIMES_ROMAN));
         Text sobre = new Text("\n O serviço que você escolheu possui uma taxa de R$25,00. \n pensando no seu conforto agora temos a opção de pagamento com o PIX, siga as instruções abaixo e economize tempo no seu atendimento:").setFont(PdfFontFactory.createFont(FontConstants.TIMES_ROMAN));
         Text qr =  new Text("\n 1- Acesse o APP do seu banco e entre no PIX  \n 2- Escolha a opção pagar com PIX \n  3- Aponte a câmera do seu celular para o QR-CODE como mostra na ilustração abaixo: ").setFont(PdfFontFactory.createFont(FontConstants.TIMES_ROMAN));
         Text seu = new Text("\n SEU QR-CODE :\n R$ 25,00").setFont(PdfFontFactory.createFont(FontConstants.TIMES_ROMAN)).setBold();
