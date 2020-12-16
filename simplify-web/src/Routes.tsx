@@ -14,6 +14,7 @@ import Status404 from './pages/status';
 import Login from './pages/Login';
 import Cadastro from './pages/register';
 import Profile from './pages/profile';
+import PreLogin from './pages/pre-login';
 
 function Routes() {
     return (
@@ -30,6 +31,8 @@ function Routes() {
                 <Route path="/login" component={Login} />
 
                 <Route path="/cadastro" component={Cadastro} />
+
+                <Route path="/prelogin" component={PreLogin} />
 
                 <Route path="**" component={Status404} />
 
