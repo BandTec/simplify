@@ -5,16 +5,19 @@ import br.com.bandtec.apiservicos.entities.ImgsDocs;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity(name = "solicita")
+@Entity
 public class Solicitacao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "agendamento")
-    private String dataAgendamento;
+    @Column
+    private String data;
 
+    private String hora;
+
+    private Integer id_usuario;
 
     @OneToMany
     private List<ImgsDocs> documentos;
@@ -28,11 +31,18 @@ public class Solicitacao {
     }
 
     public String getDataAgendamento() {
-        return dataAgendamento;
+        return data;
     }
 
     public void setDataAgendamento(String dataAgendamento) {
-        this.dataAgendamento = dataAgendamento;
+        this.data = dataAgendamento;
     }
 
+    public String getHora() {
+        return hora;
+    }
+
+    public List<ImgsDocs> getDocumentos() {
+        return documentos;
+    }
 }
