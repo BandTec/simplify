@@ -43,6 +43,13 @@
     padding-top: 2rem;
 }
 
+.card-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
 main{
     background: var(--color-box-base);
     width: 100%;

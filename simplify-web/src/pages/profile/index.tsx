@@ -80,38 +80,33 @@ function Profile() {
                     <legend>
                         Ultimas Solicitações
                     </legend>
-                    <CardProfile
-                        classIcon="fas fa-doc"
-                        endereco="http://localhost:8080/pdf/rg"
+                    <div className="card-content">
+                        <CardProfile
+                            classIcon="fas fa-doc"
+                            endereco="http://localhost:8080/pdf/rg"
 
-                        titulo="Certidão de nascimento" />
-                    <CardProfile
-                        classIcon="fas fa-doc"
-                        endereco="http://localhost:8080/pdf/rg"
+                            titulo="Certidão de nascimento" />
+                        <CardProfile
+                            classIcon="fas fa-doc"
+                            endereco="http://localhost:8080/pdf/rg"
 
-                        titulo="Segunda via RG(Registro Geral)" />
+                            titulo="Segunda via RG(Registro Geral)" />
+                    </div>
                 </fieldset>
                 <fieldset>
                     <legend>
                         Documentos Armazenados
                     </legend>
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="col-12">
-                                <CardProfile
-                                    classIcon="fas fa-doc"
-                                    endereco=""
-                                    titulo="RG"
-                                />
-                            </div>
-                            <div className="col-12">
-                                <CardProfile
-                                    classIcon="fas fa-doc"
-                                    endereco=""
-                                    titulo="Comprovante de endereço" />
-                            </div>
-
-                        </div>
+                    <div className="card-content">
+                        <CardProfile
+                            classIcon="fas fa-doc"
+                            endereco=""
+                            titulo="RG"
+                        />
+                        <CardProfile
+                            classIcon="fas fa-doc"
+                            endereco=""
+                            titulo="Comprovante de endereço" />
                     </div>
                 </fieldset>
                 <fieldset>
