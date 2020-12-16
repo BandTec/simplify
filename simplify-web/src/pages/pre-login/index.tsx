@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import imgCartorio from '../../assets/img-cartorio.jpg'
 import imgUser from '../../assets/img-user.png'
-import './style.css'
+import './styles.css'
 
 
 function PreLogin() {
@@ -13,13 +13,13 @@ function PreLogin() {
                 <h1 className="prelogin-title">Escolha o perfil de acesso</h1>
                 <div className="prelogin-container">
                     <div>
-                        <Link className="prelogin-link" to="/login">
+                        <Link className="prelogin-link" to="/">
                             <img className="prelogin-img" src={imgUser}/>
                             <p>Usuário</p>
                         </Link>
                     </div>
                     <div>
-                        <Link className="prelogin-link" to="/login">
+                        <Link className="prelogin-link" to="/cart/home">
                             <img className="prelogin-img" src={imgCartorio}/>
                             <p>Cartório</p>
                         </Link>

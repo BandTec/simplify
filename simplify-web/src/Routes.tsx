@@ -18,6 +18,7 @@ import PreLogin from './pages/pre-login';
 
 import { CadServices } from './pages-cartorio/cadServices';
 import { ExportCart } from './pages-cartorio/pageExport'
+import HomeCartorio from './pages-cartorio/home-cartorio';
 
 function Routes() {
     return (
@@ -27,16 +28,18 @@ function Routes() {
 
                 <Route path="/home" component={Home} />
 
+                <Route path="/cart/home" component={HomeCartorio} />
+
                 <Route path="/services" component={Servico} />
 
                 <Route path="/profile" component={Profile} />
 
-                <Route path="/login" component={Login} />
+                <Route path="/user/login" component={Login} />
 
                 <Route path="/cadastro" component={Cadastro} />
 
-                <Route path="/prelogin" component={PreLogin} />
-                
+                <Route path="/login" component={PreLogin} />
+
                 <Route path="/cart/servicos" component={CadServices} />
 
                 <Route path="/cart/profile" component={ExportCart} />
