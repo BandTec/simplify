@@ -73,7 +73,6 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-context:5.2.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:5.2.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:5.2.10.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.30" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aspects:5.2.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-web:2.2.11.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter:2.2.11.RELEASE" level="project" />
@@ -104,6 +103,16 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-webmvc:5.2.10.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.2.10.RELEASE" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: com.h2database:h2:1.4.200" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:kernel:7.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.30" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:io:7.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:layout:7.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:forms:7.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:pdfa:7.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:sign:7.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:barcodes:7.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:font-asian:7.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:hyph:7.0.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-starter-test:2.2.11.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test:2.2.11.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:2.2.11.RELEASE" level="project" />
