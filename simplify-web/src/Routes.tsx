@@ -15,6 +15,9 @@ import Login from './pages/Login';
 import Cadastro from './pages/register';
 import Profile from './pages/profile';
 
+import { CadServices } from './pages-cartorio/cadServices';
+import { ExportCart } from './pages-cartorio/pageExport'
+
 function Routes() {
     return (
         <BrowserRouter>
@@ -30,6 +33,10 @@ function Routes() {
                 <Route path="/login" component={Login} />
 
                 <Route path="/cadastro" component={Cadastro} />
+
+                <Route path="/cart/servicos" component={CadServices} />
+
+                <Route path="/cart/profile" component={ExportCart} />
 
                 <Route path="**" component={Status404} />
 

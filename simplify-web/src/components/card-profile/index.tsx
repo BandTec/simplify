@@ -4,14 +4,25 @@ import './styles.css'
 
 interface propsCard {
     titulo: string
+    classIcon: string
+    endereco: string
 }
 
 export const CardProfile = (props: propsCard) => {
     return (
-        <div className="solicitacoes">
-            <div className="solicitacao">
-                <div className="card-solicita">
-                    <h2>{props.titulo} </h2>
+        <div id="card-export">
+            <div className="face face1">
+                <div className="content">
+                    <div className="icon">
+                        <i aria-hidden="true">{props.titulo}</i>
+                    </div>
+                </div>
+            </div>
+            <div className="face face2">
+                <div className="content">
+                    <h3>
+                        <a href={props.endereco} >{props.titulo}</a>
+                    </h3>
                 </div>
             </div>
         </div>

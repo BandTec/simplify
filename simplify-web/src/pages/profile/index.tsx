@@ -80,8 +80,16 @@ function Profile() {
                     <legend>
                         Ultimas Solicitações
                     </legend>
-                    <CardProfile titulo="Certidão de nascimento" />
-                    <CardProfile titulo="Segunda via RG(Registro Geral)" />
+                    <CardProfile
+                        classIcon="fas fa-doc"
+                        endereco="http://localhost:8080/pdf/rg"
+
+                        titulo="Certidão de nascimento" />
+                    <CardProfile
+                        classIcon="fas fa-doc"
+                        endereco="http://localhost:8080/pdf/rg"
+
+                        titulo="Segunda via RG(Registro Geral)" />
                 </fieldset>
                 <fieldset>
                     <legend>
@@ -90,10 +98,17 @@ function Profile() {
                     <div className="row">
                         <div className="col-12">
                             <div className="col-12">
-                                <CardProfile titulo="RG" />
+                                <CardProfile
+                                    classIcon="fas fa-doc"
+                                    endereco=""
+                                    titulo="RG"
+                                />
                             </div>
                             <div className="col-12">
-                                <CardProfile titulo="Comprovante de endereço" />
+                                <CardProfile
+                                    classIcon="fas fa-doc"
+                                    endereco=""
+                                    titulo="Comprovante de endereço" />
                             </div>
 
                         </div>
