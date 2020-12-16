@@ -15,6 +15,7 @@ public class Solicitacao {
     @Column(name = "agendamento")
     private String dataAgendamento;
 
+
     @OneToMany
     private List<ImgsDocs> documentos;
 

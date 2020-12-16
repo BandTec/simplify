@@ -42,8 +42,9 @@ function Download() {
             id="pdf"
             titulo="Agendamento realizado com sucesso"
             conteudo="Seu agendamento foi concluído com sucesso! Clique no botão abaixo para acessar as informações da sua solicitação."
-            botao="Baixar PDF"
+            botao2="Baixar PDF"
             visibilidadeBotao={false}
+            visibilidade={true}
             target=""
             click={baixarPDF}
             submit={dismiss}

@@ -19,7 +19,8 @@ function Home() {
             <div id="page-landing-content" className="container">
                 <div className="logo-container">
                     <img src={logo} alt="Proffy" />
-                    <h2>Gerar documentos nunca foi tão fácil</h2>
+                    <h2>Gerar documentos nunca foi tão fácil
+                    </h2>
                 </div>
 
                 <img src={heroImage} alt="" className="hero-image" />

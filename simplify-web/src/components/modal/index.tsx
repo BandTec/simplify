@@ -12,8 +12,10 @@ export interface modalProps {
     titulo: string,
     conteudo: string,
     id: string,
-    botao: string,
-    visibilidadeBotao: boolean
+    botao?: string,
+    botao2?: string,
+    visibilidadeBotao: boolean,
+    visibilidade: boolean,
     target: string
     dismiss: boolean,
     dataAgendamento: string,
@@ -47,9 +49,20 @@ const Modal: React.FC<modalProps> = (props) => {
                         </div>
                     </div>
                     <div className="modal-footer" onSubmit={props.submit}>
-                        <button 
+                    <a href="http://localhost:8888/pdf/certidao"
+                    className="a-modal" 
+                    >  
+                    <button 
                             type="submit" 
-                            className="btn-modal" 
+                            className={props.visibilidade?'btn-modal':'btn-none'} 
+                            >
+                                {props.botao2}
+                        </button>
+                    </a>
+                        <button 
+                            
+                            type="submit" 
+                            className={!props.visibilidade?'btn-modal':'btn-none'} 
                             data-dismiss={props.dismiss ? "modal": ""} 
                             data-toggle="modal" 
                             data-target={props.target} 

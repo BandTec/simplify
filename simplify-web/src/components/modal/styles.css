@@ -45,7 +45,9 @@
     display: flex;
     flex-direction: column;
 }
-
+.a-modal{
+    text-decoration: none !important;
+}
 @media only screen and (max-width: 720px) {
     .btn-modal {
         margin: auto !important;

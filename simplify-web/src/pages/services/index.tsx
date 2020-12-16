@@ -60,6 +60,7 @@ function Servicos() {
                             conteudo="Horários disponíveis"
                             botao="Continuar"
                             visibilidadeBotao={true}
+                            visibilidade={false}
                             target="#pdf"
                             dataAgendamento=""
                             hora="12:00"

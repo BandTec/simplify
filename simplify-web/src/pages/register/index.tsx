@@ -63,6 +63,7 @@ function Cadastro() {
                 conteudo={modal ? `Usuário ${nome} cadastrado com sucesso!` : "Complete o formulário para realização do cadastro."}
                 botao="OK"
                 visibilidadeBotao={false}
+                visibilidade={false}
                 target=""
                 submit={dismiss}
                 click={dismiss}
