@@ -22,7 +22,7 @@ function HomeCartorio() {
                     <h2>Gerar documentos nunca foi tão fácil</h2>
                 </div>
 
-                <img src={heroImage} alt="" className="hero-image"/>
+                <img src={heroImage} alt="" className="hero-image" />
 
                 <div className="buttons-container">
                     <Link to="/cadastro/cartorio" className="study">
