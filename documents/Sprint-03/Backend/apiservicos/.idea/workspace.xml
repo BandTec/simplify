@@ -23,11 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f8c988d-9403-4345-a724-6dc4cfe19b5f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/bandtec/apiservicos/gerarPdf/CertidaoNascimento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/bandtec/apiservicos/gerarPdf/CertidaoNascimento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../users-api/src/main/java/com/simplify/usersapi/entities/LoginCartorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/bandtec/apiservicos/entities/ImgsDocs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/bandtec/apiservicos/entities/ImgsDocs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-api/src/main/java/com/simplify/usersapi/controllers/CartorioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-api/src/main/java/com/simplify/usersapi/controllers/CartorioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-api/src/main/java/com/simplify/usersapi/entities/Cartorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-api/src/main/java/com/simplify/usersapi/entities/Cartorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../users-api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../simplify-web/src/Service/api-image.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../simplify-web/src/Service/api-image.ts" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/classes/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,37 +39,6 @@
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/bandtec/apiservicos/entities/Solicitacao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/bandtec/apiservicos/gerarPdf/CertidaoNascimento.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/br/com/bandtec/apiservicos/entities/Service.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -79,17 +51,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/br/com/bandtec/apiservicos/gerarPdf/CertidaoNascimento.java" />
-      </list>
-    </option>
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="D:\Apps\IntelliJ IDEA Community Edition 2020.2\plugins\maven\lib\maven3" />
+        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.1\plugins\maven\lib\maven3" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -101,79 +66,6 @@
   </component>
   <component name="ProjectId" id="1lcDauDlmaIzSmEp3NOb6Rs88tW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="apiservicos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="apiservicos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="apiservicos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="apiservicos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="apiservicos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="apiservicos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="apiservicos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="apiservicos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="apiservicos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="apiservicos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="apiservicos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="apiservicos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="apiservicos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="apiservicos" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="apiservicos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="apiservicos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="apiservicos" type="462c0819:PsiDirectoryNode" />
-              <item name="entities" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="apiservicos" type="b2602c69:ProjectViewProjectNode" />
-              <item name="apiservicos" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="apiservicos" type="462c0819:PsiDirectoryNode" />
-              <item name="gerarPdf" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-    </panes>
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -181,29 +73,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../s/simplify/documents/Sprint-03/Backend/api-pdf" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Aluno\Desktop\simplify\documents\Sprint-03\Backend\apiservicos\images" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration name="ApiservicosApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <envs>
-        <env name="GOOGLE_APPLICATION_CREDENTIALS" value="C:\Users\PedroGonçalves\Desktop\faculll\simplify\documents\Sprint-03\Backend\simplify-project.json" />
+        <env name="GOOGLE_APPLICATION_CREDENTIALS" value="C:\Users\PedroGonçalves\Desktop\faculll\simplify\documents\Sprint-03\Backend\upload-files-simplify-01.json" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="br.com.bandtec.apiservicos.ApiservicosApplication" />
       <module name="apiservicos" />
@@ -223,7 +103,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -237,49 +117,12 @@
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1382" height="744" extended-state="6" />
-    <layout>
-      <window_info id="Image Layers" />
-      <window_info id="Designer" />
-      <window_info id="UI Designer" />
-      <window_info id="Capture Tool" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19591528" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -298,73 +141,46 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607888151907">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1608243148960">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1607888151907" />
-    <state x="446" y="48" key="#com.intellij.ide.util.MemberChooser" timestamp="1608155843452">
+    <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1608243148960" />
+    <state x="446" y="48" key="#com.intellij.ide.util.MemberChooser" timestamp="1608244643376">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="446" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/1920.0.1360.728@0.0.1280.680" timestamp="1608155843452" />
-    <state x="200" y="116" width="717" height="488" key="EnvironmentVariablesDialog" timestamp="1607888145306">
+    <state x="446" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1608244643376" />
+    <state x="200" y="116" width="717" height="488" key="EnvironmentVariablesDialog" timestamp="1608243138675">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="200" y="116" width="717" height="488" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1607888145306" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1608073284896">
+    <state x="200" y="116" width="717" height="488" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1608243138675" />
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1608245175312">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1360.728@0.0.1280.680" timestamp="1608073284896" />
-    <state width="1222" height="163" key="GridCell.Tab.0.bottom" timestamp="1608158017433">
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1608245175312" />
+    <state width="1237" height="239" key="GridCell.Tab.0.bottom" timestamp="1608246140094">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1222" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1360.728@0.0.1280.680" timestamp="1608156486915" />
-    <state width="1222" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608158017433" />
-    <state width="1222" height="163" key="GridCell.Tab.0.center" timestamp="1608158017433">
+    <state width="1237" height="239" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608246140094" />
+    <state width="1237" height="239" key="GridCell.Tab.0.center" timestamp="1608246140094">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1222" height="163" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1360.728@0.0.1280.680" timestamp="1608156486915" />
-    <state width="1222" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1608158017433" />
-    <state width="1222" height="163" key="GridCell.Tab.0.left" timestamp="1608158017433">
+    <state width="1237" height="239" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1608246140094" />
+    <state width="1237" height="239" key="GridCell.Tab.0.left" timestamp="1608246140094">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1222" height="163" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1360.728@0.0.1280.680" timestamp="1608156486915" />
-    <state width="1222" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1608158017433" />
-    <state width="1222" height="163" key="GridCell.Tab.0.right" timestamp="1608158017433">
+    <state width="1237" height="239" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1608246140094" />
+    <state width="1237" height="239" key="GridCell.Tab.0.right" timestamp="1608246140094">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1222" height="163" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1360.728@0.0.1280.680" timestamp="1608156486915" />
-    <state width="1222" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1608158017433" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/bandtec/apiservicos/controllers/SolicitacaoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/bandtec/apiservicos/entities/Solicitacao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/bandtec/apiservicos/entities/Service.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/br/com/bandtec/apiservicos/gerarPdf/CertidaoNascimento.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="40" column="39" lean-forward="true" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
+    <state width="1237" height="239" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1608246140094" />
   </component>
 </project>
