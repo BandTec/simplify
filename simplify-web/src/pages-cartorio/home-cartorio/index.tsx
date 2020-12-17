@@ -6,7 +6,6 @@ import logo from '../../assets/Simplify.png';
 import heroImage from '../../assets/Ilustracao/image-4.svg';
 import serviceImage from '../../assets/accept.png'
 import loginImage from '../../assets/user.png'
-import signInImage from '../../assets/sign-in.png'
 
 
 
@@ -25,10 +24,6 @@ function HomeCartorio() {
                 <img src={heroImage} alt="" className="hero-image" />
 
                 <div className="buttons-container">
-                    <Link to="/cadastro/cartorio" className="study">
-                        <img src={signInImage} alt="" />
-                        Cadastrar-se
-               </Link>
                     <Link to="/cart/servico" className="give-classes">
                         <img src={serviceImage} alt="" />
                         Cadastrar serviço

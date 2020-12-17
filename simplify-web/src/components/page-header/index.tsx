@@ -9,13 +9,14 @@ import backIcon from '../../assets/icons//back.svg'
 interface pageHeaderProps {
     title: string;
     description?: string;
+    endereco: string;
 }
 
 const PageHeader: React.FC<pageHeaderProps> = (props) => {
     return (
         <header className="page-header" >
             <div className="top-bar-container">
-                <Link to="/">
+                <Link to={props.endereco}>
                     <img src={backIcon} alt="Voltar" />
                 </Link>
                 <img src="" alt="" />

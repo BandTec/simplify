@@ -6,6 +6,7 @@ import Textarea from '../../components/TextArea'
 
 import warningIcon from '../../assets/icons/warning.svg'
 import api from '../../Service/api'
+import apiServicos from '../../Service/apiServicos'
 
 
 export interface Service {
@@ -32,12 +33,19 @@ export function CadServices() {
             presencial,
             horario
         })
+        apiServicos.post("", { nome, descricao, documentos, presencial, horario }).then(res => {
+            if (res.status == 201) {
+                alert("Serviço cadastrado com sucesso")
+            } else {
+                alert("Erro ao cadastrar")
+            }
+        })
 
     }
 
     return (
         <div>
-            <PageHeader title="Cadastre novos serviços para os usuarios" />
+            <PageHeader endereco="cart/home" title="Cadastre novos serviços para os usuarios" />
             <main className="container">
                 <fieldset>
                     <legend>Dados sobre o serviço</legend>

@@ -37,13 +37,13 @@
 }
 
 .buttons-container a{
-    width: 16.4rem;
+    width: 25.4rem;
     height: 6.4rem;
 
     border-radius: 0.8rem;
     margin-right: 2.6rem;
     font: 600 2rem "Roboto" !important;
-
+    
     display: flex;
     align-items: center;
     justify-content: center;

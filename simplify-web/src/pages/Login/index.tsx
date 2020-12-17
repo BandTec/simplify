@@ -2,7 +2,7 @@ import React, { FormEvent, useEffect, useState } from 'react';
 import './styles.css'
 
 import Input from '../../components/input';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import api from '../../Service/api';
 import PageHeader from '../../components/page-header';
 
@@ -50,7 +50,7 @@ function Login() {
 
     return (
         <div id="page-teacher-form" className="container">
-            <PageHeader title="Que Incrivel ver você novamente !!!"
+            <PageHeader endereco="/" title="Que Incrivel ver você novamente !!!"
 
             />
             <main>
@@ -61,6 +61,7 @@ function Login() {
                         <Input name="senha" onChange={(e => { setSenha(e.target.value) })} type="password" label="Senha" />
                     </fieldset>
                     <footer>
+                        <Link className="linkCad" to="/user/cadastro">Não possuo conta</Link>
                         <p >
                             <img src={warningIcon} alt="Aviso Importante" />
                     Importante ! Preencha todos os campos

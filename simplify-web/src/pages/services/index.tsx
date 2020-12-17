@@ -1,4 +1,4 @@
-import React, { Component, FormEvent, MouseEvent, useState } from 'react';
+import React, { Component, FormEvent, MouseEvent, useEffect, useState } from 'react';
 import Card from '../../components/card-service';
 import servicos from '../../mocks/services/mock-service';
 import Modal from '../../components/modal'
@@ -21,6 +21,7 @@ function Servicos() {
     const [isPresencial, setIsPresencial] = useState(Boolean);
     const [dataAgendamento, setDataAgendamento] = useState('');
 
+    const [data, setData] = useState([]);
 
     function dismiss() {
         return;
@@ -46,12 +47,16 @@ function Servicos() {
         })
     }
 
+    useEffect(() => {
+        apiServicos.get(``).then(res => { setData(res.data) })
+    })
+
     return (
         <div className="container-service">
             <ModalPDF />
             <div className="container-content">
                 {/* Componente do modal aplicado */}
-                {servicos.map((item: { id: string, title: string; descricao: string; documentos: string; isPresencial: boolean; }) => {
+                {data.map((item: { id: string, title: string; descricao: string; documentos: string; isPresencial: boolean; }) => {
                     return (
                         <Modal
                             id={`${item.id}`}
@@ -70,11 +75,11 @@ function Servicos() {
                         />
                     )
                 })}
-                <PageHeader title="Acompanhe aqui uma listinha com todos os nossos serviços" />
+                <PageHeader endereco="/user/home" title="Acompanhe aqui uma listinha com todos os nossos serviços" />
                 <div className="container-content">
                     {/* Componente do modal aplicado */}
                     <div className="card-container">
-                        {servicos.map((item: { id: string, title: string; descricao: string; documentos: string; isPresencial: boolean; horario: string }) => {
+                        {data.map((item: { id: string, title: string; descricao: string; documentos: string; isPresencial: boolean; horario: string }) => {
                             return (
                                 <Card
                                     id={item.id}

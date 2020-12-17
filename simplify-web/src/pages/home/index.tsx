@@ -26,15 +26,11 @@ function Home() {
                 <img src={heroImage} alt="" className="hero-image" />
 
                 <div className="buttons-container">
-                    <Link to="/cadastro" className="study">
-                        <img src={signInImage} alt="" />
-                        Cadastrar-se
-               </Link>
-                    <Link to="/services" className="give-classes">
+                    <Link to="/user/services" className="study">
                         <img src={serviceImage} alt="" />
                         Procurar serviços
                 </Link>
-                    <Link to="/profile" className="give-classes">
+                    <Link to="/user/profile" className="give-classes">
                         <img src={loginImage} alt="" />
                         Minhas solicitações
                </Link>

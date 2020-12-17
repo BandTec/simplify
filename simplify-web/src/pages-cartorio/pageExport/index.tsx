@@ -8,7 +8,7 @@ import { CardProfile } from '../../components/card-profile'
 export function ExportCart() {
     return (
         <div className="container">
-            <PageHeader title="Exporte documentos aqui sobre seus clientes" />
+            <PageHeader endereco="/cart/home" title="Exporte documentos aqui sobre seus clientes" />
             <main>
                 <fieldset>
                     <legend>Dados da Instituição</legend>
@@ -30,13 +30,13 @@ export function ExportCart() {
                     <div className="row">
                         <div className="col-12 card-content">
                             <CardProfile
-                                    classIcon="fas fa-doc"
-                                    endereco="http://localhost:8080/pdf/rg"
-                                    titulo="Exportar Dados usuarios TXT"
+                                classIcon="fas fa-doc"
+                                endereco="http://localhost:8080/txt/"
+                                titulo="Exportar Dados usuarios TXT"
                             />
                             <CardProfile
                                 classIcon="fas fa-doc"
-                                endereco="http://localhost:8080/pdf/rg"
+                                endereco="http://localhost:8080/csv"
                                 titulo="Exportar Dados usuarios CSV"
                             />
                         </div>

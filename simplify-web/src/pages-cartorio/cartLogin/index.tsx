@@ -36,7 +36,7 @@ export function CartLogin() {
 
     return (
         <div id="page-teacher-form" className="container">
-            <PageHeader title="Sejá bem vindo!!!"
+            <PageHeader endereco="/" title="Sejá bem vindo!!!"
 
             />
             <main>

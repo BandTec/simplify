@@ -41,13 +41,11 @@ function Cadastro() {
         }).then(res => {
             if (res.status === 201) {
                 alert(`Sejá bem vindo ${nome}, seu cadastro foi efetuado com sucesso`)
-                history.push("/home");
+                history.push("/user/home");
                 modal = true;
 
             }
         }).catch(e => {
-            console.log(e)
-            alert(`Erro ao cadastrar`)
             modal = false;
         })
 
@@ -59,7 +57,7 @@ function Cadastro() {
             <Modal
                 id="modalSucesso"
                 key="modalSucesso"
-                titulo={modal ? "Usuário cadastrado com sucesso!":"Preencha todos os campos!"}
+                titulo={modal ? "Usuário cadastrado com sucesso!" : "Preencha todos os campos!"}
                 conteudo={modal ? `Usuário ${nome} cadastrado com sucesso!` : "Complete o formulário para realização do cadastro."}
                 botao="OK"
                 visibilidadeBotao={false}
@@ -72,7 +70,7 @@ function Cadastro() {
                 hora=""
             />
 
-            <PageHeader title="Que Incrivel que você está escapando da alta burocratização!!!"
+            <PageHeader endereco="/" title="Que Incrivel que você está escapando da alta burocratização!!!"
             />
 
             <main>

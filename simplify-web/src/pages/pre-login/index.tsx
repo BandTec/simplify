@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import imgCartorio from '../../assets/cart-home.png'
 import imgUser from '../../assets/user-home.png'
-import './style.css'
+import './styles.css'
 
 
 function PreLogin() {

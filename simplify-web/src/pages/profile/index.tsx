@@ -61,7 +61,7 @@ function Profile() {
     return (
 
         <div className="container-fluid">
-            <PageHeader title="Acompanhe aqui as suas solicitações" />
+            <PageHeader endereco="/user/home" title="Acompanhe aqui as suas solicitações" />
             <main>
                 <fieldset>
                     <legend>Dados Pessoais</legend>
