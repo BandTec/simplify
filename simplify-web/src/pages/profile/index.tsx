@@ -39,9 +39,10 @@ function Profile() {
     });
 
     const uploadImage = async () => {
+        let user = localStorage.getItem("idUser")
         const dataImage = new FormData();
         dataImage.append('file', imagemUpload)
-        apiImage.post("1", dataImage, {
+        apiImage.post(`${user}?tipoDoc=RG`, dataImage, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             }

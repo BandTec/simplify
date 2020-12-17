@@ -29,7 +29,7 @@ function Login() {
         }).then(res => {
             if (res.status === 200) {
                 localStorage.setItem('idUser', res.data)
-                history.push('/profile')
+                history.push('/user/profile?')
             }
         }).catch(e => {
             console.log(e)
