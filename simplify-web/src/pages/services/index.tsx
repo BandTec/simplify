@@ -21,6 +21,7 @@ function Servicos() {
     const [isPresencial, setIsPresencial] = useState(Boolean);
     const [dataAgendamento, setDataAgendamento] = useState('');
 
+
     const [data, setData] = useState([]);
 
     function dismiss() {
@@ -30,13 +31,12 @@ function Servicos() {
     function enviarInfo(e: FormEvent) {
         e.preventDefault();
 
+        let idUser = localStorage.getItem('idUser')
+
         apiServicos.post("/", {
-            id,
-            nome,
-            descricao,
-            documentos,
-            isPresencial,
-            dataAgendamento
+            idUser,
+            dataAgendamento,
+
         }).then(res => {
             if (res.status === 200) {
                 alert(`Agendamento realizado`)
@@ -48,7 +48,7 @@ function Servicos() {
     }
 
     useEffect(() => {
-        apiServicos.get(``).then(res => { setData(res.data) })
+        apiServicos.get("").then(res => { setData(res.data) })
     })
 
     return (

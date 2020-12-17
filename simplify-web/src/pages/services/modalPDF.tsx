@@ -18,7 +18,6 @@ function Download() {
     function baixarPDF(e: MouseEvent) {
         e.preventDefault();
 
-        apiPDF.get("/rg", { headers: { 'Content-Disposition': 'application/pdf' } }).then(res => { console.log(res) }, e => { console.log(e) })
     }
     // , {
     //     headers: {
