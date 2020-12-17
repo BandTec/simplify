@@ -23,8 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f8c988d-9403-4345-a724-6dc4cfe19b5f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../users-api/src/main/java/com/simplify/usersapi/entities/LoginCartorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/bandtec/apiservicos/entities/ImgsDocs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/bandtec/apiservicos/entities/ImgsDocs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../users-api/src/main/java/com/simplify/usersapi/controllers/CartorioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-api/src/main/java/com/simplify/usersapi/controllers/CartorioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../users-api/src/main/java/com/simplify/usersapi/entities/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-api/src/main/java/com/simplify/usersapi/entities/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-api/src/main/java/com/simplify/usersapi/entities/Cartorio.java" beforeDir="false" afterPath="$PROJECT_DIR$/../users-api/src/main/java/com/simplify/usersapi/entities/Cartorio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../users-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../users-api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../simplify-web/src/Service/api-image.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../simplify-web/src/Service/api-image.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +73,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../users-api" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../../s/simplify/documents/Sprint-03/Backend/api-pdf" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -143,38 +148,39 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="96" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1608243148960" />
-    <state x="446" y="48" key="#com.intellij.ide.util.MemberChooser" timestamp="1608155843452">
+    <state x="446" y="48" key="#com.intellij.ide.util.MemberChooser" timestamp="1608244643376">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="446" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680/1920.0.1360.728@0.0.1280.680" timestamp="1608155843452" />
+    <state x="446" y="48" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1608244643376" />
     <state x="200" y="116" width="717" height="488" key="EnvironmentVariablesDialog" timestamp="1608243138675">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="200" y="116" width="717" height="488" key="EnvironmentVariablesDialog/0.0.1280.680@0.0.1280.680" timestamp="1608243138675" />
-    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1608243364043">
+    <state x="421" y="96" key="FileChooserDialogImpl" timestamp="1608245175312">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680/1920.0.1360.728@0.0.1280.680" timestamp="1608073284896" />
-    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1608243364043" />
-    <state width="1222" height="163" key="GridCell.Tab.0.bottom" timestamp="1608158017433">
+    <state x="421" y="96" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1608245175312" />
+    <state width="1237" height="239" key="GridCell.Tab.0.bottom" timestamp="1608246140094">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1222" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680/1920.0.1360.728@0.0.1280.680" timestamp="1608156486915" />
-    <state width="1222" height="163" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608158017433" />
-    <state width="1222" height="163" key="GridCell.Tab.0.center" timestamp="1608158017433">
+    <state width="1237" height="239" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608246140094" />
+    <state width="1237" height="239" key="GridCell.Tab.0.center" timestamp="1608246140094">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1222" height="163" key="GridCell.Tab.0.center/0.0.1280.680/1920.0.1360.728@0.0.1280.680" timestamp="1608156486915" />
-    <state width="1222" height="163" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1608158017433" />
-    <state width="1222" height="163" key="GridCell.Tab.0.left" timestamp="1608158017433">
+    <state width="1237" height="239" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1608246140094" />
+    <state width="1237" height="239" key="GridCell.Tab.0.left" timestamp="1608246140094">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1222" height="163" key="GridCell.Tab.0.left/0.0.1280.680/1920.0.1360.728@0.0.1280.680" timestamp="1608156486915" />
-    <state width="1222" height="163" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1608158017433" />
-    <state width="1222" height="163" key="GridCell.Tab.0.right" timestamp="1608158017433">
+    <state width="1237" height="239" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1608246140094" />
+    <state width="1237" height="239" key="GridCell.Tab.0.right" timestamp="1608246140094">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1222" height="163" key="GridCell.Tab.0.right/0.0.1280.680/1920.0.1360.728@0.0.1280.680" timestamp="1608156486915" />
-    <state width="1222" height="163" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1608158017433" />
+    <state width="1237" height="239" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1608246140094" />
   </component>
 </project>

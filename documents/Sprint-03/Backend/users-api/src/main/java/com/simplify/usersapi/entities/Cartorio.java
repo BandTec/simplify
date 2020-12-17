@@ -26,6 +26,17 @@ public class Cartorio {
 
     private String horario;
 
+    public Cartorio(Integer id, String nome, String cnpj, String endereco, String email, String senha, String telefone, String horario) {
+        this.id = id;
+        this.nome = nome;
+        this.cnpj = cnpj;
+        this.endereco = endereco;
+        this.email = email;
+        this.senha = senha;
+        this.telefone = telefone;
+        this.horario = horario;
+    }
+
     public Integer getId() {
         return id;
     }

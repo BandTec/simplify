@@ -4,6 +4,7 @@ import javax.persistence.*;
 
 @Entity
 public class ImgsDocs {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idDocumento;
