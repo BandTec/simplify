@@ -40,7 +40,7 @@ function Download() {
         <Modal
             id="pdf"
             titulo="Agendamento realizado com sucesso"
-            conteudo="Seu agendamento foi concluído com sucesso! Clique no botão abaixo para acessar as informações da sua solicitação."
+            conteudo="Seu agendamento foi concluído com sucesso! Clique no botão abaixo para efetuar o pagamento e evitar filas."
             botao2="Baixar PDF"
             visibilidadeBotao={false}
             visibilidade={true}
