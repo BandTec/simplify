@@ -24,7 +24,7 @@ function HomeCartorio() {
                 <img src={heroImage} alt="" className="hero-image" />
 
                 <div className="buttons-container">
-                    <Link to="/cart/servico" className="give-classes">
+                    <Link to="/cart/servicos" className="give-classes">
                         <img src={serviceImage} alt="" />
                         Cadastrar serviço
                 </Link>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { FormEvent, useState } from 'react'
 import { useHistory } from 'react-router-dom';
 
 
@@ -19,13 +19,16 @@ export function CartLogin() {
     const [senha, setSenha] = useState("");
 
 
-    function loginConect() {
-        api.post("/cart/login", {
+    function loginConecta(e: FormEvent) {
+        e.preventDefault()
+
+        api.post("/cartorio/login", {
             cnpj,
             senha
         }).then(
             res => {
-                if (res.data) {
+                if (res.status === 200) {
+                    console.log(res)
                     history.push("/cart/home")
                 } else {
                     alert(`Login ou senha invalidos, tente novamente`)
@@ -40,7 +43,7 @@ export function CartLogin() {
 
             />
             <main>
-                <form onSubmit={loginConect}>
+                <form onSubmit={loginConecta}>
                     <fieldset>
                         <legend>Seus dados</legend>
                         <Input type="text" name="cnpj" placeholder="xxx" onChange={(e => { setCnpj(e.target.value) })} label="CNPJ" />

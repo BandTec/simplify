@@ -1,14 +1,13 @@
-import React, { Component, FormEvent, MouseEvent, useEffect, useState } from 'react';
+import React, { FormEvent, useEffect, useState } from 'react';
 import Card from '../../components/card-service';
-import servicos from '../../mocks/services/mock-service';
 import Modal from '../../components/modal'
-import { Link, useHistory } from 'react-router-dom';
-import backIcon from '../../assets/icons/back.svg'
+import { useHistory } from 'react-router-dom';
 import apiServicos from '../../Service/apiServicos'
 import ModalPDF from '../../pages/services/modalPDF'
 
 import './styles.css'
 import PageHeader from '../../components/page-header';
+import servicos from '../../mocks/services/mock-service';
 
 function Servicos() {
 
@@ -20,6 +19,10 @@ function Servicos() {
     const [documentos, setDocumentos] = useState('');
     const [isPresencial, setIsPresencial] = useState(Boolean);
     const [dataAgendamento, setDataAgendamento] = useState('');
+
+    useEffect(() => {
+        apiServicos.get("").then(res => { setData(res.data) })
+    })
 
 
     const [data, setData] = useState([]);
@@ -47,16 +50,11 @@ function Servicos() {
         })
     }
 
-    useEffect(() => {
-        apiServicos.get("").then(res => { setData(res.data) })
-    })
-
     return (
         <div className="container-service">
             <ModalPDF />
             <div className="container-content">
-                {/* Componente do modal aplicado */}
-                {data.map((item: { id: string, title: string; descricao: string; documentos: string; isPresencial: boolean; }) => {
+                {servicos.map((item: { id: string, title: string; descricao: string; documentos: string; isPresencial: boolean; }) => {
                     return (
                         <Modal
                             id={`${item.id}`}
@@ -79,7 +77,7 @@ function Servicos() {
                 <div className="container-content">
                     {/* Componente do modal aplicado */}
                     <div className="card-container">
-                        {data.map((item: { id: string, title: string; descricao: string; documentos: string; isPresencial: boolean; horario: string }) => {
+                        {servicos.map((item: { id: string, title: string; descricao: string; documentos: string; isPresencial: boolean; horario: string }) => {
                             return (
                                 <Card
                                     id={item.id}

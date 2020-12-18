@@ -23,13 +23,13 @@ function Login() {
         e.preventDefault();
 
 
-        api.post("/login", {
+        api.post("/user/login", {
             email,
             senha
         }).then(res => {
             if (res.status === 200) {
                 localStorage.setItem('idUser', res.data)
-                history.push('/user/profile?')
+                history.push('/user/profile')
             }
         }).catch(e => {
             console.log(e)
