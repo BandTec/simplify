@@ -31,7 +31,7 @@ function Routes() {
 
                 <Route path="/user/home" component={Home} />
 
-                <Route path="/user/services" component={Servico} />
+                <Route path="/user/servicos" component={Servico} />
 
                 <Route path="/user/profile" component={Profile} />
 

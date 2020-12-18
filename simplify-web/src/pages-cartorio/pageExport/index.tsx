@@ -1,11 +1,27 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import PageHeader from '../../components/page-header'
 
 import profile from '../../assets/profileCart.png'
 import './styles.css'
 import { CardProfile } from '../../components/card-profile'
+import api from '../../Service/api'
+
+interface cart {
+    nome: string
+    endereco: string
+    email: string
+    telefone: string
+    horario: string
+}
 
 export function ExportCart() {
+
+    const [response, setResponse] = useState<cart>();
+
+    useEffect(() => {
+        api.get("/cartorio/1").then(res => { setResponse(res.data) })
+    })
+
     return (
         <div className="container">
             <PageHeader endereco="/cart/home" title="Exporte documentos aqui sobre seus clientes" />
@@ -19,11 +35,11 @@ export function ExportCart() {
                     </div>
                 </fieldset>
                 <fieldset>
-                    <h2>Nome: {"response?.nome"} {"response?.sobrenome"}</h2>
-                    <h2>Endereço: {"response?.endereco"}</h2>
-                    <h2>Email: {"response?.email"}</h2>
-                    <h2>Telefone: {"response.telefone"}</h2>
-                    <h2>Horario Funcionamento: {"response.horario"}</h2>
+                    <h2>Nome: {response?.nome}</h2>
+                    <h2>Endereço: {response?.endereco}</h2>
+                    <h2>Email: {response?.email}</h2>
+                    <h2>Telefone: {response?.telefone}</h2>
+                    <h2>Horario Funcionamento: {response?.horario}</h2>
                 </fieldset>
                 <fieldset>
                     <legend>Exportar Dados Usuarios</legend>
@@ -31,13 +47,13 @@ export function ExportCart() {
                         <div className="col-12 card-content">
                             <CardProfile
                                 classIcon="fas fa-doc"
-                                endereco="http://localhost:8080/txt/"
+                                endereco="http://localhost:8080/layout/download"
                                 titulo="Exportar Dados usuarios TXT"
                             />
                             <CardProfile
                                 classIcon="fas fa-doc"
-                                endereco="http://localhost:8080/csv"
-                                titulo="Exportar Dados usuarios CSV"
+                                endereco="http://localhost:8080/layout/txt"
+                                titulo="Coming Soon..."
                             />
                         </div>
                     </div>

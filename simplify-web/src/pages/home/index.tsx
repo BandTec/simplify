@@ -26,7 +26,7 @@ function Home() {
                 <img src={heroImage} alt="" className="hero-image" />
 
                 <div className="buttons-container">
-                    <Link to="/user/services" className="study">
+                    <Link to="/user/servicos" className="study">
                         <img src={serviceImage} alt="" />
                         Procurar serviços
                 </Link>

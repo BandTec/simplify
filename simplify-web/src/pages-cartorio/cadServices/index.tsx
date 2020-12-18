@@ -45,7 +45,7 @@ export function CadServices() {
 
     return (
         <div>
-            <PageHeader endereco="cart/home" title="Cadastre novos serviços para os usuarios" />
+            <PageHeader endereco="/cart/home" title="Cadastre novos serviços para os usuarios" />
             <main className="container">
                 <fieldset>
                     <legend>Dados sobre o serviço</legend>

@@ -35,7 +35,7 @@ function Profile() {
     const handleUploadFile = (e: any) => { setImagemUpload(e.target.files[0]) }
 
     useEffect(() => {
-        api.get(`${userLogado}`).then(res => setResponse(res.data))
+        api.get(`/user/${userLogado}`).then(res => setResponse(res.data))
     });
 
     const uploadImage = async () => {
