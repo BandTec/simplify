@@ -3,6 +3,7 @@ import Card from '../../components/card-service';
 import Modal from '../../components/modal'
 import { useHistory } from 'react-router-dom';
 import apiServicos from '../../Service/apiServicos'
+import apiPDF from '../../Service/api-pdf'
 import ModalPDF from '../../pages/services/modalPDF'
 
 import './styles.css'
@@ -18,14 +19,15 @@ function Servicos() {
     const [descricao, setDescricao] = useState('');
     const [documentos, setDocumentos] = useState('');
     const [isPresencial, setIsPresencial] = useState(Boolean);
-    const [dataAgendamento, setDataAgendamento] = useState('');
+    const [data, setData] = useState('');
+    const [hora, setHora] = useState('');
 
-    useEffect(() => {
-        apiServicos.get("").then(res => { setData(res.data) })
-    })
+    // useEffect(() => {
+    //     apiServicos.get("").then(res => { setData(res.data) })
+    // })
 
 
-    const [data, setData] = useState([]);
+    // const [data, setData] = useState([]);
 
     function dismiss() {
         return;
@@ -34,18 +36,22 @@ function Servicos() {
     function enviarInfo(e: FormEvent) {
         e.preventDefault();
 
-        let idUser = localStorage.getItem('idUser')
+        // let idUser = localStorage.getItem('idUser')
 
-        apiServicos.post("/", {
-            idUser,
-            dataAgendamento,
+        apiPDF.post("/cadastrar", {
+            data,
+            hora
 
         }).then(res => {
             if (res.status === 200) {
+                console.log(data);
+                console.log(hora);
                 alert(`Agendamento realizado`)
                 history.push('/service')
             }
         }).catch(e => {
+            console.log(data);
+            console.log(hora);
             console.log(e)
         })
     }
@@ -54,7 +60,8 @@ function Servicos() {
         <div className="container-service">
             <ModalPDF />
             <div className="container-content">
-                {servicos.map((item: { id: string, title: string; descricao: string; documentos: string; isPresencial: boolean; }) => {
+                {/* Componente do modal aplicado */}
+                {servicos.map((item: { id: string, title: string; descricao: string; documentos: string; isPresencial: boolean; horario: string}) => {
                     return (
                         <Modal
                             id={`${item.id}`}
@@ -68,7 +75,7 @@ function Servicos() {
                             dataAgendamento=""
                             hora="12:00"
                             click={enviarInfo}
-                            submit={dismiss}
+                            submit={enviarInfo}
                             dismiss={true}
                         />
                     )

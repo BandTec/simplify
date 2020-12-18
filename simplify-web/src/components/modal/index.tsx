@@ -1,11 +1,12 @@
 import React, { FormEvent, useEffect, useState, MouseEvent, Component } from 'react';
 import Button from '../button';
 import horarios from '../../mocks/services/mock-horarios'
-import Select from '../../components/input/select'
 import Input from '../../components/input'
 import api from '../../Service/apiServicos'
 
 import './styles.css'
+import Select from '../Select';
+import apiPDF from '../../Service/api-pdf';
 
 
 export interface modalProps {
@@ -25,8 +26,36 @@ export interface modalProps {
 
 }
 
+
 const Modal: React.FC<modalProps> = (props) => {
 
+    const [data, setData] = useState("");
+    const [hora, setHora] = useState("");
+
+    function enviarInfo(e: FormEvent) {
+        
+        e.preventDefault();
+        console.log(data);
+        console.log(hora);
+        // let idUser = localStorage.getItem('idUser')
+    
+        apiPDF.post("/cadastrar", {
+            data,
+            hora
+    
+        }).then(res => {
+            if (res.status === 200) {
+                console.log(data);
+                console.log(hora);
+                alert(`Agendamento realizado`)
+                // history.push('/service')
+            }
+        }).catch(e => {
+            console.log(data);
+            console.log(hora);
+            console.log(e)
+        })
+    }
     return (
         <div>
             {/* Modal */}
@@ -44,11 +73,16 @@ const Modal: React.FC<modalProps> = (props) => {
                             {props.conteudo}
                         </p>
                         <div className={props.visibilidadeBotao ? "horarios-container": "btn-none"}>
-                        <Input name="data" label="" required type="date"/>
-                        <Select name="hora"/>          
+                        <Input name="data" label="" required type="date" onChange={e => { setData(e.target.value) }}/>
+                        <Select name="documento" label="Selecione o documento" value={hora} onChange={e => { setHora(e.target.value) }} options={[
+                        { value: "12:00", label: "12:00" },
+                        { value: "13:00", label: "13:00" },
+                        { value: "14:00", label: "14:00" },
+                        { value: "15:00", label: "15:00" }
+                    ]} />     
                         </div>
                     </div>
-                    <div className="modal-footer" onSubmit={props.submit}>
+                    <div className="modal-footer" onSubmit={enviarInfo}>
                     <a href="http://localhost:8888/pdf/certidao"
                     className="a-modal" 
                     >  
@@ -66,7 +100,7 @@ const Modal: React.FC<modalProps> = (props) => {
                             data-dismiss={props.dismiss ? "modal": ""} 
                             data-toggle="modal" 
                             data-target={props.target} 
-                            onClick={props.click}>
+                            onSubmit={enviarInfo}>
                                 {props.botao}
                         </button>
                     </div>

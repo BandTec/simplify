@@ -50,7 +50,7 @@ export function CadServices() {
                 <fieldset>
                     <legend>Dados sobre o serviço</legend>
                     <Input name="nome" label="Nome do serviço" required onChange={e => { setNome(e.target.value) }} />
-                    <Textarea name="descricao" label="Informe uma descrição para este serviçoo" required onChange={e => { setDescricao(e.target.value) }} />
+                    <Textarea name="descricao" label="Informe uma descrição para este serviço" required onChange={e => { setDescricao(e.target.value) }} />
                 </fieldset>
                 <fieldset>
                     <legend>Informe os documentos necessários</legend>
