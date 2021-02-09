@@ -1,0 +1,106 @@
+.container{
+    width: 100%;
+    min-height:80vh;
+    margin: 0;
+    display: flex;
+        transition: 0.3s;
+        align-items: center;
+}
+.container .txtBox{
+        transition: 0.3s;
+        position: relative;
+    width: 50%;
+    padding: 10px 100px;
+}
+.container .txtBox h2{
+    font-size: 3em;
+        transition: 0.3s;
+        font-weight: 700;
+    line-height: 2em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-left: 5px;
+    color: var(--text-color-secondary);
+}
+.container .txtBox p{
+    font-size: 1.2em;
+        transition: 0.3s;
+        font-weight: 500;
+    line-height: 1em;
+    letter-spacing: 2px;
+    color: var(--border-color);
+    margin-bottom: 30px;
+}
+.container .txtBox a{
+    position: relative;
+    display: inline-block;
+    padding: 10px 50px;
+    font-size: 1.2em;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 700;
+    background-color: var(--text-color-primary);
+    transition: 0.3s;
+}
+.container .txtBox a:hover{
+    transition: 0.3s;
+    background-color: var(--text-color-secondary);
+}
+.container .imgBox{
+    padding: 90px;
+    width: 40%;
+    height: 100%;
+    transition: 0.3s;
+}
+.container .imgBox img{
+    transition: 0.3s;
+    width: 100%;
+}
+@media screen and (max-width: 980px){
+    .container{
+        transition: 0.3s;
+        flex-direction: column;
+    }
+    .container .txtBox{
+        transition: 0.3s;
+        width: 100%;
+        padding: 10px 40px;
+        text-align: center;
+    }
+    .container .txtBox h2{
+        transition: 0.3s;
+        font-size: 2.5em;
+    }
+    .container .txtBox a{
+        padding: 6px 30px ;
+    }
+    .container .imgBox{
+        transition: 0.3s;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .container{
+        display: flex;
+        align-items: center;
+        transition: 0.3s;
+        justify-content: center;
+    }
+    .container .txtBox{
+        width: 100%;
+        transition: 0.3s;
+        padding: 10px 10px;
+        text-align: justify;
+    }
+    .container .txtBox h2{
+        transition: 0.3s;
+        font-size: 1;
+    }
+    .container .imgBox{
+        transition: 0.3s;
+        display: none;
+    }
+}

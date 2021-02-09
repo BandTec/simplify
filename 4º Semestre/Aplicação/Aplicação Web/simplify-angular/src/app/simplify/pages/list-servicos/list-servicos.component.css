@@ -1,0 +1,169 @@
+.container{
+    width: 100%;
+    display: flex;
+    min-height: 80vh;
+    margin: 0;
+    align-items: center;
+    transition: 0.5s;
+
+}
+.container .txtBox{
+    transition: 0.5s;
+
+    position: relative;
+    width: 50%;
+    padding: 10px 100px;
+}
+.container .txtBox h2{
+    transition: 0.5s;
+
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1.3em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-left: 5px;
+    color: var(--text-color-secondary);
+}
+.container .txtBox a{
+    position: relative;
+
+    display: inline-block;
+    padding: 6px 50px;
+    font-size: 1.2em;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 500;
+    background-color: var(--text-color-primary);
+    transition: 0.3s;
+}
+.container .txtBox a:hover{
+    transition: 0.3s;
+    background-color: var(--text-color-secondary);
+}
+.container .select-area{
+    width: 100%;
+    transition: 0.5s;
+
+    position: relative;
+    padding: 20px 0px;
+    margin-bottom: 10%;
+}
+.container .select-area select{
+    width: 300px;
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: 0.5s;
+
+    border-radius: 30px;
+    background-color: rgba(255,255,255,0.25);
+    backdrop-filter: blur(25px);
+    outline: none;
+}
+.container .select-area select option{
+    height: 55px;
+    padding-left: 20px;
+    background-color: rgba(255,255,255,0.25);
+    backdrop-filter: blur(25px);
+    padding-right: 20px;
+    
+}
+.container .list-area{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    padding: 50px;
+    transition: 0.5s;
+
+}
+.container .list-area .card{
+    width: 90%;
+    height: 70vh;
+    border: 1px solid black;
+    transition: 0.5s;
+
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;    
+}
+.container .list-area .card .card-content{
+    width: 85%;
+    height: 70px;
+    border-radius: 10px;
+    box-shadow: 2px 4px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.5);
+    margin: 5px;
+}
+.container .list-area .card .card-content a{
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #000;
+}
+.container .list-area .card .card-content:hover a{ 
+    background-color: var(--text-color-secondary);
+    color: #fff;
+    font-weight: 600;
+}
+@media screen and (max-width: 980px){
+    .container{
+        transition: 0.3s;
+        flex-direction: column;
+    }
+    .container .txtBox{
+        text-align: center;
+        width: 100%;
+        transition: 0.3s;
+        padding: 10px 40px;
+    }
+.container .select-area{
+    margin-bottom: 0;
+    transition: 0.3s;
+}
+    .container .txtBox h2{
+        transition: 0.3s;
+        font-size: 2.5em;
+    }
+    .container .txtBox a{
+        padding: 6px 30px ;
+    }
+    .container .list-area{
+        transition: 0.3s;
+        width: 100%;
+    }
+    .container .list-area .card{
+        transition: 0.3s;
+        width: 100%;
+    }
+.container .list-area .card .card-content a{
+    font-size: 0.8em;
+    text-align: center;
+}
+}
+@media screen and (max-width: 400px){
+    .container{
+        display: flex;
+        transition: 0.3s;
+        align-items: center;
+        justify-content: center;
+    }
+    .container .txtBox h2{
+        font-size: 2em;
+        transition: 0.3s;
+    }
+}

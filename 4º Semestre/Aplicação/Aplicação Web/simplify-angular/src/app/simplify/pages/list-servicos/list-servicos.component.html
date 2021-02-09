@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="txtBox">
+        <h2>Selecione uma categoria</h2>
+        <div class="select-area">
+            <select name="teste" [(ngModel)]="select" id="btnSelect">
+                <option value="documento">Documento</option>
+                <option value="" disabled>Agendamento</option>
+            </select>
+        </div>
+        <a (click)="search()">Prosseguir</a>
+    </div>
+    <div class="list-area">
+        <!-- <div *ngIf="!servicos" class="no-content">
+            <h3>:( Selecione alguma categoria para listar</h3>
+        </div> -->
+        <div *ngIf="servicos" class="card">
+            <div *ngFor="let d of servicos" class="card-content">
+                <a href="/form">{{ d }}</a>
+            </div>
+        </div>
+    </div>
+</div>
