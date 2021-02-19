@@ -1,0 +1,122 @@
+.container{
+    width: 100%;
+    min-height:80vh;
+    margin: 0;
+    display: flex;
+        transition: 0.3s;
+        align-items: center;
+}
+.container .txtBox{
+        transition: 0.3s;
+        position: relative;
+    width: 60%;
+    padding: 10px 100px;
+}
+.container .txtBox h2{
+    font-size: 2.3em;
+    transition: 0.3s;
+    font-weight: 700;
+    line-height: 2em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding-left: 5px;
+    color: var(--text-color-secondary);
+}
+.container .txtBox p{
+    font-size: 1.2em;
+        transition: 0.3s;
+        font-weight: 500;
+    line-height: 1em;
+    letter-spacing: 2px;
+    color: var(--border-color);
+    margin-bottom: 30px;
+}
+.container .txtBox .social-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 50px;
+}
+.container .txtBox .social-container .button-social{
+    width: 50px;
+    height: 50px;
+    border-radius: 4px;
+    padding: 10px;
+}
+.container .txtBox .social-container .button-social img{
+    max-width:100% ;
+}
+.container .txtBox .social-container a:nth-child(1) .button-social{
+    background-color: var(--whatsapp-button);
+}
+.container .txtBox .social-container a:nth-child(2) .button-social{
+    background-color: var(--slack-button);
+}
+.container .txtBox .social-container a:nth-child(3) .button-social{
+    background-color: var(--text-color-secondary);
+}
+.container .imgBox{
+    padding: 90px;
+    width: 40%;
+    height: 100%;
+    transition: 0.3s;
+}
+.container .imgBox img{
+    transition: 0.3s;
+    width: 100%;
+}
+@media screen and (max-width: 980px){
+    .container{
+        transition: 0.3s;
+        flex-direction: column;
+    }
+    .container .txtBox{
+        transition: 0.3s;
+        width: 100%;
+        padding: 10px 40px;
+        text-align: center;
+    }
+    .container .txtBox h2{
+        transition: 0.3s;
+        font-size: 2.5em;
+    }
+    .container .txtBox a{
+        padding: 6px 30px;
+    }
+    .container .txtBox .social-container{
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+    }
+    .container .imgBox{
+        transition: 0.3s;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .container{
+        display: flex;
+        align-items: center;
+        transition: 0.3s;
+        justify-content: center;
+    }
+    .container .txtBox{
+        width: 100%;
+        transition: 0.3s;
+        padding: 10px 10px;
+        text-align: justify;
+    }
+    .container .txtBox h2{
+        transition: 0.3s;
+        font-size: 20px;
+    }
+    .container .imgBox{
+        transition: 0.3s;
+        display: none;
+    }
+}

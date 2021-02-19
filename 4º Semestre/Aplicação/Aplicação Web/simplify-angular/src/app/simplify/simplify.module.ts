@@ -5,20 +5,20 @@ import { BrowserModule } from "@angular/platform-browser";
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ServicosComponent } from './pages/servicos/servicos.component';
-import { ListServicosComponent } from './pages/list-servicos/list-servicos.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { FormSolicitaComponent } from './pages/form-solicita/form-solicita.component';
 import { SharedModule } from "../shared/shared.module";
+import { ContactComponent } from './pages/contact/contact.component';
+import { FormCadastroComponent } from './pages/form-cadastro/form-cadastro.component';
 
 @NgModule({
     declarations: [
         HomeComponent,
         AboutComponent,
         ServicosComponent,
-        ListServicosComponent,
-        FormSolicitaComponent
+        ContactComponent,
+        FormCadastroComponent
     ],
     imports: [
         BrowserModule,
