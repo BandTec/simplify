@@ -1,9 +1,9 @@
 package com.simplify.usersapi.controllers;
 
-import com.simplify.usersapi.entities.Usuario;
+import com.simplify.usersapi.entities.Estudante;
 import com.simplify.usersapi.entregaveis.GravaArquivo;
 import com.simplify.usersapi.entregaveis.ListaObj;
-import com.simplify.usersapi.repositories.UsuarioRepository;
+import com.simplify.usersapi.repositories.EstudanteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -19,10 +19,10 @@ import java.util.*;
 @RequestMapping("/layout")
 public class LayoutController {
     @Autowired
-    private UsuarioRepository repository;
+    private EstudanteRepository repository;
 
     int tam = 7;
-    ListaObj<Usuario> listaExportar = new ListaObj<>(tam);
+    ListaObj<Estudante> listaExportar = new ListaObj<>(tam);
     Date dataDeHoje = new Date();
     SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
 
@@ -30,7 +30,7 @@ public class LayoutController {
     public ResponseEntity download(){
         FileWriter arquivo;
         Formatter exit = null;
-        List<Usuario> clientes = repository.findAll();
+        List<Estudante> clientes = repository.findAll();
         String clientezinho ="";
         String header = "";
         String body = "";
@@ -56,7 +56,7 @@ public class LayoutController {
         }
         try {
             for (int i = 0; i< listaExportar.getTamanho(); i++){
-                Usuario c = listaExportar.getElemento(i);
+                Estudante c = listaExportar.getElemento(i);
 
                 //corpo
                 if ( i<1){
@@ -91,13 +91,13 @@ public class LayoutController {
     @PostMapping("/importacoes")
     public void importar(@RequestBody byte[] txt){
         String doc = new String(txt);
-        List<Usuario> usuarios = new ArrayList<>();
+        List<Estudante> estudantes = new ArrayList<>();
         String[] linha = doc.split("\n");
         for (int i = 0; i < linha.length; i++){
             String line = linha[i];
             System.out.println(line);
             if (line.indexOf("02")==0){
-                Usuario cliente = new Usuario();
+                Estudante cliente = new Estudante();
                 cliente.setId(Integer.valueOf(line.substring(1,2)));
                 cliente.setNome(line.substring(3,9));
                 cliente.setEmail(line.substring(10,25));

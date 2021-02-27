@@ -1,8 +1,7 @@
 package com.simplify.usersapi.controllers;
 
-import com.simplify.usersapi.entities.Usuario;
-import com.simplify.usersapi.entregaveis.ListaObj;
-import com.simplify.usersapi.repositories.UsuarioRepository;
+import com.simplify.usersapi.entities.Estudante;
+import com.simplify.usersapi.repositories.EstudanteRepository;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +23,7 @@ class LayoutControllerTest {
     LayoutController controller;
 
     @MockBean
-    UsuarioRepository repository;
+    EstudanteRepository repository;
 
     @Test
     void download() {
@@ -32,10 +31,10 @@ class LayoutControllerTest {
                 "02nullnullnull\r\n" +
                 "010000000001\r\n";
         controller.dataDeHoje = new Date(2020215-12-2020);
-        List<Usuario> usuarios = new ArrayList<>();
-        Mockito.when(repository.findAll()).thenReturn(usuarios);
-        Usuario user = new Usuario();
-        usuarios.add(user);
+        List<Estudante> estudantes = new ArrayList<>();
+        Mockito.when(repository.findAll()).thenReturn(estudantes);
+        Estudante user = new Estudante();
+        estudantes.add(user);
         Mockito.when(repository.count()).thenReturn((long) 1);
         ResponseEntity resposta = controller.download();
         assertEquals(200, resposta.getStatusCodeValue());
