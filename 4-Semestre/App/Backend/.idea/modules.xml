@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Backend.iml" filepath="$PROJECT_DIR$/.idea/Backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Projeto-Spring-backup/api/api.iml" filepath="$PROJECT_DIR$/Projeto-Spring-backup/api/api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api-pdf/api-pdf.iml" filepath="$PROJECT_DIR$/api-pdf/api-pdf.iml" />
+      <module fileurl="file://$PROJECT_DIR$/apiservicos/apiservicos.iml" filepath="$PROJECT_DIR$/apiservicos/apiservicos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/users-api/users-api.iml" filepath="$PROJECT_DIR$/users-api/users-api.iml" />
+    </modules>
+  </component>
+</project>
