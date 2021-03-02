@@ -14,7 +14,7 @@
         android:layout_width="306dp"
         android:layout_height="92dp"
         android:fontFamily="@font/poppins_medium"
-        android:text="SIMPLIFY"
+        android:text="Simplify"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
@@ -28,8 +28,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="288dp"
-        android:layout_height="233dp"
+        android:layout_width="290dp"
+        android:layout_height="222dp"
         android:src="@drawable/lines"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

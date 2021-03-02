@@ -8,13 +8,12 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnStudent"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="303dp"
-        android:layout_height="151dp"
+        android:layout_height="160dp"
         android:layout_marginStart="68dp"
         android:layout_marginEnd="68dp"
-        android:layout_marginBottom="320dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Estudante"
         android:textAlignment="center"
@@ -23,6 +22,7 @@
         android:textColorHighlight="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:visibility="visible"
         app:cornerRadius="10sp"
         app:icon="@drawable/student_icon"
         app:iconGravity="top"
@@ -32,13 +32,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.422"
         app:rippleColor="@color/colorAccent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnTeach"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="303dp"
-        android:layout_height="151dp"
+        android:layout_height="160dp"
         android:layout_marginStart="68dp"
         android:layout_marginEnd="68dp"
         android:fontFamily="@font/poppins_medium"
@@ -62,7 +64,7 @@
         app:layout_constraintVertical_bias="0.772" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtLabelContext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_medium"
@@ -74,8 +76,7 @@
         android:textSize="23sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.619"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.192" />
+        app:layout_constraintVertical_bias="0.123" />
 </androidx.constraintlayout.widget.ConstraintLayout>
