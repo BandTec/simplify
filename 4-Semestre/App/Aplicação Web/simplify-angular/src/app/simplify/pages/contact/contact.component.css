@@ -106,10 +106,10 @@
         justify-content: center;
     }
     .container .txtBox{
-        width: 100%;
+        width: 90%;
         transition: 0.3s;
         padding: 10px 10px;
-        text-align: justify;
+        text-align: center;
     }
     .container .txtBox h2{
         transition: 0.3s;

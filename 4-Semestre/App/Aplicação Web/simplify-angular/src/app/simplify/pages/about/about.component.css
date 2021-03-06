@@ -80,7 +80,8 @@
     }
     .container .imgBox{
         transition: 0.3s;
-        width: 60%;
+        width: 80%;
+        padding: 10px;
     }
 }
 

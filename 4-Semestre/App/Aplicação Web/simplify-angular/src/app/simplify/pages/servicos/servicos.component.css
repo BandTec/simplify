@@ -30,7 +30,7 @@
     line-height: 1em;
     letter-spacing: 2px;
     color: var(--border-color);
-    margin-bottom: 30px;
+    margin: 30px auto;
 }
 .container .txtBox a{
     position: relative;
@@ -80,6 +80,7 @@
     .container .imgBox{
         transition: 0.3s;
         width: 80%;
+        padding: 10px;
     }
 }
 @media screen and (max-width: 400px){

@@ -29,7 +29,7 @@
     line-height: 1em;
     letter-spacing: 2px;
     color: var(--border-color);
-    margin-bottom: 30px;
+    margin: 30px auto;
 }
 .container .txtBox a{
     position: relative;
@@ -79,6 +79,7 @@
     .container .imgBox{
         transition: 0.3s;
         width: 80%;
+        padding: 10px;
     }
 }
 
@@ -90,7 +91,7 @@
         justify-content: center;
     }
     .container .txtBox{
-        width: 100%;
+        width: 90%;
         transition: 0.3s;
         padding: 10px 10px;
         text-align: justify;

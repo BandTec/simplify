@@ -11,7 +11,7 @@
 }
 .navbar .logo{
     width: 100px;
-    padding:10px 50px;
+    padding:10px 0px;
     height: 50px;
     position: relative;
 }
@@ -19,14 +19,20 @@
     cursor: pointer;
     width: 100px;
 }
+.navbar .menu a img {
+    width: 50px;
+}
 .navbar .buttons{
     display: flex;
     width: 100%;
     justify-content: flex-end;
+    align-self: stretch;
+    text-align: right;
 }
+
 .navbar .buttons ul{
     list-style: none;
-    display: flex;
+    display: block;
 }
 .navbar .buttons ul li a{
     padding: 0px 15px;
@@ -38,4 +44,17 @@
 }
 .navbar .buttons ul li a:hover{
     color: var(--text-color-secondary);
+}
+
+@media(min-width: 700px) {
+    .navbar .logo{
+        padding:10px 50px;
+    }
+    .navbar .buttons {
+        align-self: unset;
+        text-align: unset;
+    }
+    .navbar .buttons ul{
+        display: flex;
+    }
 }

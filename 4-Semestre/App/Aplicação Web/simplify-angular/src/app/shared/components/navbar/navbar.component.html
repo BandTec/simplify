@@ -2,7 +2,7 @@
     <div class="logo">
         <a href="/"><img src="../../../../assets/logo/noname.png" alt="Logo Simplify"></a>
     </div>
-    <div class="buttons">
+    <div class="buttons" [style.display]= "toggleMenu ? 'flex': 'none'">
         <ul>
             <li>
                 <a href="/">Home</a>
@@ -18,7 +18,11 @@
             </li>
         </ul>
     </div>
+    <div class="menu" (click)="showMenu(); $event.preventDefault()">
+        <a href="/"><img src="../../../../assets/icons/menu-hamburguer.svg" alt="Menu Hamburguer"></a>
+    </div>
 </div>
 <div id="main">
     <ng-content></ng-content>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.js"></script>
