@@ -2,7 +2,7 @@
     <div class="logo">
         <a href="/"><img src="../../../../assets/logo/noname.png" alt="Logo Simplify"></a>
     </div>
-    <div class="buttons" [style.display]= "toggleMenu ? 'flex': 'none'">
+    <div class="buttons">
         <ul>
             <li>
                 <a href="/">Home</a>
@@ -18,8 +18,24 @@
             </li>
         </ul>
     </div>
-    <div class="menu" (click)="showMenu(); $event.preventDefault()">
-        <a href="/"><img src="../../../../assets/icons/menu-hamburguer.svg" alt="Menu Hamburguer"></a>
+    <div class="menu" [style.height]= "toggleMenu ? '100vh': 'inherit'">
+        <div class="menu-img" (click)="showMenu(); $event.preventDefault()">
+            <a href="/"><img src="../../../../assets/icons/menu-hamburguer.svg" alt="Menu Hamburguer"></a>
+        </div>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/about">Sobre nós</a>
+            </li>
+            <li>
+                <a href="/servicos">Serviços</a>
+            </li>
+            <li>
+                <a href="/contact">Contatos</a>
+            </li>
+        </ul>
     </div>
 </div>
 <div id="main">

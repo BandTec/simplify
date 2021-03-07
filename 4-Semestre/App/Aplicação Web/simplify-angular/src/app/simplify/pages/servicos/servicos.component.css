@@ -27,10 +27,10 @@
     font-size: 1.2em;
     font-weight: 500;
     transition: 0.3s;
-    line-height: 1em;
+    line-height: 1.6em;
     letter-spacing: 2px;
     color: var(--border-color);
-    margin: 30px auto;
+    margin-bottom: 30px;
 }
 .container .txtBox a{
     position: relative;
