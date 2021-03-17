@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/colorBackground"
+
+    tools:context=".HomeEstudante">
+
+    <ScrollView
+        style="@android:style/Widget.Holo.TextView"
+        android:layout_width="288dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="bem-vindo(a)"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:id="@+id/tv_bemvindo">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Gerson Albuquerque"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/tv_nome"
+            ></TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:layout_marginTop="20dp"
+                android:id="@+id/v_linha"
+                ></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="suas turmas"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/black"
+                android:id="@+id/tv_suasTurmas"
+                >
+            </TextView>
+        </LinearLayout>
+        </ScrollView>
+
+    <ScrollView
+        style="@android:style/Widget.Holo.ScrollView"
+        android:layout_width="350dp"
+        android:layout_height="385dp"
+        android:layout_marginTop="150dp"
+        android:fadeScrollbars="false"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnTurma1"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="2ADSA\n PI"
+
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnTurma2"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:baselineAligned="false"
+                android:text="3ADSB\n Engenharia de Software"
+
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@color/white" />
+
+
+            <Button
+                android:id="@+id/btnTurma3"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:text="1CCOA\n PI"
+
+
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:text="testte scroll"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/button5"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:text="teste"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/button6"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:text="scroll"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/button7"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:text="scroll teste"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/iv_saida"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:src="@drawable/saida"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        ></ImageView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
