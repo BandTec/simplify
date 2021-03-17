@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/colorBackground"
+
+    tools:context=".ApiUpload.Upload">
+
+    <ScrollView
+        style="@android:style/Widget.Holo.TextView"
+        android:layout_width="288dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="matricula"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:textColor="@color/black"
+            android:id="@+id/tv_bemvindo">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Bandtec"
+            android:textAlignment="center"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/tv_nome"
+            ></TextView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"
+                android:layout_marginTop="1dp"
+                android:id="@+id/v_linha"
+                ></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Documentos pendente"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:id="@+id/tv_suasTurmas"
+                >
+            </TextView>
+        </LinearLayout>
+        </ScrollView>
+
+    <ScrollView
+        style="@android:style/Widget.Holo.ScrollView"
+        android:layout_width="350dp"
+        android:layout_height="405dp"
+        android:layout_marginTop="30dp"
+        android:fadeScrollbars="false"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnTurma1"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:text="Blablabla"
+
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:backgroundTint="@color/colorAccent"
+                android:textColor="@color/white" />
+
+            <ImageView
+                android:layout_marginTop="30dp"
+                android:id="@+id/selected_image"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:adjustViewBounds="true"
+                android:background="@color/colorPrimary"
+                android:scaleType="fitCenter" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="18dp" />
+
+            <Button
+                android:id="@+id/select_image"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:padding="10dp"
+                android:text="Selecionar Imagem"
+                android:textColor="@android:color/white"
+                android:onClick="selecionar_img"
+                />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="60dp" />
+
+            <Button
+                android:id="@+id/upload_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:padding="10dp"
+                android:text="Realizar upload"
+                android:textColor="@android:color/white"
+                android:onClick="upload_img"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/iv_saida"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:src="@drawable/saida"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        ></ImageView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

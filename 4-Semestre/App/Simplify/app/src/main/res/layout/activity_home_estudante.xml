@@ -93,11 +93,11 @@
                 android:textColor="@color/colorAccent" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/btnUpload"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="match_parent"
                 android:layout_height="82dp"
-                android:text="testte scroll"
+                android:text="testte upload"
                 android:textColor="@color/colorAccent" />
 
             <Button

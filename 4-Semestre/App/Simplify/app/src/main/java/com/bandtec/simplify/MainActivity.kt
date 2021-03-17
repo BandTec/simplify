@@ -13,9 +13,15 @@ class MainActivity : AppCompatActivity() {
 
         val btnEstudante = findViewById<Button>(R.id.btnStudent)
 
+        val btnProfessor = findViewById<Button>(R.id.btnTeach)
+
         btnEstudante.setOnClickListener{
            startActivity(Intent(this@MainActivity, LoginEstudante::class.java))
        }
+
+        btnProfessor.setOnClickListener{
+            startActivity(Intent(this@MainActivity, HomeProfessor::class.java))
+        }
 
     }
 
